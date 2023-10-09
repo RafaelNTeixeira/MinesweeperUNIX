@@ -1,0 +1,33 @@
+\hypertarget{rtc_8h_source}{}\doxysection{rtc.\+h}
+\label{rtc_8h_source}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/rtc/rtc.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/rtc/rtc.h}}
+\mbox{\hyperlink{rtc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rtc__commands_8h}{rtc\_commands.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00012\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_time_ac45991f4d86716f0b796eeed4ed3ef13}{hour}};}
+\DoxyCodeLine{00013\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_time_ab12391260f0e9c163560a29bfec79421}{minute}};}
+\DoxyCodeLine{00014\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_time_aa8fcec3005cd439c5d83ff5e4366b1e1}{second}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_time_a90e4b8e33eacaf238dd3a62015328f8b}{day}};}
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_time_a7fbd668060bea01d3cc445ae2ed28159}{month}};}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{struct_time_a474991592fc530db29c79f3bdf2a022c}{year}};}
+\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{struct_time}{Time}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \mbox{\hyperlink{struct_time}{Time}}*\ \mbox{\hyperlink{rtc_8h_a146e69d1601c86471739a6d5a0ad14c9}{initTime}}();}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{rtc_8h_abd8de825e876e8ef94c64ac616f68a11}{rtc\_subscribe\_int}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{rtc_8h_ab8f17bf5280c908c8b199a90fefcc758}{rtc\_unsubscribe\_int}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{rtc_8h_ae891da27574d5dc9db2b4cb0bfeadc01}{deleteTime}}(\mbox{\hyperlink{struct_time}{Time}}*\ time);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{rtc_8h_a4117d102071c0a3c9745763466e2ffeb}{getCurrentTime}}(\mbox{\hyperlink{struct_time}{Time}}*\ time);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{rtc_8h_abc57bf2c447b1860df7493b3222c3a43}{bcdToDec}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ bcd);}
+
+\end{DoxyCode}

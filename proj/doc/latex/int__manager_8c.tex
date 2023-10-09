@@ -1,0 +1,154 @@
+\hypertarget{int__manager_8c}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/devices/int\+\_\+manager.c File Reference}
+\label{int__manager_8c}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/int\_manager.c@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/int\_manager.c}}
+{\ttfamily \#include \char`\"{}int\+\_\+manager.\+h\char`\"{}}\newline
+Include dependency graph for int\+\_\+manager.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{int__manager_8c_ac4ae186b48f33686d93c72b9160a2afb}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the system and sets up the necessary interrupts and devices. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{int__manager_8c_a24285aea4a27f96c321b2628788e9a57}{main\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em Main loop of the system. This function enters the main loop of the system and continuously waits for messages from device interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{int__manager_8c_afaf9296ec5f119629e57f458f207ae0c}{finalize}} ()
+\begin{DoxyCompactList}\small\item\em Finalizes the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{int__manager_8c_a3462fc5fe41d7f3738b28e8db5c34afa}{timer\+\_\+irq\+\_\+set}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{int__manager_8c_a4a804c5ed9fbbb87e678bc754a0050df}{kbd\+\_\+irq\+\_\+set}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{int__manager_8c_a19510d6e8f8e3683abe25e8936a4401e}{mouse\+\_\+irq\+\_\+set}}
+\item 
+int \mbox{\hyperlink{int__manager_8c_a617a47c70795bcff659815ad0efd2266}{counter}}
+\item 
+bool \mbox{\hyperlink{int__manager_8c_a5634adbf50fca2436ea592580f1e5a6f}{codecomplete\+\_\+kbd}}
+\item 
+bool \mbox{\hyperlink{int__manager_8c_a9897f9870abb626be7aa3ea093b385c2}{read\+Second}}
+\item 
+bool \mbox{\hyperlink{int__manager_8c_ac0c81ad6219c86ba95a128fa44152d0f}{read\+Third}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{int__manager_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{int__manager_8c_a7519b660f978fd1162baddae035ccf7d}{scan\+\_\+bytes\+\_\+kbd}} \mbox{[}2\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{int__manager_8c_a43b27e98dc15b81b7d54d7944480be5b}{scan\+\_\+bytes\+\_\+mouse}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{int__manager_8c_afaf9296ec5f119629e57f458f207ae0c}\label{int__manager_8c_afaf9296ec5f119629e57f458f207ae0c}} 
+\index{int\_manager.c@{int\_manager.c}!finalize@{finalize}}
+\index{finalize@{finalize}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily int() finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finalizes the system. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{int__manager_8c_ac4ae186b48f33686d93c72b9160a2afb}\label{int__manager_8c_ac4ae186b48f33686d93c72b9160a2afb}} 
+\index{int\_manager.c@{int\_manager.c}!initialize@{initialize}}
+\index{initialize@{initialize}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily int() initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the system and sets up the necessary interrupts and devices. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{int__manager_8c_a24285aea4a27f96c321b2628788e9a57}\label{int__manager_8c_a24285aea4a27f96c321b2628788e9a57}} 
+\index{int\_manager.c@{int\_manager.c}!main\_loop@{main\_loop}}
+\index{main\_loop@{main\_loop}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{main\_loop()}{main\_loop()}}
+{\footnotesize\ttfamily int() main\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main loop of the system. This function enters the main loop of the system and continuously waits for messages from device interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{int__manager_8c_a5634adbf50fca2436ea592580f1e5a6f}\label{int__manager_8c_a5634adbf50fca2436ea592580f1e5a6f}} 
+\index{int\_manager.c@{int\_manager.c}!codecomplete\_kbd@{codecomplete\_kbd}}
+\index{codecomplete\_kbd@{codecomplete\_kbd}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{codecomplete\_kbd}{codecomplete\_kbd}}
+{\footnotesize\ttfamily bool codecomplete\+\_\+kbd}
+
+\mbox{\Hypertarget{int__manager_8c_a617a47c70795bcff659815ad0efd2266}\label{int__manager_8c_a617a47c70795bcff659815ad0efd2266}} 
+\index{int\_manager.c@{int\_manager.c}!counter@{counter}}
+\index{counter@{counter}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int counter}
+
+\mbox{\Hypertarget{int__manager_8c_a4a804c5ed9fbbb87e678bc754a0050df}\label{int__manager_8c_a4a804c5ed9fbbb87e678bc754a0050df}} 
+\index{int\_manager.c@{int\_manager.c}!kbd\_irq\_set@{kbd\_irq\_set}}
+\index{kbd\_irq\_set@{kbd\_irq\_set}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{kbd\_irq\_set}{kbd\_irq\_set}}
+{\footnotesize\ttfamily uint32\+\_\+t kbd\+\_\+irq\+\_\+set}
+
+\mbox{\Hypertarget{int__manager_8c_a19510d6e8f8e3683abe25e8936a4401e}\label{int__manager_8c_a19510d6e8f8e3683abe25e8936a4401e}} 
+\index{int\_manager.c@{int\_manager.c}!mouse\_irq\_set@{mouse\_irq\_set}}
+\index{mouse\_irq\_set@{mouse\_irq\_set}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_irq\_set}{mouse\_irq\_set}}
+{\footnotesize\ttfamily uint32\+\_\+t mouse\+\_\+irq\+\_\+set}
+
+\mbox{\Hypertarget{int__manager_8c_a9897f9870abb626be7aa3ea093b385c2}\label{int__manager_8c_a9897f9870abb626be7aa3ea093b385c2}} 
+\index{int\_manager.c@{int\_manager.c}!readSecond@{readSecond}}
+\index{readSecond@{readSecond}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{readSecond}{readSecond}}
+{\footnotesize\ttfamily bool read\+Second}
+
+\mbox{\Hypertarget{int__manager_8c_ac0c81ad6219c86ba95a128fa44152d0f}\label{int__manager_8c_ac0c81ad6219c86ba95a128fa44152d0f}} 
+\index{int\_manager.c@{int\_manager.c}!readThird@{readThird}}
+\index{readThird@{readThird}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{readThird}{readThird}}
+{\footnotesize\ttfamily bool read\+Third}
+
+\mbox{\Hypertarget{int__manager_8c_a7519b660f978fd1162baddae035ccf7d}\label{int__manager_8c_a7519b660f978fd1162baddae035ccf7d}} 
+\index{int\_manager.c@{int\_manager.c}!scan\_bytes\_kbd@{scan\_bytes\_kbd}}
+\index{scan\_bytes\_kbd@{scan\_bytes\_kbd}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{scan\_bytes\_kbd}{scan\_bytes\_kbd}}
+{\footnotesize\ttfamily uint8\+\_\+t scan\+\_\+bytes\+\_\+kbd\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{int__manager_8c_a43b27e98dc15b81b7d54d7944480be5b}\label{int__manager_8c_a43b27e98dc15b81b7d54d7944480be5b}} 
+\index{int\_manager.c@{int\_manager.c}!scan\_bytes\_mouse@{scan\_bytes\_mouse}}
+\index{scan\_bytes\_mouse@{scan\_bytes\_mouse}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{scan\_bytes\_mouse}{scan\_bytes\_mouse}}
+{\footnotesize\ttfamily uint8\+\_\+t scan\+\_\+bytes\+\_\+mouse\mbox{[}3\mbox{]}}
+
+\mbox{\Hypertarget{int__manager_8c_aa1de7a5557e9d96b83cf03f73c92163f}\label{int__manager_8c_aa1de7a5557e9d96b83cf03f73c92163f}} 
+\index{int\_manager.c@{int\_manager.c}!scancode@{scancode}}
+\index{scancode@{scancode}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{scancode}{scancode}}
+{\footnotesize\ttfamily uint8\+\_\+t scancode}
+
+\mbox{\Hypertarget{int__manager_8c_a3462fc5fe41d7f3738b28e8db5c34afa}\label{int__manager_8c_a3462fc5fe41d7f3738b28e8db5c34afa}} 
+\index{int\_manager.c@{int\_manager.c}!timer\_irq\_set@{timer\_irq\_set}}
+\index{timer\_irq\_set@{timer\_irq\_set}!int\_manager.c@{int\_manager.c}}
+\doxysubsubsection{\texorpdfstring{timer\_irq\_set}{timer\_irq\_set}}
+{\footnotesize\ttfamily uint32\+\_\+t timer\+\_\+irq\+\_\+set}
+

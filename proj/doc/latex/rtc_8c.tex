@@ -1,0 +1,118 @@
+\hypertarget{rtc_8c}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/devices/rtc/rtc.c File Reference}
+\label{rtc_8c}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/rtc/rtc.c@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/rtc/rtc.c}}
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+Include dependency graph for rtc.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_time}{Time}} $\ast$ \mbox{\hyperlink{rtc_8c_a146e69d1601c86471739a6d5a0ad14c9}{init\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{struct_time}{Time}} struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_abd8de825e876e8ef94c64ac616f68a11}{rtc\+\_\+subscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes and enables the RTC interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8c_ab8f17bf5280c908c8b199a90fefcc758}{rtc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the RTC interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8c_ae891da27574d5dc9db2b4cb0bfeadc01}{delete\+Time}} (\mbox{\hyperlink{struct_time}{Time}} $\ast$time)
+\begin{DoxyCompactList}\small\item\em Deletes the time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rtc_8c_ae8aba83225f6193ec169c4fc41f3f3cb}{get\+Current\+Time}} (\mbox{\hyperlink{struct_time}{Time}} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Get the current time and date. \end{DoxyCompactList}\item 
+unsigned long \mbox{\hyperlink{rtc_8c_abc57bf2c447b1860df7493b3222c3a43}{bcd\+To\+Dec}} (unsigned long bcd)
+\begin{DoxyCompactList}\small\item\em Converts values from bcd to decimal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8c_abc57bf2c447b1860df7493b3222c3a43}\label{rtc_8c_abc57bf2c447b1860df7493b3222c3a43}} 
+\index{rtc.c@{rtc.c}!bcdToDec@{bcdToDec}}
+\index{bcdToDec@{bcdToDec}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{bcdToDec()}{bcdToDec()}}
+{\footnotesize\ttfamily unsigned long bcd\+To\+Dec (\begin{DoxyParamCaption}\item[{unsigned long}]{bcd }\end{DoxyParamCaption})}
+
+
+
+Converts values from bcd to decimal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bcd} & Binary time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decimal time. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{rtc_8c_ae891da27574d5dc9db2b4cb0bfeadc01}\label{rtc_8c_ae891da27574d5dc9db2b4cb0bfeadc01}} 
+\index{rtc.c@{rtc.c}!deleteTime@{deleteTime}}
+\index{deleteTime@{deleteTime}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{deleteTime()}{deleteTime()}}
+{\footnotesize\ttfamily void delete\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_time}{Time}} $\ast$}]{time }\end{DoxyParamCaption})}
+
+
+
+Deletes the time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rtc_8c_ae8aba83225f6193ec169c4fc41f3f3cb}\label{rtc_8c_ae8aba83225f6193ec169c4fc41f3f3cb}} 
+\index{rtc.c@{rtc.c}!getCurrentTime@{getCurrentTime}}
+\index{getCurrentTime@{getCurrentTime}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{getCurrentTime()}{getCurrentTime()}}
+{\footnotesize\ttfamily void get\+Current\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_time}{Time}} $\ast$}]{time }\end{DoxyParamCaption})}
+
+
+
+Get the current time and date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{rtc_8c_a146e69d1601c86471739a6d5a0ad14c9}\label{rtc_8c_a146e69d1601c86471739a6d5a0ad14c9}} 
+\index{rtc.c@{rtc.c}!initTime@{initTime}}
+\index{initTime@{initTime}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{initTime()}{initTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_time}{Time}} $\ast$ init\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{struct_time}{Time}} struct. 
+
+\begin{DoxyReturn}{Returns}
+timer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{rtc_8c_abd8de825e876e8ef94c64ac616f68a11}\label{rtc_8c_abd8de825e876e8ef94c64ac616f68a11}} 
+\index{rtc.c@{rtc.c}!rtc\_subscribe\_int@{rtc\_subscribe\_int}}
+\index{rtc\_subscribe\_int@{rtc\_subscribe\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_subscribe\_int()}{rtc\_subscribe\_int()}}
+{\footnotesize\ttfamily int rtc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables the RTC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns bit order in interrupt mask; negative value on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rtc_8c_ab8f17bf5280c908c8b199a90fefcc758}\label{rtc_8c_ab8f17bf5280c908c8b199a90fefcc758}} 
+\index{rtc.c@{rtc.c}!rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}}
+\index{rtc\_unsubscribe\_int@{rtc\_unsubscribe\_int}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_unsubscribe\_int()}{rtc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int rtc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the RTC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+return 0 upon success and -\/1 otherwise 
+\end{DoxyReturn}

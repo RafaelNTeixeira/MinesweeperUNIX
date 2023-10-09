@@ -1,0 +1,707 @@
+\hypertarget{game__state_8c}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/game/game\+\_\+state.c File Reference}
+\label{game__state_8c}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/game\_state.c@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/game\_state.c}}
+{\ttfamily \#include \char`\"{}game\+\_\+state.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+state.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game__state_8c_a29568e025250a8489157bc1edb122f33}{update\+\_\+cursor}} (uint16\+\_\+t x\+\_\+val, uint16\+\_\+t y\+\_\+val)
+\begin{DoxyCompactList}\small\item\em This function updates the position of the cursor based on the provided movement values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a814afd9aa373a35da8e7498906b94d62}{start\+\_\+game\+\_\+16x16}} ()
+\begin{DoxyCompactList}\small\item\em This function starts a game with a 16x16 grid. Initializes the game timer, sets the number of tiles in the x and y directions, and places mines on the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_ade11f77cf98a5c65c075cec3349926c9}{start\+\_\+game\+\_\+20x16}} ()
+\begin{DoxyCompactList}\small\item\em This function starts a game on a 20x16 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a72d3dc2882239cc9fc80e728abd24f3b}{start\+\_\+game\+\_\+28x20}} ()
+\begin{DoxyCompactList}\small\item\em This function starts a game on a 28x20 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a3b714459f8030f49c71cfe0bab357a4e}{cursor\+\_\+erase}} ()
+\begin{DoxyCompactList}\small\item\em This function calls the specific erase function to remove the cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a5a77ee52a28fda90e08f909a1eefcd53}{\+\_\+main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function calls the specific draw function to draw the main menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a36951ff3bd81205b3d399c2735d38b59}{cursor\+\_\+draw}} ()
+\begin{DoxyCompactList}\small\item\em This function takes the current position of the cursor and draws it on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a2197621c2978ad9dabc69238471854f7}{\+\_\+draw\+\_\+board}} ()
+\begin{DoxyCompactList}\small\item\em This function calls the specific draw function for a 16x16 board to draw the game board on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a6196304024954107645a1db9755caa0e}{\+\_\+instructions\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function calls the specific draw function to draw the instruction menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a424898e501816d36dbc33937ca44696a}{\+\_\+win\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function calls the specific draw function to draw the win menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a2b06b2805c7c002bf943188a9f3e0889}{\+\_\+gameover\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the game over menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a22e3ee8916b6fb932cdd0cfa56804655}{check\+\_\+mouse\+\_\+clicks\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function checks the mouse clicks within the menu screen and updates the game state accordingly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a1e3d437fbea0d84bafff6b2de26d35c3}{check\+\_\+mouse\+\_\+click\+\_\+left\+\_\+beginner}} ()
+\begin{DoxyCompactList}\small\item\em This function handles the left mouse click event and updates the game state accordingly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_afb8b15ae86a02d10786cbe38e9537b4c}{check\+\_\+mouse\+\_\+click\+\_\+right\+\_\+beginner}} ()
+\begin{DoxyCompactList}\small\item\em This function handles the right mouse click event and updates the game state accordingly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a687ba83630e1bf3e38216dd348c667c4}{check\+\_\+mouse\+\_\+click\+\_\+left\+\_\+medium}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for a left mouse click in the medium mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_ae74320a968191dd9fddd0e7c65ade8ca}{check\+\_\+mouse\+\_\+click\+\_\+right\+\_\+medium}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for a right mouse click in the medium mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_ad9c841e2dda5cb82a231277e6e001237}{check\+\_\+mouse\+\_\+click\+\_\+left\+\_\+hard}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for a left mouse click in the hard mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a3bd747a822aefc2adca7100412ad1464}{check\+\_\+mouse\+\_\+click\+\_\+right\+\_\+hard}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for a right mouse click in the hard mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a7a10758af498b53f24f1ce57aaea89ce}{check\+\_\+mouse\+\_\+clicks\+\_\+win}} ()
+\begin{DoxyCompactList}\small\item\em This function sets the game state to \textquotesingle{}MAIN\+\_\+\+MENU\textquotesingle{}, allowing the player to return to the main menu after winning the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_ad3ff9c8ffa1396998f425deba68d269f}{check\+\_\+mouse\+\_\+clicks\+\_\+finished}} ()
+\begin{DoxyCompactList}\small\item\em This function sets the game state to \textquotesingle{}MAIN\+\_\+\+MENU\textquotesingle{}, allowing the player to return to the main menu after the game is finished. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a23cfb3dd9d42ed95c9e3e527c427ed30}{game\+\_\+draw\+\_\+time}} (\mbox{\hyperlink{struct_time}{Time}} $\ast$\mbox{\hyperlink{game__state_8c_a8a8c4b228d679334ee9b76b7c79b52f2}{timer}})
+\begin{DoxyCompactList}\small\item\em This function calculates the elapsed time since the game started and displays it in the format \char`\"{}mm\+:ss\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_ad70f7e6bd2036071b4aae2dd5b39b650}{check\+\_\+keyboard\+\_\+w}} ()
+\begin{DoxyCompactList}\small\item\em This function is responsible for detecting the \textquotesingle{}W\textquotesingle{} key press on the keyboard and performing the corresponding actions based on the current position represented by the \textquotesingle{}y\+\_\+matrix\+\_\+kbd\textquotesingle{} variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a62dbdccc2e359d731f68de9d221b77a2}{check\+\_\+keyboard\+\_\+a}} ()
+\begin{DoxyCompactList}\small\item\em This function detects the \textquotesingle{}A\textquotesingle{} key press on the keyboard and performs specific actions based on the current position represented by the \textquotesingle{}x\+\_\+matrix\+\_\+kbd\textquotesingle{} variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_ae6957c159ff7c2ebe3d588078da99979}{check\+\_\+keyboard\+\_\+s\+\_\+16x16}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}S\textquotesingle{} key press on the keyboard in a 16x16 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a60fb1161dac992f98b7e0a09b8898901}{check\+\_\+keyboard\+\_\+s\+\_\+20x16}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}S\textquotesingle{} key press on the keyboard in a 20x16 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_aa2f706a7776cf12ce04e8d49b79efe87}{check\+\_\+keyboard\+\_\+s\+\_\+28x20}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}S\textquotesingle{} key press on the keyboard in a 28x20 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a6cc5b485d0598ac614752be45c4b869f}{check\+\_\+keyboard\+\_\+d\+\_\+16x16}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}D\textquotesingle{} key press on the keyboard in a 16x16 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a4cec07225ed46962859d77f2889c635e}{check\+\_\+keyboard\+\_\+d\+\_\+20x16}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}D\textquotesingle{} key press on the keyboard in a 20x16 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_ae614c89bd6b0885c67a5352c956bff3e}{check\+\_\+keyboard\+\_\+d\+\_\+28x20}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}D\textquotesingle{} key press on the keyboard in a 28x20 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_afe4ecd7d5ea67158fd397018661105ae}{check\+\_\+keyboard\+\_\+enter\+\_\+16x16}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}Enter\textquotesingle{} key press on the keyboard in a 16x16 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a50eccb2a37ab49df20679f9fd2b8aa0c}{check\+\_\+keyboard\+\_\+enter\+\_\+20x16}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}Enter\textquotesingle{} key press on the keyboard in a 20x16 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a4aa036358e6a4d86c943cd1e6eca688c}{check\+\_\+keyboard\+\_\+enter\+\_\+28x20}} ()
+\begin{DoxyCompactList}\small\item\em This function checks for the \textquotesingle{}Enter\textquotesingle{} key press on the keyboard in a 28x20 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__state_8c_a69279d35a57aee05d4bbbc59b562eac2}{check\+\_\+keyboard\+\_\+f\+\_\+16x16}} ()
+\item 
+void \mbox{\hyperlink{game__state_8c_af61ed6db8b0b4ecab7801d3d5b347322}{check\+\_\+keyboard\+\_\+f\+\_\+20x16}} ()
+\item 
+void \mbox{\hyperlink{game__state_8c_ae9b6dcc8b4f7e87487f1e5b5884547d3}{check\+\_\+keyboard\+\_\+f\+\_\+28x20}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{game__state_8h_ad0ed1832dd134806ad335cdcc1a59ad2}{game\+\_\+state}} \mbox{\hyperlink{game__state_8c_aa695ed09e3998fb66889f148925a12aa}{state}} = \mbox{\hyperlink{game__state_8h_ad0ed1832dd134806ad335cdcc1a59ad2ac22743f1fc74de09544ecc9bab74a17b}{MAIN\+\_\+\+MENU}}
+\item 
+\mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{game__state_8c_a894a7c3b0c6a008d5f86c438da4e4e57}{cursor\+\_\+pos}} = \{400, 300\}
+\item 
+int \mbox{\hyperlink{game__state_8c_a786a393e41ef89576d517261c3a37956}{mines}}
+\item 
+int \mbox{\hyperlink{game__state_8c_aa76f8bcb031972e8f43d060fad32a13f}{x\+\_\+tiles}}
+\item 
+int \mbox{\hyperlink{game__state_8c_a471b948a79fd4ba320449551ee3e2dd1}{y\+\_\+tiles}}
+\item 
+int \mbox{\hyperlink{game__state_8c_a22a83b43d90fe93c88c92a381a301807}{y\+\_\+matrix}}
+\item 
+int \mbox{\hyperlink{game__state_8c_aac9401e158cb3f1fea9a45886fbb01ab}{x\+\_\+matrix}}
+\item 
+int \mbox{\hyperlink{game__state_8c_ab63b044f0410854e49ba14f632464675}{y\+\_\+matrix\+\_\+kbd}}
+\item 
+int \mbox{\hyperlink{game__state_8c_ad92963bb365bccc7f340886ef1e0d96f}{x\+\_\+matrix\+\_\+kbd}}
+\item 
+char \mbox{\hyperlink{game__state_8c_a54e5262a3b1f85076342555f94ae71c6}{board\+\_\+16x16}} \mbox{[}16\mbox{]}\mbox{[}16\mbox{]}
+\item 
+char \mbox{\hyperlink{game__state_8c_a82becbb49886a3d854ad1d899b7b1373}{board\+\_\+20x16}} \mbox{[}20\mbox{]}\mbox{[}16\mbox{]}
+\item 
+char \mbox{\hyperlink{game__state_8c_aecc9f703e2c2025503140698b90d7954}{board\+\_\+28x20}} \mbox{[}28\mbox{]}\mbox{[}20\mbox{]}
+\item 
+int \mbox{\hyperlink{game__state_8c_a7625dd53d2e6746f33d82e3a0a4315c4}{y\+\_\+coord}}
+\item 
+int \mbox{\hyperlink{game__state_8c_a3a36589c3de65f38a6a2413d3c7d7627}{x\+\_\+coord}}
+\item 
+\mbox{\hyperlink{struct_time}{Time}} $\ast$ \mbox{\hyperlink{game__state_8c_a8a8c4b228d679334ee9b76b7c79b52f2}{timer}}
+\item 
+\mbox{\hyperlink{struct_time}{Time}} $\ast$ \mbox{\hyperlink{game__state_8c_a81effbf3d418a5566de7969b78de6114}{initial\+Timer}}
+\item 
+int \mbox{\hyperlink{game__state_8c_a86428d3a194fd8d6a819f27a65d0a0d3}{m1}}
+\item 
+int \mbox{\hyperlink{game__state_8c_a4bf498bfd9de66e2b0aba618200ceee5}{m2}}
+\item 
+int \mbox{\hyperlink{game__state_8c_acfb6b9e2b00e34da4313b463c341e597}{s1}}
+\item 
+int \mbox{\hyperlink{game__state_8c_a4c68ffea7c3affb6a0ee6219aba89a69}{s2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__state_8c_a2197621c2978ad9dabc69238471854f7}\label{game__state_8c_a2197621c2978ad9dabc69238471854f7}} 
+\index{game\_state.c@{game\_state.c}!\_draw\_board@{\_draw\_board}}
+\index{\_draw\_board@{\_draw\_board}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{\_draw\_board()}{\_draw\_board()}}
+{\footnotesize\ttfamily void \+\_\+draw\+\_\+board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calls the specific draw function for a 16x16 board to draw the game board on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{game__state_8c_a2b06b2805c7c002bf943188a9f3e0889}\label{game__state_8c_a2b06b2805c7c002bf943188a9f3e0889}} 
+\index{game\_state.c@{game\_state.c}!\_gameover\_menu@{\_gameover\_menu}}
+\index{\_gameover\_menu@{\_gameover\_menu}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{\_gameover\_menu()}{\_gameover\_menu()}}
+{\footnotesize\ttfamily void \+\_\+gameover\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the game over menu on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{game__state_8c_a6196304024954107645a1db9755caa0e}\label{game__state_8c_a6196304024954107645a1db9755caa0e}} 
+\index{game\_state.c@{game\_state.c}!\_instructions\_menu@{\_instructions\_menu}}
+\index{\_instructions\_menu@{\_instructions\_menu}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{\_instructions\_menu()}{\_instructions\_menu()}}
+{\footnotesize\ttfamily void \+\_\+instructions\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calls the specific draw function to draw the instruction menu. 
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{game__state_8c_a5a77ee52a28fda90e08f909a1eefcd53}\label{game__state_8c_a5a77ee52a28fda90e08f909a1eefcd53}} 
+\index{game\_state.c@{game\_state.c}!\_main\_menu@{\_main\_menu}}
+\index{\_main\_menu@{\_main\_menu}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{\_main\_menu()}{\_main\_menu()}}
+{\footnotesize\ttfamily void \+\_\+main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calls the specific draw function to draw the main menu. 
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{game__state_8c_a424898e501816d36dbc33937ca44696a}\label{game__state_8c_a424898e501816d36dbc33937ca44696a}} 
+\index{game\_state.c@{game\_state.c}!\_win\_menu@{\_win\_menu}}
+\index{\_win\_menu@{\_win\_menu}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{\_win\_menu()}{\_win\_menu()}}
+{\footnotesize\ttfamily void \+\_\+win\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calls the specific draw function to draw the win menu. 
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{game__state_8c_a62dbdccc2e359d731f68de9d221b77a2}\label{game__state_8c_a62dbdccc2e359d731f68de9d221b77a2}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_a@{check\_keyboard\_a}}
+\index{check\_keyboard\_a@{check\_keyboard\_a}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_a()}{check\_keyboard\_a()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+a (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function detects the \textquotesingle{}A\textquotesingle{} key press on the keyboard and performs specific actions based on the current position represented by the \textquotesingle{}x\+\_\+matrix\+\_\+kbd\textquotesingle{} variable. 
+
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{game__state_8c_a6cc5b485d0598ac614752be45c4b869f}\label{game__state_8c_a6cc5b485d0598ac614752be45c4b869f}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_d\_16x16@{check\_keyboard\_d\_16x16}}
+\index{check\_keyboard\_d\_16x16@{check\_keyboard\_d\_16x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_d\_16x16()}{check\_keyboard\_d\_16x16()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+d\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}D\textquotesingle{} key press on the keyboard in a 16x16 grid. 
+
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{game__state_8c_a4cec07225ed46962859d77f2889c635e}\label{game__state_8c_a4cec07225ed46962859d77f2889c635e}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_d\_20x16@{check\_keyboard\_d\_20x16}}
+\index{check\_keyboard\_d\_20x16@{check\_keyboard\_d\_20x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_d\_20x16()}{check\_keyboard\_d\_20x16()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+d\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}D\textquotesingle{} key press on the keyboard in a 20x16 grid. 
+
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{game__state_8c_ae614c89bd6b0885c67a5352c956bff3e}\label{game__state_8c_ae614c89bd6b0885c67a5352c956bff3e}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_d\_28x20@{check\_keyboard\_d\_28x20}}
+\index{check\_keyboard\_d\_28x20@{check\_keyboard\_d\_28x20}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_d\_28x20()}{check\_keyboard\_d\_28x20()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+d\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}D\textquotesingle{} key press on the keyboard in a 28x20 grid. 
+
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{game__state_8c_afe4ecd7d5ea67158fd397018661105ae}\label{game__state_8c_afe4ecd7d5ea67158fd397018661105ae}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_enter\_16x16@{check\_keyboard\_enter\_16x16}}
+\index{check\_keyboard\_enter\_16x16@{check\_keyboard\_enter\_16x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_enter\_16x16()}{check\_keyboard\_enter\_16x16()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+enter\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}Enter\textquotesingle{} key press on the keyboard in a 16x16 grid. 
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{game__state_8c_a50eccb2a37ab49df20679f9fd2b8aa0c}\label{game__state_8c_a50eccb2a37ab49df20679f9fd2b8aa0c}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_enter\_20x16@{check\_keyboard\_enter\_20x16}}
+\index{check\_keyboard\_enter\_20x16@{check\_keyboard\_enter\_20x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_enter\_20x16()}{check\_keyboard\_enter\_20x16()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+enter\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}Enter\textquotesingle{} key press on the keyboard in a 20x16 grid. 
+
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{game__state_8c_a4aa036358e6a4d86c943cd1e6eca688c}\label{game__state_8c_a4aa036358e6a4d86c943cd1e6eca688c}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_enter\_28x20@{check\_keyboard\_enter\_28x20}}
+\index{check\_keyboard\_enter\_28x20@{check\_keyboard\_enter\_28x20}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_enter\_28x20()}{check\_keyboard\_enter\_28x20()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+enter\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}Enter\textquotesingle{} key press on the keyboard in a 28x20 grid. 
+
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{game__state_8c_a69279d35a57aee05d4bbbc59b562eac2}\label{game__state_8c_a69279d35a57aee05d4bbbc59b562eac2}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_f\_16x16@{check\_keyboard\_f\_16x16}}
+\index{check\_keyboard\_f\_16x16@{check\_keyboard\_f\_16x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_f\_16x16()}{check\_keyboard\_f\_16x16()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+f\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function checks for the \textquotesingle{}F\textquotesingle{} key press on the keyboard in a 16x16 grid. Here is the caller graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{game__state_8c_af61ed6db8b0b4ecab7801d3d5b347322}\label{game__state_8c_af61ed6db8b0b4ecab7801d3d5b347322}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_f\_20x16@{check\_keyboard\_f\_20x16}}
+\index{check\_keyboard\_f\_20x16@{check\_keyboard\_f\_20x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_f\_20x16()}{check\_keyboard\_f\_20x16()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+f\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function checks for the \textquotesingle{}F\textquotesingle{} key press on the keyboard in a 20x16 grid. Here is the caller graph for this function\+:
+% FIG 21
+\mbox{\Hypertarget{game__state_8c_ae9b6dcc8b4f7e87487f1e5b5884547d3}\label{game__state_8c_ae9b6dcc8b4f7e87487f1e5b5884547d3}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_f\_28x20@{check\_keyboard\_f\_28x20}}
+\index{check\_keyboard\_f\_28x20@{check\_keyboard\_f\_28x20}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_f\_28x20()}{check\_keyboard\_f\_28x20()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+f\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function checks for the \textquotesingle{}F\textquotesingle{} key press on the keyboard in a 28x20 grid. Here is the caller graph for this function\+:
+% FIG 22
+\mbox{\Hypertarget{game__state_8c_ae6957c159ff7c2ebe3d588078da99979}\label{game__state_8c_ae6957c159ff7c2ebe3d588078da99979}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_s\_16x16@{check\_keyboard\_s\_16x16}}
+\index{check\_keyboard\_s\_16x16@{check\_keyboard\_s\_16x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_s\_16x16()}{check\_keyboard\_s\_16x16()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+s\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}S\textquotesingle{} key press on the keyboard in a 16x16 grid. 
+
+Here is the caller graph for this function\+:
+% FIG 23
+\mbox{\Hypertarget{game__state_8c_a60fb1161dac992f98b7e0a09b8898901}\label{game__state_8c_a60fb1161dac992f98b7e0a09b8898901}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_s\_20x16@{check\_keyboard\_s\_20x16}}
+\index{check\_keyboard\_s\_20x16@{check\_keyboard\_s\_20x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_s\_20x16()}{check\_keyboard\_s\_20x16()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+s\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}S\textquotesingle{} key press on the keyboard in a 20x16 grid. 
+
+Here is the caller graph for this function\+:
+% FIG 24
+\mbox{\Hypertarget{game__state_8c_aa2f706a7776cf12ce04e8d49b79efe87}\label{game__state_8c_aa2f706a7776cf12ce04e8d49b79efe87}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_s\_28x20@{check\_keyboard\_s\_28x20}}
+\index{check\_keyboard\_s\_28x20@{check\_keyboard\_s\_28x20}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_s\_28x20()}{check\_keyboard\_s\_28x20()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+s\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for the \textquotesingle{}S\textquotesingle{} key press on the keyboard in a 28x20 grid. 
+
+Here is the caller graph for this function\+:
+% FIG 25
+\mbox{\Hypertarget{game__state_8c_ad70f7e6bd2036071b4aae2dd5b39b650}\label{game__state_8c_ad70f7e6bd2036071b4aae2dd5b39b650}} 
+\index{game\_state.c@{game\_state.c}!check\_keyboard\_w@{check\_keyboard\_w}}
+\index{check\_keyboard\_w@{check\_keyboard\_w}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_keyboard\_w()}{check\_keyboard\_w()}}
+{\footnotesize\ttfamily void check\+\_\+keyboard\+\_\+w (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for detecting the \textquotesingle{}W\textquotesingle{} key press on the keyboard and performing the corresponding actions based on the current position represented by the \textquotesingle{}y\+\_\+matrix\+\_\+kbd\textquotesingle{} variable. 
+
+Here is the caller graph for this function\+:
+% FIG 26
+\mbox{\Hypertarget{game__state_8c_a1e3d437fbea0d84bafff6b2de26d35c3}\label{game__state_8c_a1e3d437fbea0d84bafff6b2de26d35c3}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_click\_left\_beginner@{check\_mouse\_click\_left\_beginner}}
+\index{check\_mouse\_click\_left\_beginner@{check\_mouse\_click\_left\_beginner}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_click\_left\_beginner()}{check\_mouse\_click\_left\_beginner()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+click\+\_\+left\+\_\+beginner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function handles the left mouse click event and updates the game state accordingly. 
+
+This function checks for a left mouse click in the beginner mode. Here is the call graph for this function\+:
+% FIG 27
+Here is the caller graph for this function\+:
+% FIG 28
+\mbox{\Hypertarget{game__state_8c_ad9c841e2dda5cb82a231277e6e001237}\label{game__state_8c_ad9c841e2dda5cb82a231277e6e001237}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_click\_left\_hard@{check\_mouse\_click\_left\_hard}}
+\index{check\_mouse\_click\_left\_hard@{check\_mouse\_click\_left\_hard}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_click\_left\_hard()}{check\_mouse\_click\_left\_hard()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+click\+\_\+left\+\_\+hard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for a left mouse click in the hard mode. 
+
+Here is the call graph for this function\+:
+% FIG 29
+Here is the caller graph for this function\+:
+% FIG 30
+\mbox{\Hypertarget{game__state_8c_a687ba83630e1bf3e38216dd348c667c4}\label{game__state_8c_a687ba83630e1bf3e38216dd348c667c4}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_click\_left\_medium@{check\_mouse\_click\_left\_medium}}
+\index{check\_mouse\_click\_left\_medium@{check\_mouse\_click\_left\_medium}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_click\_left\_medium()}{check\_mouse\_click\_left\_medium()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+click\+\_\+left\+\_\+medium (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for a left mouse click in the medium mode. 
+
+Here is the call graph for this function\+:
+% FIG 31
+Here is the caller graph for this function\+:
+% FIG 32
+\mbox{\Hypertarget{game__state_8c_afb8b15ae86a02d10786cbe38e9537b4c}\label{game__state_8c_afb8b15ae86a02d10786cbe38e9537b4c}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_click\_right\_beginner@{check\_mouse\_click\_right\_beginner}}
+\index{check\_mouse\_click\_right\_beginner@{check\_mouse\_click\_right\_beginner}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_click\_right\_beginner()}{check\_mouse\_click\_right\_beginner()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+click\+\_\+right\+\_\+beginner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function handles the right mouse click event and updates the game state accordingly. 
+
+This function checks for a right mouse click in the beginner mode. Here is the call graph for this function\+:
+% FIG 33
+Here is the caller graph for this function\+:
+% FIG 34
+\mbox{\Hypertarget{game__state_8c_a3bd747a822aefc2adca7100412ad1464}\label{game__state_8c_a3bd747a822aefc2adca7100412ad1464}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_click\_right\_hard@{check\_mouse\_click\_right\_hard}}
+\index{check\_mouse\_click\_right\_hard@{check\_mouse\_click\_right\_hard}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_click\_right\_hard()}{check\_mouse\_click\_right\_hard()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+click\+\_\+right\+\_\+hard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for a right mouse click in the hard mode. 
+
+Here is the call graph for this function\+:
+% FIG 35
+Here is the caller graph for this function\+:
+% FIG 36
+\mbox{\Hypertarget{game__state_8c_ae74320a968191dd9fddd0e7c65ade8ca}\label{game__state_8c_ae74320a968191dd9fddd0e7c65ade8ca}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_click\_right\_medium@{check\_mouse\_click\_right\_medium}}
+\index{check\_mouse\_click\_right\_medium@{check\_mouse\_click\_right\_medium}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_click\_right\_medium()}{check\_mouse\_click\_right\_medium()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+click\+\_\+right\+\_\+medium (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks for a right mouse click in the medium mode. 
+
+Here is the call graph for this function\+:
+% FIG 37
+Here is the caller graph for this function\+:
+% FIG 38
+\mbox{\Hypertarget{game__state_8c_ad3ff9c8ffa1396998f425deba68d269f}\label{game__state_8c_ad3ff9c8ffa1396998f425deba68d269f}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_clicks\_finished@{check\_mouse\_clicks\_finished}}
+\index{check\_mouse\_clicks\_finished@{check\_mouse\_clicks\_finished}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_clicks\_finished()}{check\_mouse\_clicks\_finished()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+clicks\+\_\+finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function sets the game state to \textquotesingle{}MAIN\+\_\+\+MENU\textquotesingle{}, allowing the player to return to the main menu after the game is finished. 
+
+Here is the caller graph for this function\+:
+% FIG 39
+\mbox{\Hypertarget{game__state_8c_a22e3ee8916b6fb932cdd0cfa56804655}\label{game__state_8c_a22e3ee8916b6fb932cdd0cfa56804655}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_clicks\_menu@{check\_mouse\_clicks\_menu}}
+\index{check\_mouse\_clicks\_menu@{check\_mouse\_clicks\_menu}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_clicks\_menu()}{check\_mouse\_clicks\_menu()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+clicks\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function checks the mouse clicks within the menu screen and updates the game state accordingly. 
+
+Here is the call graph for this function\+:
+% FIG 40
+Here is the caller graph for this function\+:
+% FIG 41
+\mbox{\Hypertarget{game__state_8c_a7a10758af498b53f24f1ce57aaea89ce}\label{game__state_8c_a7a10758af498b53f24f1ce57aaea89ce}} 
+\index{game\_state.c@{game\_state.c}!check\_mouse\_clicks\_win@{check\_mouse\_clicks\_win}}
+\index{check\_mouse\_clicks\_win@{check\_mouse\_clicks\_win}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{check\_mouse\_clicks\_win()}{check\_mouse\_clicks\_win()}}
+{\footnotesize\ttfamily void check\+\_\+mouse\+\_\+clicks\+\_\+win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function sets the game state to \textquotesingle{}MAIN\+\_\+\+MENU\textquotesingle{}, allowing the player to return to the main menu after winning the game. 
+
+Here is the caller graph for this function\+:
+% FIG 42
+\mbox{\Hypertarget{game__state_8c_a36951ff3bd81205b3d399c2735d38b59}\label{game__state_8c_a36951ff3bd81205b3d399c2735d38b59}} 
+\index{game\_state.c@{game\_state.c}!cursor\_draw@{cursor\_draw}}
+\index{cursor\_draw@{cursor\_draw}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{cursor\_draw()}{cursor\_draw()}}
+{\footnotesize\ttfamily void cursor\+\_\+draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function takes the current position of the cursor and draws it on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 43
+Here is the caller graph for this function\+:
+% FIG 44
+\mbox{\Hypertarget{game__state_8c_a3b714459f8030f49c71cfe0bab357a4e}\label{game__state_8c_a3b714459f8030f49c71cfe0bab357a4e}} 
+\index{game\_state.c@{game\_state.c}!cursor\_erase@{cursor\_erase}}
+\index{cursor\_erase@{cursor\_erase}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{cursor\_erase()}{cursor\_erase()}}
+{\footnotesize\ttfamily void cursor\+\_\+erase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calls the specific erase function to remove the cursor. 
+
+Here is the call graph for this function\+:
+% FIG 45
+Here is the caller graph for this function\+:
+% FIG 46
+\mbox{\Hypertarget{game__state_8c_a23cfb3dd9d42ed95c9e3e527c427ed30}\label{game__state_8c_a23cfb3dd9d42ed95c9e3e527c427ed30}} 
+\index{game\_state.c@{game\_state.c}!game\_draw\_time@{game\_draw\_time}}
+\index{game\_draw\_time@{game\_draw\_time}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{game\_draw\_time()}{game\_draw\_time()}}
+{\footnotesize\ttfamily void game\+\_\+draw\+\_\+time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_time}{Time}} $\ast$}]{timer }\end{DoxyParamCaption})}
+
+
+
+This function calculates the elapsed time since the game started and displays it in the format \char`\"{}mm\+:ss\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer} & An object of type \mbox{\hyperlink{struct_time}{Time}}. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 47
+Here is the caller graph for this function\+:
+% FIG 48
+\mbox{\Hypertarget{game__state_8c_a814afd9aa373a35da8e7498906b94d62}\label{game__state_8c_a814afd9aa373a35da8e7498906b94d62}} 
+\index{game\_state.c@{game\_state.c}!start\_game\_16x16@{start\_game\_16x16}}
+\index{start\_game\_16x16@{start\_game\_16x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{start\_game\_16x16()}{start\_game\_16x16()}}
+{\footnotesize\ttfamily void start\+\_\+game\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function starts a game with a 16x16 grid. Initializes the game timer, sets the number of tiles in the x and y directions, and places mines on the game board. 
+
+Here is the call graph for this function\+:
+% FIG 49
+Here is the caller graph for this function\+:
+% FIG 50
+\mbox{\Hypertarget{game__state_8c_ade11f77cf98a5c65c075cec3349926c9}\label{game__state_8c_ade11f77cf98a5c65c075cec3349926c9}} 
+\index{game\_state.c@{game\_state.c}!start\_game\_20x16@{start\_game\_20x16}}
+\index{start\_game\_20x16@{start\_game\_20x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{start\_game\_20x16()}{start\_game\_20x16()}}
+{\footnotesize\ttfamily void start\+\_\+game\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function starts a game on a 20x16 board. 
+
+Here is the call graph for this function\+:
+% FIG 51
+Here is the caller graph for this function\+:
+% FIG 52
+\mbox{\Hypertarget{game__state_8c_a72d3dc2882239cc9fc80e728abd24f3b}\label{game__state_8c_a72d3dc2882239cc9fc80e728abd24f3b}} 
+\index{game\_state.c@{game\_state.c}!start\_game\_28x20@{start\_game\_28x20}}
+\index{start\_game\_28x20@{start\_game\_28x20}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{start\_game\_28x20()}{start\_game\_28x20()}}
+{\footnotesize\ttfamily void start\+\_\+game\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function starts a game on a 28x20 board. 
+
+Here is the call graph for this function\+:
+% FIG 53
+Here is the caller graph for this function\+:
+% FIG 54
+\mbox{\Hypertarget{game__state_8c_a29568e025250a8489157bc1edb122f33}\label{game__state_8c_a29568e025250a8489157bc1edb122f33}} 
+\index{game\_state.c@{game\_state.c}!update\_cursor@{update\_cursor}}
+\index{update\_cursor@{update\_cursor}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{update\_cursor()}{update\_cursor()}}
+{\footnotesize\ttfamily void update\+\_\+cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x\+\_\+val,  }\item[{uint16\+\_\+t}]{y\+\_\+val }\end{DoxyParamCaption})}
+
+
+
+This function updates the position of the cursor based on the provided movement values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+val} & The amount of movement in the x direction. \\
+\hline
+{\em y\+\_\+val} & The amount of movement in the y direction. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 55
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game__state_8c_a54e5262a3b1f85076342555f94ae71c6}\label{game__state_8c_a54e5262a3b1f85076342555f94ae71c6}} 
+\index{game\_state.c@{game\_state.c}!board\_16x16@{board\_16x16}}
+\index{board\_16x16@{board\_16x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{board\_16x16}{board\_16x16}}
+{\footnotesize\ttfamily char board\+\_\+16x16\mbox{[}16\mbox{]}\mbox{[}16\mbox{]}}
+
+\mbox{\Hypertarget{game__state_8c_a82becbb49886a3d854ad1d899b7b1373}\label{game__state_8c_a82becbb49886a3d854ad1d899b7b1373}} 
+\index{game\_state.c@{game\_state.c}!board\_20x16@{board\_20x16}}
+\index{board\_20x16@{board\_20x16}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{board\_20x16}{board\_20x16}}
+{\footnotesize\ttfamily char board\+\_\+20x16\mbox{[}20\mbox{]}\mbox{[}16\mbox{]}}
+
+\mbox{\Hypertarget{game__state_8c_aecc9f703e2c2025503140698b90d7954}\label{game__state_8c_aecc9f703e2c2025503140698b90d7954}} 
+\index{game\_state.c@{game\_state.c}!board\_28x20@{board\_28x20}}
+\index{board\_28x20@{board\_28x20}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{board\_28x20}{board\_28x20}}
+{\footnotesize\ttfamily char board\+\_\+28x20\mbox{[}28\mbox{]}\mbox{[}20\mbox{]}}
+
+\mbox{\Hypertarget{game__state_8c_a894a7c3b0c6a008d5f86c438da4e4e57}\label{game__state_8c_a894a7c3b0c6a008d5f86c438da4e4e57}} 
+\index{game\_state.c@{game\_state.c}!cursor\_pos@{cursor\_pos}}
+\index{cursor\_pos@{cursor\_pos}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{cursor\_pos}{cursor\_pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}} cursor\+\_\+pos = \{400, 300\}}
+
+\mbox{\Hypertarget{game__state_8c_a81effbf3d418a5566de7969b78de6114}\label{game__state_8c_a81effbf3d418a5566de7969b78de6114}} 
+\index{game\_state.c@{game\_state.c}!initialTimer@{initialTimer}}
+\index{initialTimer@{initialTimer}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{initialTimer}{initialTimer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_time}{Time}}$\ast$ initial\+Timer}
+
+\mbox{\Hypertarget{game__state_8c_a86428d3a194fd8d6a819f27a65d0a0d3}\label{game__state_8c_a86428d3a194fd8d6a819f27a65d0a0d3}} 
+\index{game\_state.c@{game\_state.c}!m1@{m1}}
+\index{m1@{m1}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{m1}{m1}}
+{\footnotesize\ttfamily int m1}
+
+\mbox{\Hypertarget{game__state_8c_a4bf498bfd9de66e2b0aba618200ceee5}\label{game__state_8c_a4bf498bfd9de66e2b0aba618200ceee5}} 
+\index{game\_state.c@{game\_state.c}!m2@{m2}}
+\index{m2@{m2}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{m2}{m2}}
+{\footnotesize\ttfamily int m2}
+
+\mbox{\Hypertarget{game__state_8c_a786a393e41ef89576d517261c3a37956}\label{game__state_8c_a786a393e41ef89576d517261c3a37956}} 
+\index{game\_state.c@{game\_state.c}!mines@{mines}}
+\index{mines@{mines}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{mines}{mines}}
+{\footnotesize\ttfamily int mines}
+
+\mbox{\Hypertarget{game__state_8c_acfb6b9e2b00e34da4313b463c341e597}\label{game__state_8c_acfb6b9e2b00e34da4313b463c341e597}} 
+\index{game\_state.c@{game\_state.c}!s1@{s1}}
+\index{s1@{s1}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{s1}{s1}}
+{\footnotesize\ttfamily int s1}
+
+\mbox{\Hypertarget{game__state_8c_a4c68ffea7c3affb6a0ee6219aba89a69}\label{game__state_8c_a4c68ffea7c3affb6a0ee6219aba89a69}} 
+\index{game\_state.c@{game\_state.c}!s2@{s2}}
+\index{s2@{s2}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{s2}{s2}}
+{\footnotesize\ttfamily int s2}
+
+\mbox{\Hypertarget{game__state_8c_aa695ed09e3998fb66889f148925a12aa}\label{game__state_8c_aa695ed09e3998fb66889f148925a12aa}} 
+\index{game\_state.c@{game\_state.c}!state@{state}}
+\index{state@{state}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{game__state_8h_ad0ed1832dd134806ad335cdcc1a59ad2}{game\+\_\+state}} state = \mbox{\hyperlink{game__state_8h_ad0ed1832dd134806ad335cdcc1a59ad2ac22743f1fc74de09544ecc9bab74a17b}{MAIN\+\_\+\+MENU}}}
+
+\mbox{\Hypertarget{game__state_8c_a8a8c4b228d679334ee9b76b7c79b52f2}\label{game__state_8c_a8a8c4b228d679334ee9b76b7c79b52f2}} 
+\index{game\_state.c@{game\_state.c}!timer@{timer}}
+\index{timer@{timer}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_time}{Time}}$\ast$ timer}
+
+\mbox{\Hypertarget{game__state_8c_a3a36589c3de65f38a6a2413d3c7d7627}\label{game__state_8c_a3a36589c3de65f38a6a2413d3c7d7627}} 
+\index{game\_state.c@{game\_state.c}!x\_coord@{x\_coord}}
+\index{x\_coord@{x\_coord}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{x\_coord}{x\_coord}}
+{\footnotesize\ttfamily int x\+\_\+coord}
+
+\mbox{\Hypertarget{game__state_8c_aac9401e158cb3f1fea9a45886fbb01ab}\label{game__state_8c_aac9401e158cb3f1fea9a45886fbb01ab}} 
+\index{game\_state.c@{game\_state.c}!x\_matrix@{x\_matrix}}
+\index{x\_matrix@{x\_matrix}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{x\_matrix}{x\_matrix}}
+{\footnotesize\ttfamily int x\+\_\+matrix}
+
+\mbox{\Hypertarget{game__state_8c_ad92963bb365bccc7f340886ef1e0d96f}\label{game__state_8c_ad92963bb365bccc7f340886ef1e0d96f}} 
+\index{game\_state.c@{game\_state.c}!x\_matrix\_kbd@{x\_matrix\_kbd}}
+\index{x\_matrix\_kbd@{x\_matrix\_kbd}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{x\_matrix\_kbd}{x\_matrix\_kbd}}
+{\footnotesize\ttfamily int x\+\_\+matrix\+\_\+kbd}
+
+\mbox{\Hypertarget{game__state_8c_aa76f8bcb031972e8f43d060fad32a13f}\label{game__state_8c_aa76f8bcb031972e8f43d060fad32a13f}} 
+\index{game\_state.c@{game\_state.c}!x\_tiles@{x\_tiles}}
+\index{x\_tiles@{x\_tiles}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{x\_tiles}{x\_tiles}}
+{\footnotesize\ttfamily int x\+\_\+tiles}
+
+\mbox{\Hypertarget{game__state_8c_a7625dd53d2e6746f33d82e3a0a4315c4}\label{game__state_8c_a7625dd53d2e6746f33d82e3a0a4315c4}} 
+\index{game\_state.c@{game\_state.c}!y\_coord@{y\_coord}}
+\index{y\_coord@{y\_coord}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{y\_coord}{y\_coord}}
+{\footnotesize\ttfamily int y\+\_\+coord}
+
+\mbox{\Hypertarget{game__state_8c_a22a83b43d90fe93c88c92a381a301807}\label{game__state_8c_a22a83b43d90fe93c88c92a381a301807}} 
+\index{game\_state.c@{game\_state.c}!y\_matrix@{y\_matrix}}
+\index{y\_matrix@{y\_matrix}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{y\_matrix}{y\_matrix}}
+{\footnotesize\ttfamily int y\+\_\+matrix}
+
+\mbox{\Hypertarget{game__state_8c_ab63b044f0410854e49ba14f632464675}\label{game__state_8c_ab63b044f0410854e49ba14f632464675}} 
+\index{game\_state.c@{game\_state.c}!y\_matrix\_kbd@{y\_matrix\_kbd}}
+\index{y\_matrix\_kbd@{y\_matrix\_kbd}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{y\_matrix\_kbd}{y\_matrix\_kbd}}
+{\footnotesize\ttfamily int y\+\_\+matrix\+\_\+kbd}
+
+\mbox{\Hypertarget{game__state_8c_a471b948a79fd4ba320449551ee3e2dd1}\label{game__state_8c_a471b948a79fd4ba320449551ee3e2dd1}} 
+\index{game\_state.c@{game\_state.c}!y\_tiles@{y\_tiles}}
+\index{y\_tiles@{y\_tiles}!game\_state.c@{game\_state.c}}
+\doxysubsubsection{\texorpdfstring{y\_tiles}{y\_tiles}}
+{\footnotesize\ttfamily int y\+\_\+tiles}
+

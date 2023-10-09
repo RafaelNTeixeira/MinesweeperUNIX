@@ -1,0 +1,767 @@
+\hypertarget{display_8c}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/game/display.c File Reference}
+\label{display_8c}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/display.c@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/display.c}}
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+Include dependency graph for display.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{display_8c_a27e9eebf45e82d55ef8bed8f46b6a8c4}{load\+\_\+xpms}} ()
+\begin{DoxyCompactList}\small\item\em This function loads various XPM images into memory. Each XPM image is loaded using the \textquotesingle{}xpm\+\_\+load\textquotesingle{} function and stored in the corresponding variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a83361e027b6f0dd917305f1f82dedda3}{draw\+\_\+main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function is responsible for drawing the main menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a9144e9ab98a9800b7382fba53b72471d}{draw\+\_\+board\+\_\+16x16}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the 16x16 game board on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a631f72b13e6bb830b3ce77d742c10359}{draw\+\_\+board\+\_\+20x16}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the 20x16 game board on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a174d6af7b755d657e5f8c6d9f3e49a91}{draw\+\_\+board\+\_\+28x20}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the 28x20 game board on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a4a12832bc13f38307477e0452d4d857c}{draw\+\_\+grid\+\_\+16x16}} (char board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_abc6134f616115cd982e85d71cf64ad32}{draw\+\_\+grid\+\_\+20x16}} (char board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a5c17e0316425b8f6f1052ab0dcb7f682}{draw\+\_\+grid\+\_\+28x20}} (char board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a9ea00b036c65c786e005faf7f5364d4c}{draw\+\_\+face\+Restart\+\_\+16x16}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 16x16 game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a8d46a9bea15758a57e2cbd5214f8faff}{draw\+\_\+face\+Restart\+\_\+20x16}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 20x16 game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a7eb431064a6d350a8ea1ffbe3d0a9a50}{draw\+\_\+face\+Restart\+\_\+28x20}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 28x20 game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a2495bd3d32098323c9fa5e9699a1b05d}{draw\+\_\+press\+Cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This function draws the \char`\"{}pressed cell\char`\"{} image on the screen at the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a58b56a9af02d37c0b66d88674e579da3}{draw\+\_\+cursor}} (uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em This function is responsible for drawing the cursor on the screen at the specified coordinates (x, y). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_aa1156b1e9f5177ad9f3215f1f7a19280}{erase\+\_\+cursor}} (uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em This function is responsible for erasing the cursor from the screen at the specified coordinates (x, y). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_ad591a81c7dd7fe49e0732eee1c55c725}{draw\+\_\+instructions\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function displays the \char`\"{}instructions menu\char`\"{} image on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_ab2df83aff4dc3a6418146d961f26b54b}{draw\+\_\+gameover\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function displays the \char`\"{}gameover menu\char`\"{} image on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a97df0f6e4184d84c9e3871042b94bc3a}{draw\+\_\+number}} (int number, int x, int y)
+\begin{DoxyCompactList}\small\item\em This function selects the appropriate XPM image based on the provided number and uses the draw\+\_\+xpm function to draw it on the screen at the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a179e5407907bfb96d92248cd0d0f9be7}{draw\+\_\+colon}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This function draws a colon symbol on the screen at the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a76699761812d390f73ade4e7bdcf448e}{draw\+\_\+final\+\_\+time}} (int \mbox{\hyperlink{game__state_8c_a86428d3a194fd8d6a819f27a65d0a0d3}{m1}}, int \mbox{\hyperlink{game__state_8c_a4bf498bfd9de66e2b0aba618200ceee5}{m2}}, int \mbox{\hyperlink{game__state_8c_acfb6b9e2b00e34da4313b463c341e597}{s1}}, int \mbox{\hyperlink{game__state_8c_a4c68ffea7c3affb6a0ee6219aba89a69}{s2}})
+\begin{DoxyCompactList}\small\item\em This function draws the final time on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_a947be19a1ddc3c2bdcddce8fe4c1b7de}{draw\+\_\+win\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function displays the \char`\"{}win menu\char`\"{} image on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8c_ab7c39a04e19382ac09a860e6b6512105}{draw\+\_\+selected\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This function is used to visually represent a selected cell on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a2815145a7fe675197473162e955f34dc}{face\+Game\+Over}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_ab4adcbda9ab6343e6f2201ff39ff5bbd}{face\+Restart}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a085da5e077460bc52b2e1cd8994631a6}{instructions\+Button}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a31923f7ffa838a3312041bacee568ad7}{play\+Button}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_ab029a4063559409d1a861ffcdb660aa8}{quit\+Button}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a0e5261db6f4a81633febfa7945777019}{banner\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_aff00c98e43a5b0f91d4cf101485795af}{mine\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_af2a1bef418e89a99ea1ed060001f44cf}{normal\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a026d2b34345177c999cd194dc724037c}{press\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a9799ae93bd76e5f0627548674deb4311}{one\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a307f342aa543564582081f4c46081bfc}{two\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_abc26d2291d1c60bd6bf3cbab00e0b3b0}{three\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a123448c3df2e44e80c092f4a84517c0f}{four\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a0165bcfda95ea6c7bdbcec4e79709445}{five\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a2bb68568b2e493da503c52848c30ae9f}{six\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_af8cb1658521a849bd30fa066d65a7d3e}{seven\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a17174a37228f25ae767152098e6bdfed}{eight\+Cell}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_aa66c44b215ee497c47674882fc466e9f}{selected}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_abe1dc2535f74dd2b881998ae97bad22b}{colon}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a4c69ee4e7b67e855249cf3b9f66d99ae}{zero}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a9b034c363d055f9df18d1a10c42e501b}{one}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_ab6803d44b5db00e0928a077628b4ff0b}{two}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_abf155d9777dcf10bfea3592038320f53}{three}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a28e995dbdaf728c9dc83baa953098ecc}{four}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a2ff9c0f7beb921fefa53034601e47d9a}{five}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a1fe7784c6cf5cff30b00f030f4f62298}{six}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_ad3af128b4628c91b43a3f5d1f014e543}{seven}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a1be71edbf01ce2da7f41e00c8b073c2b}{eight}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a79e1139e3876bd7633e5e5cc5fa3b0b2}{nine}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a89c150515349754244ab4591fd180b42}{play\+\_\+16x16}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a7dc3704c4a9a705f86b72ecc7e0327a7}{play\+\_\+20x16}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_ab744be605b25b8ab8fcbbaf534b684cd}{play\+\_\+28x20}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a69dbf8c732ac94bc3d7407e02b919437}{grid\+\_\+16x16}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a8a13170be8130e5a0ae108d628a074a2}{grid\+\_\+20x16}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_aaaf735758ce457593d8bc2ba1b8e5df8}{grid\+\_\+28x20}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a632b0a796c388aa5cf8a762ff0790256}{font}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_aad4d7dabc0024ef38b72fb388d76b170}{font\+\_\+white}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_ab344452c360efd75914e0c88e39dd329}{cursor}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a47752fec5dc23b5723668c27b4fcad7d}{empty\+\_\+cursor}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a8f0cc8329d87377dd59becfb7fb16daa}{title}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a74faba81427c896a1147e447cae414e9}{main\+\_\+menu}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_abe294fb49a3cbb87f30d665d521e02a1}{instructions\+Page}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_a5da935198e504548761fd15206dd5c90}{game\+Over}}
+\item 
+xpm\+\_\+image\+\_\+t \mbox{\hyperlink{display_8c_aaa675b9875064ed91104b1f23b9bf710}{game\+Win}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{display_8c_a9144e9ab98a9800b7382fba53b72471d}\label{display_8c_a9144e9ab98a9800b7382fba53b72471d}} 
+\index{display.c@{display.c}!draw\_board\_16x16@{draw\_board\_16x16}}
+\index{draw\_board\_16x16@{draw\_board\_16x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_board\_16x16()}{draw\_board\_16x16()}}
+{\footnotesize\ttfamily void draw\+\_\+board\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the 16x16 game board on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{display_8c_a631f72b13e6bb830b3ce77d742c10359}\label{display_8c_a631f72b13e6bb830b3ce77d742c10359}} 
+\index{display.c@{display.c}!draw\_board\_20x16@{draw\_board\_20x16}}
+\index{draw\_board\_20x16@{draw\_board\_20x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_board\_20x16()}{draw\_board\_20x16()}}
+{\footnotesize\ttfamily void draw\+\_\+board\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the 20x16 game board on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{display_8c_a174d6af7b755d657e5f8c6d9f3e49a91}\label{display_8c_a174d6af7b755d657e5f8c6d9f3e49a91}} 
+\index{display.c@{display.c}!draw\_board\_28x20@{draw\_board\_28x20}}
+\index{draw\_board\_28x20@{draw\_board\_28x20}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_board\_28x20()}{draw\_board\_28x20()}}
+{\footnotesize\ttfamily void draw\+\_\+board\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the 28x20 game board on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{display_8c_a179e5407907bfb96d92248cd0d0f9be7}\label{display_8c_a179e5407907bfb96d92248cd0d0f9be7}} 
+\index{display.c@{display.c}!draw\_colon@{draw\_colon}}
+\index{draw\_colon@{draw\_colon}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_colon()}{draw\_colon()}}
+{\footnotesize\ttfamily void draw\+\_\+colon (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function draws a colon symbol on the screen at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The X-\/coordinate of the position. \\
+\hline
+{\em y} & The Y-\/coordinate of the position. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{display_8c_a58b56a9af02d37c0b66d88674e579da3}\label{display_8c_a58b56a9af02d37c0b66d88674e579da3}} 
+\index{display.c@{display.c}!draw\_cursor@{draw\_cursor}}
+\index{draw\_cursor@{draw\_cursor}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_cursor()}{draw\_cursor()}}
+{\footnotesize\ttfamily void draw\+\_\+cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for drawing the cursor on the screen at the specified coordinates (x, y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An unsigned 16-\/bit integer representing the x-\/coordinate of the cursor\textquotesingle{}s position. \\
+\hline
+{\em y} & An unsigned 16-\/bit integer representing the y-\/coordinate of the cursor\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{display_8c_a9ea00b036c65c786e005faf7f5364d4c}\label{display_8c_a9ea00b036c65c786e005faf7f5364d4c}} 
+\index{display.c@{display.c}!draw\_faceRestart\_16x16@{draw\_faceRestart\_16x16}}
+\index{draw\_faceRestart\_16x16@{draw\_faceRestart\_16x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_faceRestart\_16x16()}{draw\_faceRestart\_16x16()}}
+{\footnotesize\ttfamily void draw\+\_\+face\+Restart\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 16x16 game board. 
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{display_8c_a8d46a9bea15758a57e2cbd5214f8faff}\label{display_8c_a8d46a9bea15758a57e2cbd5214f8faff}} 
+\index{display.c@{display.c}!draw\_faceRestart\_20x16@{draw\_faceRestart\_20x16}}
+\index{draw\_faceRestart\_20x16@{draw\_faceRestart\_20x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_faceRestart\_20x16()}{draw\_faceRestart\_20x16()}}
+{\footnotesize\ttfamily void draw\+\_\+face\+Restart\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 20x16 game board. 
+
+Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{display_8c_a7eb431064a6d350a8ea1ffbe3d0a9a50}\label{display_8c_a7eb431064a6d350a8ea1ffbe3d0a9a50}} 
+\index{display.c@{display.c}!draw\_faceRestart\_28x20@{draw\_faceRestart\_28x20}}
+\index{draw\_faceRestart\_28x20@{draw\_faceRestart\_28x20}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_faceRestart\_28x20()}{draw\_faceRestart\_28x20()}}
+{\footnotesize\ttfamily void draw\+\_\+face\+Restart\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 28x20 game board. 
+
+Here is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{display_8c_a76699761812d390f73ade4e7bdcf448e}\label{display_8c_a76699761812d390f73ade4e7bdcf448e}} 
+\index{display.c@{display.c}!draw\_final\_time@{draw\_final\_time}}
+\index{draw\_final\_time@{draw\_final\_time}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_final\_time()}{draw\_final\_time()}}
+{\footnotesize\ttfamily void draw\+\_\+final\+\_\+time (\begin{DoxyParamCaption}\item[{int}]{m1,  }\item[{int}]{m2,  }\item[{int}]{s1,  }\item[{int}]{s2 }\end{DoxyParamCaption})}
+
+
+
+This function draws the final time on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & The first digit of the minutes. \\
+\hline
+{\em m2} & The second digit of the minutes. \\
+\hline
+{\em s1} & The first digit of the seconds. \\
+\hline
+{\em s2} & The second digit of the seconds. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 17
+Here is the caller graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{display_8c_ab2df83aff4dc3a6418146d961f26b54b}\label{display_8c_ab2df83aff4dc3a6418146d961f26b54b}} 
+\index{display.c@{display.c}!draw\_gameover\_menu@{draw\_gameover\_menu}}
+\index{draw\_gameover\_menu@{draw\_gameover\_menu}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_gameover\_menu()}{draw\_gameover\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+gameover\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function displays the \char`\"{}gameover menu\char`\"{} image on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 19
+Here is the caller graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{display_8c_a4a12832bc13f38307477e0452d4d857c}\label{display_8c_a4a12832bc13f38307477e0452d4d857c}} 
+\index{display.c@{display.c}!draw\_grid\_16x16@{draw\_grid\_16x16}}
+\index{draw\_grid\_16x16@{draw\_grid\_16x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_grid\_16x16()}{draw\_grid\_16x16()}}
+{\footnotesize\ttfamily void draw\+\_\+grid\+\_\+16x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & 16x16 character array representing the state of the game board. Each element of the array corresponds to a cell in the grid and contains a character representing the cell\textquotesingle{}s content. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 21
+Here is the caller graph for this function\+:
+% FIG 22
+\mbox{\Hypertarget{display_8c_abc6134f616115cd982e85d71cf64ad32}\label{display_8c_abc6134f616115cd982e85d71cf64ad32}} 
+\index{display.c@{display.c}!draw\_grid\_20x16@{draw\_grid\_20x16}}
+\index{draw\_grid\_20x16@{draw\_grid\_20x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_grid\_20x16()}{draw\_grid\_20x16()}}
+{\footnotesize\ttfamily void draw\+\_\+grid\+\_\+20x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & 20x16 character array representing the state of the game board. Each element of the array corresponds to a cell in the grid and contains a character representing the cell\textquotesingle{}s content. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 23
+Here is the caller graph for this function\+:
+% FIG 24
+\mbox{\Hypertarget{display_8c_a5c17e0316425b8f6f1052ab0dcb7f682}\label{display_8c_a5c17e0316425b8f6f1052ab0dcb7f682}} 
+\index{display.c@{display.c}!draw\_grid\_28x20@{draw\_grid\_28x20}}
+\index{draw\_grid\_28x20@{draw\_grid\_28x20}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_grid\_28x20()}{draw\_grid\_28x20()}}
+{\footnotesize\ttfamily void draw\+\_\+grid\+\_\+28x20 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & 28x20 character array representing the state of the game board. Each element of the array corresponds to a cell in the grid and contains a character representing the cell\textquotesingle{}s content. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 25
+Here is the caller graph for this function\+:
+% FIG 26
+\mbox{\Hypertarget{display_8c_ad591a81c7dd7fe49e0732eee1c55c725}\label{display_8c_ad591a81c7dd7fe49e0732eee1c55c725}} 
+\index{display.c@{display.c}!draw\_instructions\_menu@{draw\_instructions\_menu}}
+\index{draw\_instructions\_menu@{draw\_instructions\_menu}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_instructions\_menu()}{draw\_instructions\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+instructions\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function displays the \char`\"{}instructions menu\char`\"{} image on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 27
+Here is the caller graph for this function\+:
+% FIG 28
+\mbox{\Hypertarget{display_8c_a83361e027b6f0dd917305f1f82dedda3}\label{display_8c_a83361e027b6f0dd917305f1f82dedda3}} 
+\index{display.c@{display.c}!draw\_main\_menu@{draw\_main\_menu}}
+\index{draw\_main\_menu@{draw\_main\_menu}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_main\_menu()}{draw\_main\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for drawing the main menu on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 29
+Here is the caller graph for this function\+:
+% FIG 30
+\mbox{\Hypertarget{display_8c_a97df0f6e4184d84c9e3871042b94bc3a}\label{display_8c_a97df0f6e4184d84c9e3871042b94bc3a}} 
+\index{display.c@{display.c}!draw\_number@{draw\_number}}
+\index{draw\_number@{draw\_number}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_number()}{draw\_number()}}
+{\footnotesize\ttfamily void draw\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function selects the appropriate XPM image based on the provided number and uses the draw\+\_\+xpm function to draw it on the screen at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & The number to be drawn on the screen. It should be an integer between 0 and 9. \\
+\hline
+{\em x} & The X-\/coordinate of the position where the number will be drawn. \\
+\hline
+{\em y} & The Y-\/coordinate of the position where the number will be drawn. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 31
+Here is the caller graph for this function\+:
+% FIG 32
+\mbox{\Hypertarget{display_8c_a2495bd3d32098323c9fa5e9699a1b05d}\label{display_8c_a2495bd3d32098323c9fa5e9699a1b05d}} 
+\index{display.c@{display.c}!draw\_pressCell@{draw\_pressCell}}
+\index{draw\_pressCell@{draw\_pressCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_pressCell()}{draw\_pressCell()}}
+{\footnotesize\ttfamily void draw\+\_\+press\+Cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function draws the \char`\"{}pressed cell\char`\"{} image on the screen at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the position to draw the image. \\
+\hline
+{\em y} & The y-\/coordinate of the position to draw the image. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 33
+\mbox{\Hypertarget{display_8c_ab7c39a04e19382ac09a860e6b6512105}\label{display_8c_ab7c39a04e19382ac09a860e6b6512105}} 
+\index{display.c@{display.c}!draw\_selected\_cell@{draw\_selected\_cell}}
+\index{draw\_selected\_cell@{draw\_selected\_cell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_selected\_cell()}{draw\_selected\_cell()}}
+{\footnotesize\ttfamily void draw\+\_\+selected\+\_\+cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is used to visually represent a selected cell on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 34
+Here is the caller graph for this function\+:
+% FIG 35
+\mbox{\Hypertarget{display_8c_a947be19a1ddc3c2bdcddce8fe4c1b7de}\label{display_8c_a947be19a1ddc3c2bdcddce8fe4c1b7de}} 
+\index{display.c@{display.c}!draw\_win\_menu@{draw\_win\_menu}}
+\index{draw\_win\_menu@{draw\_win\_menu}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{draw\_win\_menu()}{draw\_win\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+win\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function displays the \char`\"{}win menu\char`\"{} image on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 36
+Here is the caller graph for this function\+:
+% FIG 37
+\mbox{\Hypertarget{display_8c_aa1156b1e9f5177ad9f3215f1f7a19280}\label{display_8c_aa1156b1e9f5177ad9f3215f1f7a19280}} 
+\index{display.c@{display.c}!erase\_cursor@{erase\_cursor}}
+\index{erase\_cursor@{erase\_cursor}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{erase\_cursor()}{erase\_cursor()}}
+{\footnotesize\ttfamily void erase\+\_\+cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for erasing the cursor from the screen at the specified coordinates (x, y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An unsigned 16-\/bit integer representing the x-\/coordinate of the cursor\textquotesingle{}s position. \\
+\hline
+{\em y} & An unsigned 16-\/bit integer representing the y-\/coordinate of the cursor\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 38
+Here is the caller graph for this function\+:
+% FIG 39
+\mbox{\Hypertarget{display_8c_a27e9eebf45e82d55ef8bed8f46b6a8c4}\label{display_8c_a27e9eebf45e82d55ef8bed8f46b6a8c4}} 
+\index{display.c@{display.c}!load\_xpms@{load\_xpms}}
+\index{load\_xpms@{load\_xpms}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{load\_xpms()}{load\_xpms()}}
+{\footnotesize\ttfamily int() load\+\_\+xpms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function loads various XPM images into memory. Each XPM image is loaded using the \textquotesingle{}xpm\+\_\+load\textquotesingle{} function and stored in the corresponding variable. 
+
+\begin{DoxyReturn}{Returns}
+0 if all XPM images are successfully loaded. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 40
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{display_8c_a0e5261db6f4a81633febfa7945777019}\label{display_8c_a0e5261db6f4a81633febfa7945777019}} 
+\index{display.c@{display.c}!bannerCell@{bannerCell}}
+\index{bannerCell@{bannerCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{bannerCell}{bannerCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t banner\+Cell}
+
+\mbox{\Hypertarget{display_8c_abe1dc2535f74dd2b881998ae97bad22b}\label{display_8c_abe1dc2535f74dd2b881998ae97bad22b}} 
+\index{display.c@{display.c}!colon@{colon}}
+\index{colon@{colon}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{colon}{colon}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t colon}
+
+\mbox{\Hypertarget{display_8c_ab344452c360efd75914e0c88e39dd329}\label{display_8c_ab344452c360efd75914e0c88e39dd329}} 
+\index{display.c@{display.c}!cursor@{cursor}}
+\index{cursor@{cursor}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t cursor}
+
+\mbox{\Hypertarget{display_8c_a1be71edbf01ce2da7f41e00c8b073c2b}\label{display_8c_a1be71edbf01ce2da7f41e00c8b073c2b}} 
+\index{display.c@{display.c}!eight@{eight}}
+\index{eight@{eight}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{eight}{eight}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t eight}
+
+\mbox{\Hypertarget{display_8c_a17174a37228f25ae767152098e6bdfed}\label{display_8c_a17174a37228f25ae767152098e6bdfed}} 
+\index{display.c@{display.c}!eightCell@{eightCell}}
+\index{eightCell@{eightCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{eightCell}{eightCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t eight\+Cell}
+
+\mbox{\Hypertarget{display_8c_a47752fec5dc23b5723668c27b4fcad7d}\label{display_8c_a47752fec5dc23b5723668c27b4fcad7d}} 
+\index{display.c@{display.c}!empty\_cursor@{empty\_cursor}}
+\index{empty\_cursor@{empty\_cursor}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{empty\_cursor}{empty\_cursor}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t empty\+\_\+cursor}
+
+\mbox{\Hypertarget{display_8c_a2815145a7fe675197473162e955f34dc}\label{display_8c_a2815145a7fe675197473162e955f34dc}} 
+\index{display.c@{display.c}!faceGameOver@{faceGameOver}}
+\index{faceGameOver@{faceGameOver}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{faceGameOver}{faceGameOver}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t face\+Game\+Over}
+
+\mbox{\Hypertarget{display_8c_ab4adcbda9ab6343e6f2201ff39ff5bbd}\label{display_8c_ab4adcbda9ab6343e6f2201ff39ff5bbd}} 
+\index{display.c@{display.c}!faceRestart@{faceRestart}}
+\index{faceRestart@{faceRestart}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{faceRestart}{faceRestart}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t face\+Restart}
+
+\mbox{\Hypertarget{display_8c_a2ff9c0f7beb921fefa53034601e47d9a}\label{display_8c_a2ff9c0f7beb921fefa53034601e47d9a}} 
+\index{display.c@{display.c}!five@{five}}
+\index{five@{five}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{five}{five}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t five}
+
+\mbox{\Hypertarget{display_8c_a0165bcfda95ea6c7bdbcec4e79709445}\label{display_8c_a0165bcfda95ea6c7bdbcec4e79709445}} 
+\index{display.c@{display.c}!fiveCell@{fiveCell}}
+\index{fiveCell@{fiveCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{fiveCell}{fiveCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t five\+Cell}
+
+\mbox{\Hypertarget{display_8c_a632b0a796c388aa5cf8a762ff0790256}\label{display_8c_a632b0a796c388aa5cf8a762ff0790256}} 
+\index{display.c@{display.c}!font@{font}}
+\index{font@{font}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t font}
+
+\mbox{\Hypertarget{display_8c_aad4d7dabc0024ef38b72fb388d76b170}\label{display_8c_aad4d7dabc0024ef38b72fb388d76b170}} 
+\index{display.c@{display.c}!font\_white@{font\_white}}
+\index{font\_white@{font\_white}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{font\_white}{font\_white}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t font\+\_\+white}
+
+\mbox{\Hypertarget{display_8c_a28e995dbdaf728c9dc83baa953098ecc}\label{display_8c_a28e995dbdaf728c9dc83baa953098ecc}} 
+\index{display.c@{display.c}!four@{four}}
+\index{four@{four}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{four}{four}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t four}
+
+\mbox{\Hypertarget{display_8c_a123448c3df2e44e80c092f4a84517c0f}\label{display_8c_a123448c3df2e44e80c092f4a84517c0f}} 
+\index{display.c@{display.c}!fourCell@{fourCell}}
+\index{fourCell@{fourCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{fourCell}{fourCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t four\+Cell}
+
+\mbox{\Hypertarget{display_8c_a5da935198e504548761fd15206dd5c90}\label{display_8c_a5da935198e504548761fd15206dd5c90}} 
+\index{display.c@{display.c}!gameOver@{gameOver}}
+\index{gameOver@{gameOver}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{gameOver}{gameOver}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t game\+Over}
+
+\mbox{\Hypertarget{display_8c_aaa675b9875064ed91104b1f23b9bf710}\label{display_8c_aaa675b9875064ed91104b1f23b9bf710}} 
+\index{display.c@{display.c}!gameWin@{gameWin}}
+\index{gameWin@{gameWin}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{gameWin}{gameWin}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t game\+Win}
+
+\mbox{\Hypertarget{display_8c_a69dbf8c732ac94bc3d7407e02b919437}\label{display_8c_a69dbf8c732ac94bc3d7407e02b919437}} 
+\index{display.c@{display.c}!grid\_16x16@{grid\_16x16}}
+\index{grid\_16x16@{grid\_16x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{grid\_16x16}{grid\_16x16}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t grid\+\_\+16x16}
+
+\mbox{\Hypertarget{display_8c_a8a13170be8130e5a0ae108d628a074a2}\label{display_8c_a8a13170be8130e5a0ae108d628a074a2}} 
+\index{display.c@{display.c}!grid\_20x16@{grid\_20x16}}
+\index{grid\_20x16@{grid\_20x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{grid\_20x16}{grid\_20x16}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t grid\+\_\+20x16}
+
+\mbox{\Hypertarget{display_8c_aaaf735758ce457593d8bc2ba1b8e5df8}\label{display_8c_aaaf735758ce457593d8bc2ba1b8e5df8}} 
+\index{display.c@{display.c}!grid\_28x20@{grid\_28x20}}
+\index{grid\_28x20@{grid\_28x20}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{grid\_28x20}{grid\_28x20}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t grid\+\_\+28x20}
+
+\mbox{\Hypertarget{display_8c_a085da5e077460bc52b2e1cd8994631a6}\label{display_8c_a085da5e077460bc52b2e1cd8994631a6}} 
+\index{display.c@{display.c}!instructionsButton@{instructionsButton}}
+\index{instructionsButton@{instructionsButton}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{instructionsButton}{instructionsButton}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t instructions\+Button}
+
+\mbox{\Hypertarget{display_8c_abe294fb49a3cbb87f30d665d521e02a1}\label{display_8c_abe294fb49a3cbb87f30d665d521e02a1}} 
+\index{display.c@{display.c}!instructionsPage@{instructionsPage}}
+\index{instructionsPage@{instructionsPage}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{instructionsPage}{instructionsPage}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t instructions\+Page}
+
+\mbox{\Hypertarget{display_8c_a74faba81427c896a1147e447cae414e9}\label{display_8c_a74faba81427c896a1147e447cae414e9}} 
+\index{display.c@{display.c}!main\_menu@{main\_menu}}
+\index{main\_menu@{main\_menu}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{main\_menu}{main\_menu}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t main\+\_\+menu}
+
+\mbox{\Hypertarget{display_8c_aff00c98e43a5b0f91d4cf101485795af}\label{display_8c_aff00c98e43a5b0f91d4cf101485795af}} 
+\index{display.c@{display.c}!mineCell@{mineCell}}
+\index{mineCell@{mineCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{mineCell}{mineCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t mine\+Cell}
+
+\mbox{\Hypertarget{display_8c_a79e1139e3876bd7633e5e5cc5fa3b0b2}\label{display_8c_a79e1139e3876bd7633e5e5cc5fa3b0b2}} 
+\index{display.c@{display.c}!nine@{nine}}
+\index{nine@{nine}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{nine}{nine}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t nine}
+
+\mbox{\Hypertarget{display_8c_af2a1bef418e89a99ea1ed060001f44cf}\label{display_8c_af2a1bef418e89a99ea1ed060001f44cf}} 
+\index{display.c@{display.c}!normalCell@{normalCell}}
+\index{normalCell@{normalCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{normalCell}{normalCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t normal\+Cell}
+
+\mbox{\Hypertarget{display_8c_a9b034c363d055f9df18d1a10c42e501b}\label{display_8c_a9b034c363d055f9df18d1a10c42e501b}} 
+\index{display.c@{display.c}!one@{one}}
+\index{one@{one}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{one}{one}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t one}
+
+\mbox{\Hypertarget{display_8c_a9799ae93bd76e5f0627548674deb4311}\label{display_8c_a9799ae93bd76e5f0627548674deb4311}} 
+\index{display.c@{display.c}!oneCell@{oneCell}}
+\index{oneCell@{oneCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{oneCell}{oneCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t one\+Cell}
+
+\mbox{\Hypertarget{display_8c_a89c150515349754244ab4591fd180b42}\label{display_8c_a89c150515349754244ab4591fd180b42}} 
+\index{display.c@{display.c}!play\_16x16@{play\_16x16}}
+\index{play\_16x16@{play\_16x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{play\_16x16}{play\_16x16}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t play\+\_\+16x16}
+
+\mbox{\Hypertarget{display_8c_a7dc3704c4a9a705f86b72ecc7e0327a7}\label{display_8c_a7dc3704c4a9a705f86b72ecc7e0327a7}} 
+\index{display.c@{display.c}!play\_20x16@{play\_20x16}}
+\index{play\_20x16@{play\_20x16}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{play\_20x16}{play\_20x16}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t play\+\_\+20x16}
+
+\mbox{\Hypertarget{display_8c_ab744be605b25b8ab8fcbbaf534b684cd}\label{display_8c_ab744be605b25b8ab8fcbbaf534b684cd}} 
+\index{display.c@{display.c}!play\_28x20@{play\_28x20}}
+\index{play\_28x20@{play\_28x20}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{play\_28x20}{play\_28x20}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t play\+\_\+28x20}
+
+\mbox{\Hypertarget{display_8c_a31923f7ffa838a3312041bacee568ad7}\label{display_8c_a31923f7ffa838a3312041bacee568ad7}} 
+\index{display.c@{display.c}!playButton@{playButton}}
+\index{playButton@{playButton}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{playButton}{playButton}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t play\+Button}
+
+\mbox{\Hypertarget{display_8c_a026d2b34345177c999cd194dc724037c}\label{display_8c_a026d2b34345177c999cd194dc724037c}} 
+\index{display.c@{display.c}!pressCell@{pressCell}}
+\index{pressCell@{pressCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{pressCell}{pressCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t press\+Cell}
+
+\mbox{\Hypertarget{display_8c_ab029a4063559409d1a861ffcdb660aa8}\label{display_8c_ab029a4063559409d1a861ffcdb660aa8}} 
+\index{display.c@{display.c}!quitButton@{quitButton}}
+\index{quitButton@{quitButton}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{quitButton}{quitButton}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t quit\+Button}
+
+\mbox{\Hypertarget{display_8c_aa66c44b215ee497c47674882fc466e9f}\label{display_8c_aa66c44b215ee497c47674882fc466e9f}} 
+\index{display.c@{display.c}!selected@{selected}}
+\index{selected@{selected}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{selected}{selected}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t selected}
+
+\mbox{\Hypertarget{display_8c_ad3af128b4628c91b43a3f5d1f014e543}\label{display_8c_ad3af128b4628c91b43a3f5d1f014e543}} 
+\index{display.c@{display.c}!seven@{seven}}
+\index{seven@{seven}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{seven}{seven}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t seven}
+
+\mbox{\Hypertarget{display_8c_af8cb1658521a849bd30fa066d65a7d3e}\label{display_8c_af8cb1658521a849bd30fa066d65a7d3e}} 
+\index{display.c@{display.c}!sevenCell@{sevenCell}}
+\index{sevenCell@{sevenCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{sevenCell}{sevenCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t seven\+Cell}
+
+\mbox{\Hypertarget{display_8c_a1fe7784c6cf5cff30b00f030f4f62298}\label{display_8c_a1fe7784c6cf5cff30b00f030f4f62298}} 
+\index{display.c@{display.c}!six@{six}}
+\index{six@{six}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{six}{six}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t six}
+
+\mbox{\Hypertarget{display_8c_a2bb68568b2e493da503c52848c30ae9f}\label{display_8c_a2bb68568b2e493da503c52848c30ae9f}} 
+\index{display.c@{display.c}!sixCell@{sixCell}}
+\index{sixCell@{sixCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{sixCell}{sixCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t six\+Cell}
+
+\mbox{\Hypertarget{display_8c_abf155d9777dcf10bfea3592038320f53}\label{display_8c_abf155d9777dcf10bfea3592038320f53}} 
+\index{display.c@{display.c}!three@{three}}
+\index{three@{three}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{three}{three}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t three}
+
+\mbox{\Hypertarget{display_8c_abc26d2291d1c60bd6bf3cbab00e0b3b0}\label{display_8c_abc26d2291d1c60bd6bf3cbab00e0b3b0}} 
+\index{display.c@{display.c}!threeCell@{threeCell}}
+\index{threeCell@{threeCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{threeCell}{threeCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t three\+Cell}
+
+\mbox{\Hypertarget{display_8c_a8f0cc8329d87377dd59becfb7fb16daa}\label{display_8c_a8f0cc8329d87377dd59becfb7fb16daa}} 
+\index{display.c@{display.c}!title@{title}}
+\index{title@{title}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t title}
+
+\mbox{\Hypertarget{display_8c_ab6803d44b5db00e0928a077628b4ff0b}\label{display_8c_ab6803d44b5db00e0928a077628b4ff0b}} 
+\index{display.c@{display.c}!two@{two}}
+\index{two@{two}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{two}{two}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t two}
+
+\mbox{\Hypertarget{display_8c_a307f342aa543564582081f4c46081bfc}\label{display_8c_a307f342aa543564582081f4c46081bfc}} 
+\index{display.c@{display.c}!twoCell@{twoCell}}
+\index{twoCell@{twoCell}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{twoCell}{twoCell}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t two\+Cell}
+
+\mbox{\Hypertarget{display_8c_a4c69ee4e7b67e855249cf3b9f66d99ae}\label{display_8c_a4c69ee4e7b67e855249cf3b9f66d99ae}} 
+\index{display.c@{display.c}!zero@{zero}}
+\index{zero@{zero}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{zero}{zero}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t zero}
+

@@ -1,0 +1,13 @@
+digraph "cursor_draw"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="cursor_draw",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function takes the current position of the cursor and draws it on the screen."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="draw_cursor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$display_8c.html#a58b56a9af02d37c0b66d88674e579da3",tooltip="This function is responsible for drawing the cursor on the screen at the specified coordinates (x,..."];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="draw_xpm",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#af110146e2c41a581c0d543ed7eb61f37",tooltip="This function prints a xmp image to the display."];
+}

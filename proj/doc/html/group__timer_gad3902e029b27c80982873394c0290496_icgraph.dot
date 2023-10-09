@@ -1,0 +1,11 @@
+digraph "timer_print_config"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="timer_print_config",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Prints a timer config field value."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="timer_display_conf",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$group__timer.html#ga140d8f092c0913cabdca949c4a1cc650",tooltip="Shows timer configuration."];
+}

@@ -1,0 +1,191 @@
+\hypertarget{kbc_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/devices/keyboard/kbc.h File Reference}
+\label{kbc_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/keyboard/kbc.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/keyboard/kbc.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}i8042\+\_\+kbc.\+h\char`\"{}}\newline
+Include dependency graph for kbc.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{kbc_8h_a02884ada1971dbade466081413210b18}{kbc\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em This function subscribes keyboard interrupts with policies REENABLE and EXCLUSIVE. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbc_8h_a1102381e6a9e876e05dd78c58ccb5673}{kbc\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em This function unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbc_8h_a0cd424c16589e6f4f988d74d6d762635}{kbd\+\_\+get\+\_\+status}} (uint8\+\_\+t $\ast$status)
+\begin{DoxyCompactList}\small\item\em This function reads the status of the KBC. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbc_8h_a619abc5b7b65862ca17882bc5da349d4}{kbd\+\_\+read\+\_\+out\+\_\+buffer}} (uint8\+\_\+t $\ast$output)
+\begin{DoxyCompactList}\small\item\em This function reads the content in the 0x64 address. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{kbc_8h_a08a01750e27367718eca6d4cf23b69e2}{kbc\+\_\+can\+\_\+read}} (uint8\+\_\+t $\ast$st)
+\begin{DoxyCompactList}\small\item\em This function verifys if it is possible to read the status of the KBC. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{kbc_8h_aef6ef70e3fc1f34dfd977b3ac231b6c0}{kbc\+\_\+read}} (uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em This function reads the status of the KBC more completely. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{kbc_8h_aea970a154161a35f6894898a092ed70a}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard\textquotesingle{}s interrupt handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{kbc_8h_ae05264c141a3e8ff812e24521e449758}{scan\+\_\+bytes}} \mbox{[}2\mbox{]}
+\item 
+bool \mbox{\hyperlink{kbc_8h_a5634adbf50fca2436ea592580f1e5a6f}{codecomplete\+\_\+kbd}}
+\item 
+int \mbox{\hyperlink{kbc_8h_aa8071c159d985714607ae19e80066ec9}{nrbytes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kbc_8h_a08a01750e27367718eca6d4cf23b69e2}\label{kbc_8h_a08a01750e27367718eca6d4cf23b69e2}} 
+\index{kbc.h@{kbc.h}!kbc\_can\_read@{kbc\_can\_read}}
+\index{kbc\_can\_read@{kbc\_can\_read}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_can\_read()}{kbc\_can\_read()}}
+{\footnotesize\ttfamily bool() kbc\+\_\+can\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{st }\end{DoxyParamCaption})}
+
+
+
+This function verifys if it is possible to read the status of the KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & The current status of the KBC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{kbc_8h_aea970a154161a35f6894898a092ed70a}\label{kbc_8h_aea970a154161a35f6894898a092ed70a}} 
+\index{kbc.h@{kbc.h}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily void() kbc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Keyboard\textquotesingle{}s interrupt handler. 
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{kbc_8h_aef6ef70e3fc1f34dfd977b3ac231b6c0}\label{kbc_8h_aef6ef70e3fc1f34dfd977b3ac231b6c0}} 
+\index{kbc.h@{kbc.h}!kbc\_read@{kbc\_read}}
+\index{kbc\_read@{kbc\_read}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_read()}{kbc\_read()}}
+{\footnotesize\ttfamily int() kbc\+\_\+read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+This function reads the status of the KBC more completely. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The current status of the KBC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{kbc_8h_a02884ada1971dbade466081413210b18}\label{kbc_8h_a02884ada1971dbade466081413210b18}} 
+\index{kbc.h@{kbc.h}!kbc\_subscribe\_int@{kbc\_subscribe\_int}}
+\index{kbc\_subscribe\_int@{kbc\_subscribe\_int}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_subscribe\_int()}{kbc\_subscribe\_int()}}
+{\footnotesize\ttfamily int() kbc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+This function subscribes keyboard interrupts with policies REENABLE and EXCLUSIVE. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em bit\+\_\+no} & All zeros except for the bit position of the keyboard\textquotesingle{}s hook id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{kbc_8h_a1102381e6a9e876e05dd78c58ccb5673}\label{kbc_8h_a1102381e6a9e876e05dd78c58ccb5673}} 
+\index{kbc.h@{kbc.h}!kbc\_unsubscribe\_int@{kbc\_unsubscribe\_int}}
+\index{kbc\_unsubscribe\_int@{kbc\_unsubscribe\_int}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbc\_unsubscribe\_int()}{kbc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() kbc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function unsubscribes keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 if case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{kbc_8h_a0cd424c16589e6f4f988d74d6d762635}\label{kbc_8h_a0cd424c16589e6f4f988d74d6d762635}} 
+\index{kbc.h@{kbc.h}!kbd\_get\_status@{kbd\_get\_status}}
+\index{kbd\_get\_status@{kbd\_get\_status}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbd\_get\_status()}{kbd\_get\_status()}}
+{\footnotesize\ttfamily int() kbd\+\_\+get\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{status }\end{DoxyParamCaption})}
+
+
+
+This function reads the status of the KBC. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em status} & The current status of the KBC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{kbc_8h_a619abc5b7b65862ca17882bc5da349d4}\label{kbc_8h_a619abc5b7b65862ca17882bc5da349d4}} 
+\index{kbc.h@{kbc.h}!kbd\_read\_out\_buffer@{kbd\_read\_out\_buffer}}
+\index{kbd\_read\_out\_buffer@{kbd\_read\_out\_buffer}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{kbd\_read\_out\_buffer()}{kbd\_read\_out\_buffer()}}
+{\footnotesize\ttfamily int() kbd\+\_\+read\+\_\+out\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+This function reads the content in the 0x64 address. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em output} & The data present in the 0x64 address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 11
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{kbc_8h_a5634adbf50fca2436ea592580f1e5a6f}\label{kbc_8h_a5634adbf50fca2436ea592580f1e5a6f}} 
+\index{kbc.h@{kbc.h}!codecomplete\_kbd@{codecomplete\_kbd}}
+\index{codecomplete\_kbd@{codecomplete\_kbd}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{codecomplete\_kbd}{codecomplete\_kbd}}
+{\footnotesize\ttfamily bool codecomplete\+\_\+kbd\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{kbc_8h_aa8071c159d985714607ae19e80066ec9}\label{kbc_8h_aa8071c159d985714607ae19e80066ec9}} 
+\index{kbc.h@{kbc.h}!nrbytes@{nrbytes}}
+\index{nrbytes@{nrbytes}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{nrbytes}{nrbytes}}
+{\footnotesize\ttfamily int nrbytes\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{kbc_8h_ae05264c141a3e8ff812e24521e449758}\label{kbc_8h_ae05264c141a3e8ff812e24521e449758}} 
+\index{kbc.h@{kbc.h}!scan\_bytes@{scan\_bytes}}
+\index{scan\_bytes@{scan\_bytes}!kbc.h@{kbc.h}}
+\doxysubsubsection{\texorpdfstring{scan\_bytes}{scan\_bytes}}
+{\footnotesize\ttfamily uint8\+\_\+t scan\+\_\+bytes\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+

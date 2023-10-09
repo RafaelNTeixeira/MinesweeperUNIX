@@ -1,0 +1,89 @@
+\hypertarget{statemachine_8c}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/devices/mouse/statemachine.c File Reference}
+\label{statemachine_8c}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/mouse/statemachine.c@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/mouse/statemachine.c}}
+{\ttfamily \#include \char`\"{}statemachine.\+h\char`\"{}}\newline
+Include dependency graph for statemachine.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct mouse\+\_\+ev $\ast$ \mbox{\hyperlink{statemachine_8c_a907cfdcea783b671613f38e54ac75add}{mouse\+\_\+events}} (struct packet $\ast$pack)
+\begin{DoxyCompactList}\small\item\em Generates a mouse event based on the provided mouse packet. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{statemachine_8c_a0db5909bf5d2df1ac3e2c12578812086}{draw\+\_\+handler}} (uint8\+\_\+t xlen, uint8\+\_\+t tolerance, struct packet $\ast$pack)
+\begin{DoxyCompactList}\small\item\em Handles mouse events for drawing operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct mouse\+\_\+ev \mbox{\hyperlink{statemachine_8c_a38f13212860dc24556d86bb0de4ad293}{mouse\+\_\+event}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{statemachine_8c_abe288840b507d8c289eb126c8de14c99}{xl}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{statemachine_8c_a20af2e59160d9bba61d95e863659637c}{yl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{statemachine_8c_a0db5909bf5d2df1ac3e2c12578812086}\label{statemachine_8c_a0db5909bf5d2df1ac3e2c12578812086}} 
+\index{statemachine.c@{statemachine.c}!draw\_handler@{draw\_handler}}
+\index{draw\_handler@{draw\_handler}!statemachine.c@{statemachine.c}}
+\doxysubsubsection{\texorpdfstring{draw\_handler()}{draw\_handler()}}
+{\footnotesize\ttfamily bool() draw\+\_\+handler (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{xlen,  }\item[{uint8\+\_\+t}]{tolerance,  }\item[{struct packet $\ast$}]{pack }\end{DoxyParamCaption})}
+
+
+
+Handles mouse events for drawing operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xlen} & Minimum length required for a valid drawing operation \\
+\hline
+{\em tolerance} & Maximum movement tolerance allowed for drawing operation \\
+\hline
+{\em pack} & Pointer to the mouse packet containing movement and button information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid drawing operation is detected, false otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{statemachine_8c_a907cfdcea783b671613f38e54ac75add}\label{statemachine_8c_a907cfdcea783b671613f38e54ac75add}} 
+\index{statemachine.c@{statemachine.c}!mouse\_events@{mouse\_events}}
+\index{mouse\_events@{mouse\_events}!statemachine.c@{statemachine.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_events()}{mouse\_events()}}
+{\footnotesize\ttfamily struct mouse\+\_\+ev $\ast$ mouse\+\_\+events (\begin{DoxyParamCaption}\item[{struct packet $\ast$}]{pack }\end{DoxyParamCaption})}
+
+
+
+Generates a mouse event based on the provided mouse packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pack} & pack Pointer to the mouse packet containing movement and button information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the generated mouse event structure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{statemachine_8c_a38f13212860dc24556d86bb0de4ad293}\label{statemachine_8c_a38f13212860dc24556d86bb0de4ad293}} 
+\index{statemachine.c@{statemachine.c}!mouse\_event@{mouse\_event}}
+\index{mouse\_event@{mouse\_event}!statemachine.c@{statemachine.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_event}{mouse\_event}}
+{\footnotesize\ttfamily struct mouse\+\_\+ev mouse\+\_\+event}
+
+\mbox{\Hypertarget{statemachine_8c_abe288840b507d8c289eb126c8de14c99}\label{statemachine_8c_abe288840b507d8c289eb126c8de14c99}} 
+\index{statemachine.c@{statemachine.c}!xl@{xl}}
+\index{xl@{xl}!statemachine.c@{statemachine.c}}
+\doxysubsubsection{\texorpdfstring{xl}{xl}}
+{\footnotesize\ttfamily uint8\+\_\+t xl}
+
+\mbox{\Hypertarget{statemachine_8c_a20af2e59160d9bba61d95e863659637c}\label{statemachine_8c_a20af2e59160d9bba61d95e863659637c}} 
+\index{statemachine.c@{statemachine.c}!yl@{yl}}
+\index{yl@{yl}!statemachine.c@{statemachine.c}}
+\doxysubsubsection{\texorpdfstring{yl}{yl}}
+{\footnotesize\ttfamily uint8\+\_\+t yl}
+

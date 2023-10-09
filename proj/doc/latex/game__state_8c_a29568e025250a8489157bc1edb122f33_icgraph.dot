@@ -1,0 +1,35 @@
+digraph "update_cursor"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="update_cursor",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function updates the position of the cursor based on the provided movement values."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="handle_mouse_beginner\l_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a5142c6ed46abfbb64306fd6ea9e6dff4",tooltip="This function handles the mouse event that occurs in the beginner game mode."];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="handle_mouse_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a2b4320aed33d44e042e51170d7ab66f3",tooltip="This function handles mouse events based on the current program state."];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="main_loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$int__manager_8c.html#a24285aea4a27f96c321b2628788e9a57",tooltip="Main loop of the system. This function enters the main loop of the system and continuously waits for ..."];
+  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="proj_main_loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="handle_mouse_gameover\l_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a202fe047988c50024344c58a0a02af1e",tooltip="This function handles the mouse event that occurs in the game over state."];
+  Node6 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="handle_mouse_gamewin\l_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a3f5c1403abca024491c7d52e4a5008a5",tooltip="This function handles the mouse event that occurs in the game win state."];
+  Node7 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="handle_mouse_hard_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a35b9963213ab414b29e79900673455a5",tooltip="This function handles the mouse event that occurs in the hard game mode."];
+  Node8 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="handle_mouse_instruction\l_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#acf0c71ac49f267b1eb53d3804573a297",tooltip="This function handles the mouse event that occurs in the instructions state."];
+  Node9 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="handle_mouse_medium\l_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a8ea88ecba779635e9f2118f8e29436b0",tooltip="This function handles the mouse event that occurs in the medium game mode."];
+  Node10 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node11 [dir="back",color="steelblue1",style="solid"];
+  Node11 [label="handle_mouse_menu_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a0947840da77c1d2b1280d5ada3ed4293",tooltip="This function handles mouse events specifically in the \"MAIN_MENU\" state."];
+  Node11 -> Node3 [dir="back",color="steelblue1",style="solid"];
+}

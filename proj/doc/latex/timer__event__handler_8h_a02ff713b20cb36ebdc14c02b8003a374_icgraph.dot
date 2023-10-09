@@ -1,0 +1,15 @@
+digraph "handle_timer_gameover_event"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="handle_timer_gameover\l_event",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function updates the game state and performs necessary actions based on the timer event when the..."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="handle_timer_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$timer__event__handler_8c.html#af11116ed560ac78b44861167288f492c",tooltip="This function handles timer events."];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="main_loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$int__manager_8c.html#a24285aea4a27f96c321b2628788e9a57",tooltip="Main loop of the system. This function enters the main loop of the system and continuously waits for ..."];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="proj_main_loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b",tooltip=" "];
+}

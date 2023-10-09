@@ -1,0 +1,183 @@
+\hypertarget{mouse__event__handler_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/event\+\_\+handler/mouse\+\_\+event\+\_\+handler.h File Reference}
+\label{mouse__event__handler_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/event\_handler/mouse\_event\_handler.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/event\_handler/mouse\_event\_handler.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}devices/mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/game\+\_\+state.\+h\char`\"{}}\newline
+Include dependency graph for mouse\+\_\+event\+\_\+handler.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mouse__event__handler_8h_a2b4320aed33d44e042e51170d7ab66f3}{handle\+\_\+mouse\+\_\+event}} (struct packet pp)
+\begin{DoxyCompactList}\small\item\em This function handles mouse events based on the current program state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse__event__handler_8h_a5142c6ed46abfbb64306fd6ea9e6dff4}{handle\+\_\+mouse\+\_\+beginner\+\_\+event}} (struct packet pp)
+\begin{DoxyCompactList}\small\item\em This function handles the mouse event that occurs in the beginner game mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse__event__handler_8h_a8ea88ecba779635e9f2118f8e29436b0}{handle\+\_\+mouse\+\_\+medium\+\_\+event}} (struct packet pp)
+\begin{DoxyCompactList}\small\item\em This function handles the mouse event that occurs in the medium game mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse__event__handler_8h_a35b9963213ab414b29e79900673455a5}{handle\+\_\+mouse\+\_\+hard\+\_\+event}} (struct packet pp)
+\begin{DoxyCompactList}\small\item\em This function handles the mouse event that occurs in the hard game mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse__event__handler_8h_a0947840da77c1d2b1280d5ada3ed4293}{handle\+\_\+mouse\+\_\+menu\+\_\+event}} (struct packet pp)
+\begin{DoxyCompactList}\small\item\em This function handles mouse events specifically in the \char`\"{}\+MAIN\+\_\+\+MENU\char`\"{} state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse__event__handler_8h_a3f5c1403abca024491c7d52e4a5008a5}{handle\+\_\+mouse\+\_\+gamewin\+\_\+event}} (struct packet pp)
+\begin{DoxyCompactList}\small\item\em This function handles the mouse event that occurs in the game win state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse__event__handler_8h_a202fe047988c50024344c58a0a02af1e}{handle\+\_\+mouse\+\_\+gameover\+\_\+event}} (struct packet pp)
+\begin{DoxyCompactList}\small\item\em This function handles the mouse event that occurs in the game over state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mouse__event__handler_8h_acf0c71ac49f267b1eb53d3804573a297}{handle\+\_\+mouse\+\_\+instruction\+\_\+event}} (struct packet pp)
+\begin{DoxyCompactList}\small\item\em This function handles the mouse event that occurs in the instructions state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mouse__event__handler_8h_a5142c6ed46abfbb64306fd6ea9e6dff4}\label{mouse__event__handler_8h_a5142c6ed46abfbb64306fd6ea9e6dff4}} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!handle\_mouse\_beginner\_event@{handle\_mouse\_beginner\_event}}
+\index{handle\_mouse\_beginner\_event@{handle\_mouse\_beginner\_event}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_mouse\_beginner\_event()}{handle\_mouse\_beginner\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+mouse\+\_\+beginner\+\_\+event (\begin{DoxyParamCaption}\item[{struct packet}]{pp }\end{DoxyParamCaption})}
+
+
+
+This function handles the mouse event that occurs in the beginner game mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & A \textquotesingle{}struct packet\textquotesingle{} containing the information about the mouse event. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{mouse__event__handler_8h_a2b4320aed33d44e042e51170d7ab66f3}\label{mouse__event__handler_8h_a2b4320aed33d44e042e51170d7ab66f3}} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!handle\_mouse\_event@{handle\_mouse\_event}}
+\index{handle\_mouse\_event@{handle\_mouse\_event}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_mouse\_event()}{handle\_mouse\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+mouse\+\_\+event (\begin{DoxyParamCaption}\item[{struct packet}]{pp }\end{DoxyParamCaption})}
+
+
+
+This function handles mouse events based on the current program state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & A \textquotesingle{}struct packet\textquotesingle{} containing the information about the mouse event. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{mouse__event__handler_8h_a202fe047988c50024344c58a0a02af1e}\label{mouse__event__handler_8h_a202fe047988c50024344c58a0a02af1e}} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!handle\_mouse\_gameover\_event@{handle\_mouse\_gameover\_event}}
+\index{handle\_mouse\_gameover\_event@{handle\_mouse\_gameover\_event}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_mouse\_gameover\_event()}{handle\_mouse\_gameover\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+mouse\+\_\+gameover\+\_\+event (\begin{DoxyParamCaption}\item[{struct packet}]{pp }\end{DoxyParamCaption})}
+
+
+
+This function handles the mouse event that occurs in the game over state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & A \textquotesingle{}struct packet\textquotesingle{} containing the information about the mouse event. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{mouse__event__handler_8h_a3f5c1403abca024491c7d52e4a5008a5}\label{mouse__event__handler_8h_a3f5c1403abca024491c7d52e4a5008a5}} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!handle\_mouse\_gamewin\_event@{handle\_mouse\_gamewin\_event}}
+\index{handle\_mouse\_gamewin\_event@{handle\_mouse\_gamewin\_event}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_mouse\_gamewin\_event()}{handle\_mouse\_gamewin\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+mouse\+\_\+gamewin\+\_\+event (\begin{DoxyParamCaption}\item[{struct packet}]{pp }\end{DoxyParamCaption})}
+
+
+
+This function handles the mouse event that occurs in the game win state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & A \textquotesingle{}struct packet\textquotesingle{} containing the information about the mouse event. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{mouse__event__handler_8h_a35b9963213ab414b29e79900673455a5}\label{mouse__event__handler_8h_a35b9963213ab414b29e79900673455a5}} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!handle\_mouse\_hard\_event@{handle\_mouse\_hard\_event}}
+\index{handle\_mouse\_hard\_event@{handle\_mouse\_hard\_event}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_mouse\_hard\_event()}{handle\_mouse\_hard\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+mouse\+\_\+hard\+\_\+event (\begin{DoxyParamCaption}\item[{struct packet}]{pp }\end{DoxyParamCaption})}
+
+
+
+This function handles the mouse event that occurs in the hard game mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & A \textquotesingle{}struct packet\textquotesingle{} containing the information about the mouse event. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{mouse__event__handler_8h_acf0c71ac49f267b1eb53d3804573a297}\label{mouse__event__handler_8h_acf0c71ac49f267b1eb53d3804573a297}} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!handle\_mouse\_instruction\_event@{handle\_mouse\_instruction\_event}}
+\index{handle\_mouse\_instruction\_event@{handle\_mouse\_instruction\_event}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_mouse\_instruction\_event()}{handle\_mouse\_instruction\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+mouse\+\_\+instruction\+\_\+event (\begin{DoxyParamCaption}\item[{struct packet}]{pp }\end{DoxyParamCaption})}
+
+
+
+This function handles the mouse event that occurs in the instructions state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & A \textquotesingle{}struct packet\textquotesingle{} containing the information about the mouse event. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{mouse__event__handler_8h_a8ea88ecba779635e9f2118f8e29436b0}\label{mouse__event__handler_8h_a8ea88ecba779635e9f2118f8e29436b0}} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!handle\_mouse\_medium\_event@{handle\_mouse\_medium\_event}}
+\index{handle\_mouse\_medium\_event@{handle\_mouse\_medium\_event}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_mouse\_medium\_event()}{handle\_mouse\_medium\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+mouse\+\_\+medium\+\_\+event (\begin{DoxyParamCaption}\item[{struct packet}]{pp }\end{DoxyParamCaption})}
+
+
+
+This function handles the mouse event that occurs in the medium game mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & A \textquotesingle{}struct packet\textquotesingle{} containing the information about the mouse event. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{mouse__event__handler_8h_a0947840da77c1d2b1280d5ada3ed4293}\label{mouse__event__handler_8h_a0947840da77c1d2b1280d5ada3ed4293}} 
+\index{mouse\_event\_handler.h@{mouse\_event\_handler.h}!handle\_mouse\_menu\_event@{handle\_mouse\_menu\_event}}
+\index{handle\_mouse\_menu\_event@{handle\_mouse\_menu\_event}!mouse\_event\_handler.h@{mouse\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_mouse\_menu\_event()}{handle\_mouse\_menu\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+mouse\+\_\+menu\+\_\+event (\begin{DoxyParamCaption}\item[{struct packet}]{pp }\end{DoxyParamCaption})}
+
+
+
+This function handles mouse events specifically in the \char`\"{}\+MAIN\+\_\+\+MENU\char`\"{} state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pp} & A \textquotesingle{}struct packet\textquotesingle{} containing the information about the mouse event. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17

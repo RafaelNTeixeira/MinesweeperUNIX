@@ -1,0 +1,105 @@
+\hypertarget{statemachine_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/devices/mouse/statemachine.h File Reference}
+\label{statemachine_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/mouse/statemachine.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/mouse/statemachine.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for statemachine.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444}{States}} \{ \mbox{\hyperlink{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a0cb1b2c6a7db1f1084886c98909a3f36}{INIT}}
+, \mbox{\hyperlink{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444ab6a2858648b154fcc397d4f247b8786b}{DRAWUP}}
+, \mbox{\hyperlink{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a51df22c376649e022134d738e8d8641a}{HALF}}
+, \mbox{\hyperlink{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a32baa7d1ad095c8e2b1534d3ffd9501f}{DRAWDOWN}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct mouse\+\_\+ev $\ast$ \mbox{\hyperlink{statemachine_8h_a907cfdcea783b671613f38e54ac75add}{mouse\+\_\+events}} (struct packet $\ast$pack)
+\begin{DoxyCompactList}\small\item\em Generates a mouse event based on the provided mouse packet. \end{DoxyCompactList}\item 
+bool() \mbox{\hyperlink{statemachine_8h_a0db5909bf5d2df1ac3e2c12578812086}{draw\+\_\+handler}} (uint8\+\_\+t xlen, uint8\+\_\+t tolerance, struct packet $\ast$pack)
+\begin{DoxyCompactList}\small\item\em Handles mouse events for drawing operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444}\label{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444}} 
+\index{statemachine.h@{statemachine.h}!States@{States}}
+\index{States@{States}!statemachine.h@{statemachine.h}}
+\doxysubsubsection{\texorpdfstring{States}{States}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444}{States}}}
+
+Enumeration of states used in the drawing handler.
+\begin{DoxyItemize}
+\item INIT\+: Initial state of the drawing operation. It indicates that no drawing operation is in progress and the system is waiting for the left button to be pressed.
+\item DRAWUP\+: State indicating that the left button is pressed and the mouse is moving upwards to perform the drawing operation. In this state, the system accumulates the movement and checks for the release of the left button or other transition conditions.
+\item HALF\+: State indicating that the drawing operation has met the minimum length requirement and is transitioning to a different direction. It could either transition to a downward movement or return to the initial state. This state is triggered by specific conditions based on the accumulated movement and mouse button events.
+\item DRAWDOWN\+: State indicating that the drawing operation is moving downwards. Similar to the DRAWUP state, it accumulates the movement and checks for the release of the right button or other transition conditions. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!statemachine.h@{statemachine.h}}\index{statemachine.h@{statemachine.h}!INIT@{INIT}}}\mbox{\Hypertarget{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a0cb1b2c6a7db1f1084886c98909a3f36}\label{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a0cb1b2c6a7db1f1084886c98909a3f36}} 
+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DRAWUP@{DRAWUP}!statemachine.h@{statemachine.h}}\index{statemachine.h@{statemachine.h}!DRAWUP@{DRAWUP}}}\mbox{\Hypertarget{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444ab6a2858648b154fcc397d4f247b8786b}\label{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444ab6a2858648b154fcc397d4f247b8786b}} 
+DRAWUP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HALF@{HALF}!statemachine.h@{statemachine.h}}\index{statemachine.h@{statemachine.h}!HALF@{HALF}}}\mbox{\Hypertarget{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a51df22c376649e022134d738e8d8641a}\label{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a51df22c376649e022134d738e8d8641a}} 
+HALF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DRAWDOWN@{DRAWDOWN}!statemachine.h@{statemachine.h}}\index{statemachine.h@{statemachine.h}!DRAWDOWN@{DRAWDOWN}}}\mbox{\Hypertarget{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a32baa7d1ad095c8e2b1534d3ffd9501f}\label{statemachine_8h_a808e5cd4979462d3bbe3070d7d147444a32baa7d1ad095c8e2b1534d3ffd9501f}} 
+DRAWDOWN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{statemachine_8h_a0db5909bf5d2df1ac3e2c12578812086}\label{statemachine_8h_a0db5909bf5d2df1ac3e2c12578812086}} 
+\index{statemachine.h@{statemachine.h}!draw\_handler@{draw\_handler}}
+\index{draw\_handler@{draw\_handler}!statemachine.h@{statemachine.h}}
+\doxysubsubsection{\texorpdfstring{draw\_handler()}{draw\_handler()}}
+{\footnotesize\ttfamily bool() draw\+\_\+handler (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{xlen,  }\item[{uint8\+\_\+t}]{tolerance,  }\item[{struct packet $\ast$}]{pack }\end{DoxyParamCaption})}
+
+
+
+Handles mouse events for drawing operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xlen} & Minimum length required for a valid drawing operation \\
+\hline
+{\em tolerance} & Maximum movement tolerance allowed for drawing operation \\
+\hline
+{\em pack} & Pointer to the mouse packet containing movement and button information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid drawing operation is detected, false otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{statemachine_8h_a907cfdcea783b671613f38e54ac75add}\label{statemachine_8h_a907cfdcea783b671613f38e54ac75add}} 
+\index{statemachine.h@{statemachine.h}!mouse\_events@{mouse\_events}}
+\index{mouse\_events@{mouse\_events}!statemachine.h@{statemachine.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_events()}{mouse\_events()}}
+{\footnotesize\ttfamily struct mouse\+\_\+ev $\ast$ mouse\+\_\+events (\begin{DoxyParamCaption}\item[{struct packet $\ast$}]{pack }\end{DoxyParamCaption})}
+
+
+
+Generates a mouse event based on the provided mouse packet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pack} & pack Pointer to the mouse packet containing movement and button information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the generated mouse event structure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3

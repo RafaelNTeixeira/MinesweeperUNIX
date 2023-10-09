@@ -1,0 +1,169 @@
+\hypertarget{timer__event__handler_8c}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/event\+\_\+handler/timer\+\_\+event\+\_\+handler.c File Reference}
+\label{timer__event__handler_8c}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/event\_handler/timer\_event\_handler.c@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/event\_handler/timer\_event\_handler.c}}
+{\ttfamily \#include \char`\"{}timer\+\_\+event\+\_\+handler.\+h\char`\"{}}\newline
+Include dependency graph for timer\+\_\+event\+\_\+handler.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{timer__event__handler_8c_af11116ed560ac78b44861167288f492c}{handle\+\_\+timer\+\_\+event}} ()
+\begin{DoxyCompactList}\small\item\em This function handles timer events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer__event__handler_8c_aa048f34f3e38cdd76ac0a982f9cd8663}{handle\+\_\+timer\+\_\+menu\+\_\+event}} ()
+\begin{DoxyCompactList}\small\item\em This function handles timer events in the \char`\"{}\+MAIN\+\_\+\+MENU\char`\"{} state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer__event__handler_8c_a8106261cef7f0c9feb4ebd2379fc32e6}{handle\+\_\+timer\+\_\+beginner\+\_\+event}} ()
+\begin{DoxyCompactList}\small\item\em This function updates the game state and performs necessary actions based on the timer event during beginner gameplay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer__event__handler_8c_abb32705f822ab136d26b5ad9fd97885a}{handle\+\_\+timer\+\_\+medium\+\_\+event}} ()
+\begin{DoxyCompactList}\small\item\em This function updates the game state and performs necessary actions based on the timer event during medium gameplay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer__event__handler_8c_a32fd80487b166dcfae4866b4b5d53676}{handle\+\_\+timer\+\_\+hard\+\_\+event}} ()
+\begin{DoxyCompactList}\small\item\em This function updates the game state and performs necessary actions based on the timer event during hard gameplay. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer__event__handler_8c_a0413a4439fdbb8afc336478f9fa96482}{handle\+\_\+timer\+\_\+instructions\+\_\+event}} ()
+\begin{DoxyCompactList}\small\item\em This function handles timer events in the \char`\"{}\+INSTRUCTIONS\char`\"{} state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer__event__handler_8c_a955843ddc25192b0d7a2cc24ae0b69f8}{handle\+\_\+timer\+\_\+gamewin\+\_\+event}} ()
+\begin{DoxyCompactList}\small\item\em This function updates the game state and performs necessary actions based on the timer event when the game is won. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timer__event__handler_8c_a02ff713b20cb36ebdc14c02b8003a374}{handle\+\_\+timer\+\_\+gameover\+\_\+event}} ()
+\begin{DoxyCompactList}\small\item\em This function updates the game state and performs necessary actions based on the timer event when the game is over. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{timer__event__handler_8c_a54e5262a3b1f85076342555f94ae71c6}{board\+\_\+16x16}} \mbox{[}16\mbox{]}\mbox{[}16\mbox{]}
+\item 
+char \mbox{\hyperlink{timer__event__handler_8c_a82becbb49886a3d854ad1d899b7b1373}{board\+\_\+20x16}} \mbox{[}20\mbox{]}\mbox{[}16\mbox{]}
+\item 
+char \mbox{\hyperlink{timer__event__handler_8c_aecc9f703e2c2025503140698b90d7954}{board\+\_\+28x20}} \mbox{[}28\mbox{]}\mbox{[}20\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{timer__event__handler_8c_a8106261cef7f0c9feb4ebd2379fc32e6}\label{timer__event__handler_8c_a8106261cef7f0c9feb4ebd2379fc32e6}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!handle\_timer\_beginner\_event@{handle\_timer\_beginner\_event}}
+\index{handle\_timer\_beginner\_event@{handle\_timer\_beginner\_event}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timer\_beginner\_event()}{handle\_timer\_beginner\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+timer\+\_\+beginner\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function updates the game state and performs necessary actions based on the timer event during beginner gameplay. 
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{timer__event__handler_8c_af11116ed560ac78b44861167288f492c}\label{timer__event__handler_8c_af11116ed560ac78b44861167288f492c}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!handle\_timer\_event@{handle\_timer\_event}}
+\index{handle\_timer\_event@{handle\_timer\_event}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timer\_event()}{handle\_timer\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+timer\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function handles timer events. 
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{timer__event__handler_8c_a02ff713b20cb36ebdc14c02b8003a374}\label{timer__event__handler_8c_a02ff713b20cb36ebdc14c02b8003a374}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!handle\_timer\_gameover\_event@{handle\_timer\_gameover\_event}}
+\index{handle\_timer\_gameover\_event@{handle\_timer\_gameover\_event}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timer\_gameover\_event()}{handle\_timer\_gameover\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+timer\+\_\+gameover\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function updates the game state and performs necessary actions based on the timer event when the game is over. 
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{timer__event__handler_8c_a955843ddc25192b0d7a2cc24ae0b69f8}\label{timer__event__handler_8c_a955843ddc25192b0d7a2cc24ae0b69f8}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!handle\_timer\_gamewin\_event@{handle\_timer\_gamewin\_event}}
+\index{handle\_timer\_gamewin\_event@{handle\_timer\_gamewin\_event}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timer\_gamewin\_event()}{handle\_timer\_gamewin\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+timer\+\_\+gamewin\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function updates the game state and performs necessary actions based on the timer event when the game is won. 
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{timer__event__handler_8c_a32fd80487b166dcfae4866b4b5d53676}\label{timer__event__handler_8c_a32fd80487b166dcfae4866b4b5d53676}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!handle\_timer\_hard\_event@{handle\_timer\_hard\_event}}
+\index{handle\_timer\_hard\_event@{handle\_timer\_hard\_event}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timer\_hard\_event()}{handle\_timer\_hard\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+timer\+\_\+hard\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function updates the game state and performs necessary actions based on the timer event during hard gameplay. 
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{timer__event__handler_8c_a0413a4439fdbb8afc336478f9fa96482}\label{timer__event__handler_8c_a0413a4439fdbb8afc336478f9fa96482}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!handle\_timer\_instructions\_event@{handle\_timer\_instructions\_event}}
+\index{handle\_timer\_instructions\_event@{handle\_timer\_instructions\_event}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timer\_instructions\_event()}{handle\_timer\_instructions\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+timer\+\_\+instructions\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function handles timer events in the \char`\"{}\+INSTRUCTIONS\char`\"{} state. 
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{timer__event__handler_8c_abb32705f822ab136d26b5ad9fd97885a}\label{timer__event__handler_8c_abb32705f822ab136d26b5ad9fd97885a}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!handle\_timer\_medium\_event@{handle\_timer\_medium\_event}}
+\index{handle\_timer\_medium\_event@{handle\_timer\_medium\_event}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timer\_medium\_event()}{handle\_timer\_medium\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+timer\+\_\+medium\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function updates the game state and performs necessary actions based on the timer event during medium gameplay. 
+
+Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{timer__event__handler_8c_aa048f34f3e38cdd76ac0a982f9cd8663}\label{timer__event__handler_8c_aa048f34f3e38cdd76ac0a982f9cd8663}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!handle\_timer\_menu\_event@{handle\_timer\_menu\_event}}
+\index{handle\_timer\_menu\_event@{handle\_timer\_menu\_event}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{handle\_timer\_menu\_event()}{handle\_timer\_menu\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+timer\+\_\+menu\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function handles timer events in the \char`\"{}\+MAIN\+\_\+\+MENU\char`\"{} state. 
+
+Here is the call graph for this function\+:
+% FIG 15
+Here is the caller graph for this function\+:
+% FIG 16
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{timer__event__handler_8c_a54e5262a3b1f85076342555f94ae71c6}\label{timer__event__handler_8c_a54e5262a3b1f85076342555f94ae71c6}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!board\_16x16@{board\_16x16}}
+\index{board\_16x16@{board\_16x16}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{board\_16x16}{board\_16x16}}
+{\footnotesize\ttfamily char board\+\_\+16x16\mbox{[}16\mbox{]}\mbox{[}16\mbox{]}}
+
+\mbox{\Hypertarget{timer__event__handler_8c_a82becbb49886a3d854ad1d899b7b1373}\label{timer__event__handler_8c_a82becbb49886a3d854ad1d899b7b1373}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!board\_20x16@{board\_20x16}}
+\index{board\_20x16@{board\_20x16}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{board\_20x16}{board\_20x16}}
+{\footnotesize\ttfamily char board\+\_\+20x16\mbox{[}20\mbox{]}\mbox{[}16\mbox{]}}
+
+\mbox{\Hypertarget{timer__event__handler_8c_aecc9f703e2c2025503140698b90d7954}\label{timer__event__handler_8c_aecc9f703e2c2025503140698b90d7954}} 
+\index{timer\_event\_handler.c@{timer\_event\_handler.c}!board\_28x20@{board\_28x20}}
+\index{board\_28x20@{board\_28x20}!timer\_event\_handler.c@{timer\_event\_handler.c}}
+\doxysubsubsection{\texorpdfstring{board\_28x20}{board\_28x20}}
+{\footnotesize\ttfamily char board\+\_\+28x20\mbox{[}28\mbox{]}\mbox{[}20\mbox{]}}
+

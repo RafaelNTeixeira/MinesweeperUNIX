@@ -1,0 +1,29 @@
+digraph "start_game_28x20"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="start_game_28x20",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function starts a game on a 28x20 board."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="check_mouse_click_left_hard",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#ad9c841e2dda5cb82a231277e6e001237",tooltip="This function checks for a left mouse click in the hard mode."];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="handle_mouse_hard_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a35b9963213ab414b29e79900673455a5",tooltip="This function handles the mouse event that occurs in the hard game mode."];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="handle_mouse_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a2b4320aed33d44e042e51170d7ab66f3",tooltip="This function handles mouse events based on the current program state."];
+  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="main_loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$int__manager_8c.html#a24285aea4a27f96c321b2628788e9a57",tooltip="Main loop of the system. This function enters the main loop of the system and continuously waits for ..."];
+  Node5 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="proj_main_loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="check_mouse_clicks_menu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a22e3ee8916b6fb932cdd0cfa56804655",tooltip="This function checks the mouse clicks within the menu screen and updates the game state accordingly."];
+  Node7 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="handle_mouse_menu_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a0947840da77c1d2b1280d5ada3ed4293",tooltip="This function handles mouse events specifically in the \"MAIN_MENU\" state."];
+  Node8 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="handle_kbd_mainmenu\l_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$kbc__event__handler_8c.html#a5f0d2b60b707a74cc3db0fe3a7441fb8",tooltip="This function handles keyboard events specific to the main menu state."];
+  Node9 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="handle_kbd_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$kbc__event__handler_8c.html#a8f953f3d6c73d1b602907e7e4a2426e8",tooltip="This function handles keyboard events by dispatching them to the appropriate event handler based on t..."];
+  Node10 -> Node5 [dir="back",color="steelblue1",style="solid"];
+}

@@ -1,0 +1,38 @@
+digraph "getMatrixIndexX"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="getMatrixIndexX",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function is used to calculate the matrix index based on a given x-coordinate."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="check_mouse_click_left\l_beginner",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a1e3d437fbea0d84bafff6b2de26d35c3",tooltip="This function handles the left mouse click event and updates the game state accordingly."];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="handle_mouse_beginner\l_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a5142c6ed46abfbb64306fd6ea9e6dff4",tooltip="This function handles the mouse event that occurs in the beginner game mode."];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="handle_mouse_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a2b4320aed33d44e042e51170d7ab66f3",tooltip="This function handles mouse events based on the current program state."];
+  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="main_loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$int__manager_8c.html#a24285aea4a27f96c321b2628788e9a57",tooltip="Main loop of the system. This function enters the main loop of the system and continuously waits for ..."];
+  Node5 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="proj_main_loop",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8c.html#a2a16f651eccbd248e1ad3b3b924b143b",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="check_mouse_click_left_hard",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#ad9c841e2dda5cb82a231277e6e001237",tooltip="This function checks for a left mouse click in the hard mode."];
+  Node7 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="handle_mouse_hard_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a35b9963213ab414b29e79900673455a5",tooltip="This function handles the mouse event that occurs in the hard game mode."];
+  Node8 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="check_mouse_click_left\l_medium",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a687ba83630e1bf3e38216dd348c667c4",tooltip="This function checks for a left mouse click in the medium mode."];
+  Node9 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="handle_mouse_medium\l_event",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mouse__event__handler_8c.html#a8ea88ecba779635e9f2118f8e29436b0",tooltip="This function handles the mouse event that occurs in the medium game mode."];
+  Node10 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node11 [dir="back",color="steelblue1",style="solid"];
+  Node11 [label="check_mouse_click_right\l_beginner",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#afb8b15ae86a02d10786cbe38e9537b4c",tooltip="This function handles the right mouse click event and updates the game state accordingly."];
+  Node11 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node12 [dir="back",color="steelblue1",style="solid"];
+  Node12 [label="check_mouse_click_right_hard",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a3bd747a822aefc2adca7100412ad1464",tooltip="This function checks for a right mouse click in the hard mode."];
+  Node12 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node13 [dir="back",color="steelblue1",style="solid"];
+  Node13 [label="check_mouse_click_right\l_medium",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#ae74320a968191dd9fddd0e7c65ade8ca",tooltip="This function checks for a right mouse click in the medium mode."];
+  Node13 -> Node10 [dir="back",color="steelblue1",style="solid"];
+}

@@ -1,0 +1,455 @@
+\hypertarget{display_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/game/display.h File Reference}
+\label{display_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/display.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/display.h}}
+{\ttfamily \#include \char`\"{}devices/graphic/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/buttons/face\+Game\+Over.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/buttons/face\+Restart.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/buttons/instructions\+Button.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/buttons/play\+Button.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/buttons/quit\+Button.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/banner\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/mine\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/normal\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/press\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/selected.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/one\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/two\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/three\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/four\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/five\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/six\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/seven\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/cells/eight\+Cell.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/boards/board\+\_\+16x16.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/boards/board\+\_\+20x16.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/boards/board\+\_\+28x20.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/boards/grid\+\_\+16x16.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/boards/grid\+\_\+20x16.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/boards/grid\+\_\+28x20.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/letters/colon.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/zero.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/one.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/two.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/three.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/four.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/five.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/six.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/seven.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/eight.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/numbers/nine.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/font.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/font\+\_\+white.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/menu.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/hand\+Cursor.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/empty\+Cursor.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/instructions\+Page.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/title.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/game\+Over.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}images/win.\+xpm\char`\"{}}\newline
+Include dependency graph for display.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{display_8h_a271573582b62953a40feebcbe483849a}{load\+\_\+xpms}} ()
+\begin{DoxyCompactList}\small\item\em This function loads various XPM images into memory. Each XPM image is loaded using the \textquotesingle{}xpm\+\_\+load\textquotesingle{} function and stored in the corresponding variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a83361e027b6f0dd917305f1f82dedda3}{draw\+\_\+main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function is responsible for drawing the main menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a58b56a9af02d37c0b66d88674e579da3}{draw\+\_\+cursor}} (uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em This function is responsible for drawing the cursor on the screen at the specified coordinates (x, y). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_aa1156b1e9f5177ad9f3215f1f7a19280}{erase\+\_\+cursor}} (uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em This function is responsible for erasing the cursor from the screen at the specified coordinates (x, y). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a9144e9ab98a9800b7382fba53b72471d}{draw\+\_\+board\+\_\+16x16}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the 16x16 game board on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a631f72b13e6bb830b3ce77d742c10359}{draw\+\_\+board\+\_\+20x16}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the 20x16 game board on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a174d6af7b755d657e5f8c6d9f3e49a91}{draw\+\_\+board\+\_\+28x20}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the 28x20 game board on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a9ea00b036c65c786e005faf7f5364d4c}{draw\+\_\+face\+Restart\+\_\+16x16}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 16x16 game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a8d46a9bea15758a57e2cbd5214f8faff}{draw\+\_\+face\+Restart\+\_\+20x16}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 20x16 game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a7eb431064a6d350a8ea1ffbe3d0a9a50}{draw\+\_\+face\+Restart\+\_\+28x20}} ()
+\begin{DoxyCompactList}\small\item\em This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 28x20 game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a2495bd3d32098323c9fa5e9699a1b05d}{draw\+\_\+press\+Cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This function draws the \char`\"{}pressed cell\char`\"{} image on the screen at the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a947be19a1ddc3c2bdcddce8fe4c1b7de}{draw\+\_\+win\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function displays the \char`\"{}win menu\char`\"{} image on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_ab2df83aff4dc3a6418146d961f26b54b}{draw\+\_\+gameover\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function displays the \char`\"{}gameover menu\char`\"{} image on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_ad591a81c7dd7fe49e0732eee1c55c725}{draw\+\_\+instructions\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em This function displays the \char`\"{}instructions menu\char`\"{} image on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a4a12832bc13f38307477e0452d4d857c}{draw\+\_\+grid\+\_\+16x16}} (char board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_abc6134f616115cd982e85d71cf64ad32}{draw\+\_\+grid\+\_\+20x16}} (char board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a5c17e0316425b8f6f1052ab0dcb7f682}{draw\+\_\+grid\+\_\+28x20}} (char board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a97df0f6e4184d84c9e3871042b94bc3a}{draw\+\_\+number}} (int number, int x, int y)
+\begin{DoxyCompactList}\small\item\em This function selects the appropriate XPM image based on the provided number and uses the draw\+\_\+xpm function to draw it on the screen at the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a179e5407907bfb96d92248cd0d0f9be7}{draw\+\_\+colon}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This function draws a colon symbol on the screen at the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a76699761812d390f73ade4e7bdcf448e}{draw\+\_\+final\+\_\+time}} (int \mbox{\hyperlink{game__state_8c_a86428d3a194fd8d6a819f27a65d0a0d3}{m1}}, int \mbox{\hyperlink{game__state_8c_a4bf498bfd9de66e2b0aba618200ceee5}{m2}}, int \mbox{\hyperlink{game__state_8c_acfb6b9e2b00e34da4313b463c341e597}{s1}}, int \mbox{\hyperlink{game__state_8c_a4c68ffea7c3affb6a0ee6219aba89a69}{s2}})
+\begin{DoxyCompactList}\small\item\em This function draws the final time on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_ab7c39a04e19382ac09a860e6b6512105}{draw\+\_\+selected\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em This function is used to visually represent a selected cell on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{display_8h_a9144e9ab98a9800b7382fba53b72471d}\label{display_8h_a9144e9ab98a9800b7382fba53b72471d}} 
+\index{display.h@{display.h}!draw\_board\_16x16@{draw\_board\_16x16}}
+\index{draw\_board\_16x16@{draw\_board\_16x16}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_board\_16x16()}{draw\_board\_16x16()}}
+{\footnotesize\ttfamily void draw\+\_\+board\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the 16x16 game board on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{display_8h_a631f72b13e6bb830b3ce77d742c10359}\label{display_8h_a631f72b13e6bb830b3ce77d742c10359}} 
+\index{display.h@{display.h}!draw\_board\_20x16@{draw\_board\_20x16}}
+\index{draw\_board\_20x16@{draw\_board\_20x16}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_board\_20x16()}{draw\_board\_20x16()}}
+{\footnotesize\ttfamily void draw\+\_\+board\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the 20x16 game board on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{display_8h_a174d6af7b755d657e5f8c6d9f3e49a91}\label{display_8h_a174d6af7b755d657e5f8c6d9f3e49a91}} 
+\index{display.h@{display.h}!draw\_board\_28x20@{draw\_board\_28x20}}
+\index{draw\_board\_28x20@{draw\_board\_28x20}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_board\_28x20()}{draw\_board\_28x20()}}
+{\footnotesize\ttfamily void draw\+\_\+board\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the 28x20 game board on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{display_8h_a179e5407907bfb96d92248cd0d0f9be7}\label{display_8h_a179e5407907bfb96d92248cd0d0f9be7}} 
+\index{display.h@{display.h}!draw\_colon@{draw\_colon}}
+\index{draw\_colon@{draw\_colon}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_colon()}{draw\_colon()}}
+{\footnotesize\ttfamily void draw\+\_\+colon (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function draws a colon symbol on the screen at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The X-\/coordinate of the position. \\
+\hline
+{\em y} & The Y-\/coordinate of the position. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{display_8h_a58b56a9af02d37c0b66d88674e579da3}\label{display_8h_a58b56a9af02d37c0b66d88674e579da3}} 
+\index{display.h@{display.h}!draw\_cursor@{draw\_cursor}}
+\index{draw\_cursor@{draw\_cursor}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_cursor()}{draw\_cursor()}}
+{\footnotesize\ttfamily void draw\+\_\+cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for drawing the cursor on the screen at the specified coordinates (x, y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An unsigned 16-\/bit integer representing the x-\/coordinate of the cursor\textquotesingle{}s position. \\
+\hline
+{\em y} & An unsigned 16-\/bit integer representing the y-\/coordinate of the cursor\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{display_8h_a9ea00b036c65c786e005faf7f5364d4c}\label{display_8h_a9ea00b036c65c786e005faf7f5364d4c}} 
+\index{display.h@{display.h}!draw\_faceRestart\_16x16@{draw\_faceRestart\_16x16}}
+\index{draw\_faceRestart\_16x16@{draw\_faceRestart\_16x16}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_faceRestart\_16x16()}{draw\_faceRestart\_16x16()}}
+{\footnotesize\ttfamily void draw\+\_\+face\+Restart\+\_\+16x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 16x16 game board. 
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{display_8h_a8d46a9bea15758a57e2cbd5214f8faff}\label{display_8h_a8d46a9bea15758a57e2cbd5214f8faff}} 
+\index{display.h@{display.h}!draw\_faceRestart\_20x16@{draw\_faceRestart\_20x16}}
+\index{draw\_faceRestart\_20x16@{draw\_faceRestart\_20x16}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_faceRestart\_20x16()}{draw\_faceRestart\_20x16()}}
+{\footnotesize\ttfamily void draw\+\_\+face\+Restart\+\_\+20x16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 20x16 game board. 
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{display_8h_a7eb431064a6d350a8ea1ffbe3d0a9a50}\label{display_8h_a7eb431064a6d350a8ea1ffbe3d0a9a50}} 
+\index{display.h@{display.h}!draw\_faceRestart\_28x20@{draw\_faceRestart\_28x20}}
+\index{draw\_faceRestart\_28x20@{draw\_faceRestart\_28x20}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_faceRestart\_28x20()}{draw\_faceRestart\_28x20()}}
+{\footnotesize\ttfamily void draw\+\_\+face\+Restart\+\_\+28x20 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function draws the \char`\"{}face restart\char`\"{} image on the screen at a specific position in the 28x20 game board. 
+
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{display_8h_a76699761812d390f73ade4e7bdcf448e}\label{display_8h_a76699761812d390f73ade4e7bdcf448e}} 
+\index{display.h@{display.h}!draw\_final\_time@{draw\_final\_time}}
+\index{draw\_final\_time@{draw\_final\_time}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_final\_time()}{draw\_final\_time()}}
+{\footnotesize\ttfamily void draw\+\_\+final\+\_\+time (\begin{DoxyParamCaption}\item[{int}]{m1,  }\item[{int}]{m2,  }\item[{int}]{s1,  }\item[{int}]{s2 }\end{DoxyParamCaption})}
+
+
+
+This function draws the final time on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m1} & The first digit of the minutes. \\
+\hline
+{\em m2} & The second digit of the minutes. \\
+\hline
+{\em s1} & The first digit of the seconds. \\
+\hline
+{\em s2} & The second digit of the seconds. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{display_8h_ab2df83aff4dc3a6418146d961f26b54b}\label{display_8h_ab2df83aff4dc3a6418146d961f26b54b}} 
+\index{display.h@{display.h}!draw\_gameover\_menu@{draw\_gameover\_menu}}
+\index{draw\_gameover\_menu@{draw\_gameover\_menu}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_gameover\_menu()}{draw\_gameover\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+gameover\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function displays the \char`\"{}gameover menu\char`\"{} image on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+\mbox{\Hypertarget{display_8h_a4a12832bc13f38307477e0452d4d857c}\label{display_8h_a4a12832bc13f38307477e0452d4d857c}} 
+\index{display.h@{display.h}!draw\_grid\_16x16@{draw\_grid\_16x16}}
+\index{draw\_grid\_16x16@{draw\_grid\_16x16}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_grid\_16x16()}{draw\_grid\_16x16()}}
+{\footnotesize\ttfamily void draw\+\_\+grid\+\_\+16x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & 16x16 character array representing the state of the game board. Each element of the array corresponds to a cell in the grid and contains a character representing the cell\textquotesingle{}s content. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 22
+Here is the caller graph for this function\+:
+% FIG 23
+\mbox{\Hypertarget{display_8h_abc6134f616115cd982e85d71cf64ad32}\label{display_8h_abc6134f616115cd982e85d71cf64ad32}} 
+\index{display.h@{display.h}!draw\_grid\_20x16@{draw\_grid\_20x16}}
+\index{draw\_grid\_20x16@{draw\_grid\_20x16}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_grid\_20x16()}{draw\_grid\_20x16()}}
+{\footnotesize\ttfamily void draw\+\_\+grid\+\_\+20x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & 20x16 character array representing the state of the game board. Each element of the array corresponds to a cell in the grid and contains a character representing the cell\textquotesingle{}s content. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 24
+Here is the caller graph for this function\+:
+% FIG 25
+\mbox{\Hypertarget{display_8h_a5c17e0316425b8f6f1052ab0dcb7f682}\label{display_8h_a5c17e0316425b8f6f1052ab0dcb7f682}} 
+\index{display.h@{display.h}!draw\_grid\_28x20@{draw\_grid\_28x20}}
+\index{draw\_grid\_28x20@{draw\_grid\_28x20}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_grid\_28x20()}{draw\_grid\_28x20()}}
+{\footnotesize\ttfamily void draw\+\_\+grid\+\_\+28x20 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function iterates over the board array and uses the \textquotesingle{}draw\+\_\+xpm\textquotesingle{} function to draw the appropriate XPM image for each cell based on its content. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & 28x20 character array representing the state of the game board. Each element of the array corresponds to a cell in the grid and contains a character representing the cell\textquotesingle{}s content. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 26
+Here is the caller graph for this function\+:
+% FIG 27
+\mbox{\Hypertarget{display_8h_ad591a81c7dd7fe49e0732eee1c55c725}\label{display_8h_ad591a81c7dd7fe49e0732eee1c55c725}} 
+\index{display.h@{display.h}!draw\_instructions\_menu@{draw\_instructions\_menu}}
+\index{draw\_instructions\_menu@{draw\_instructions\_menu}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_instructions\_menu()}{draw\_instructions\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+instructions\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function displays the \char`\"{}instructions menu\char`\"{} image on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 28
+Here is the caller graph for this function\+:
+% FIG 29
+\mbox{\Hypertarget{display_8h_a83361e027b6f0dd917305f1f82dedda3}\label{display_8h_a83361e027b6f0dd917305f1f82dedda3}} 
+\index{display.h@{display.h}!draw\_main\_menu@{draw\_main\_menu}}
+\index{draw\_main\_menu@{draw\_main\_menu}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_main\_menu()}{draw\_main\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for drawing the main menu on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 30
+Here is the caller graph for this function\+:
+% FIG 31
+\mbox{\Hypertarget{display_8h_a97df0f6e4184d84c9e3871042b94bc3a}\label{display_8h_a97df0f6e4184d84c9e3871042b94bc3a}} 
+\index{display.h@{display.h}!draw\_number@{draw\_number}}
+\index{draw\_number@{draw\_number}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_number()}{draw\_number()}}
+{\footnotesize\ttfamily void draw\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function selects the appropriate XPM image based on the provided number and uses the draw\+\_\+xpm function to draw it on the screen at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & The number to be drawn on the screen. It should be an integer between 0 and 9. \\
+\hline
+{\em x} & The X-\/coordinate of the position where the number will be drawn. \\
+\hline
+{\em y} & The Y-\/coordinate of the position where the number will be drawn. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 32
+Here is the caller graph for this function\+:
+% FIG 33
+\mbox{\Hypertarget{display_8h_a2495bd3d32098323c9fa5e9699a1b05d}\label{display_8h_a2495bd3d32098323c9fa5e9699a1b05d}} 
+\index{display.h@{display.h}!draw\_pressCell@{draw\_pressCell}}
+\index{draw\_pressCell@{draw\_pressCell}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_pressCell()}{draw\_pressCell()}}
+{\footnotesize\ttfamily void draw\+\_\+press\+Cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function draws the \char`\"{}pressed cell\char`\"{} image on the screen at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the position to draw the image. \\
+\hline
+{\em y} & The y-\/coordinate of the position to draw the image. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 34
+\mbox{\Hypertarget{display_8h_ab7c39a04e19382ac09a860e6b6512105}\label{display_8h_ab7c39a04e19382ac09a860e6b6512105}} 
+\index{display.h@{display.h}!draw\_selected\_cell@{draw\_selected\_cell}}
+\index{draw\_selected\_cell@{draw\_selected\_cell}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_selected\_cell()}{draw\_selected\_cell()}}
+{\footnotesize\ttfamily void draw\+\_\+selected\+\_\+cell (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is used to visually represent a selected cell on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 35
+Here is the caller graph for this function\+:
+% FIG 36
+\mbox{\Hypertarget{display_8h_a947be19a1ddc3c2bdcddce8fe4c1b7de}\label{display_8h_a947be19a1ddc3c2bdcddce8fe4c1b7de}} 
+\index{display.h@{display.h}!draw\_win\_menu@{draw\_win\_menu}}
+\index{draw\_win\_menu@{draw\_win\_menu}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{draw\_win\_menu()}{draw\_win\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+win\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function displays the \char`\"{}win menu\char`\"{} image on the screen. 
+
+Here is the call graph for this function\+:
+% FIG 37
+Here is the caller graph for this function\+:
+% FIG 38
+\mbox{\Hypertarget{display_8h_aa1156b1e9f5177ad9f3215f1f7a19280}\label{display_8h_aa1156b1e9f5177ad9f3215f1f7a19280}} 
+\index{display.h@{display.h}!erase\_cursor@{erase\_cursor}}
+\index{erase\_cursor@{erase\_cursor}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{erase\_cursor()}{erase\_cursor()}}
+{\footnotesize\ttfamily void erase\+\_\+cursor (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for erasing the cursor from the screen at the specified coordinates (x, y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & An unsigned 16-\/bit integer representing the x-\/coordinate of the cursor\textquotesingle{}s position. \\
+\hline
+{\em y} & An unsigned 16-\/bit integer representing the y-\/coordinate of the cursor\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 39
+Here is the caller graph for this function\+:
+% FIG 40
+\mbox{\Hypertarget{display_8h_a271573582b62953a40feebcbe483849a}\label{display_8h_a271573582b62953a40feebcbe483849a}} 
+\index{display.h@{display.h}!load\_xpms@{load\_xpms}}
+\index{load\_xpms@{load\_xpms}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{load\_xpms()}{load\_xpms()}}
+{\footnotesize\ttfamily int load\+\_\+xpms (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function loads various XPM images into memory. Each XPM image is loaded using the \textquotesingle{}xpm\+\_\+load\textquotesingle{} function and stored in the corresponding variable. 
+
+\begin{DoxyReturn}{Returns}
+0 if all XPM images are successfully loaded. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 41

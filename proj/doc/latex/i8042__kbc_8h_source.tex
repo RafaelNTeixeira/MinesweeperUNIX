@@ -1,0 +1,74 @@
+\hypertarget{i8042__kbc_8h_source}{}\doxysection{i8042\+\_\+kbc.\+h}
+\label{i8042__kbc_8h_source}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/keyboard/i8042\_kbc.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/keyboard/i8042\_kbc.h}}
+\mbox{\hyperlink{i8042__kbc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_LCOM\_I8042\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ DELAY\_US\ 20000}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*\ Ports*/}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ KBD\_IRQ1\ \ \ \ \ \ \ \ \ 1\ \ \ \ }\textcolor{comment}{/*\ keyboard\ interrupt\ line\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ KBC\_OUT\_BUF\ \ \ 0x60}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ KBC\_ARGS\ \ \ \ \ \ 0x60\ }}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ KBC\_ST\_REG\ \ \ \ 0x64}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ KBC\_CMD\_REG\ \ \ 0x64}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{/*\ Status\ Register\ */}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ PARITY\ \ \ \ \ \ BIT(7)\ }\textcolor{comment}{/*\ Parity\ error\ -\/\ invalid\ data\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ TIMEOUT\ \ \ \ \ BIT(6)\ }\textcolor{comment}{/*\ Timeout\ error\ -\/\ invalid\ data\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ KBC\_ERR\_SIG\ BIT(6)\ |\ BIT(7)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ AUX\ \ \ \ \ \ \ \ \ BIT(5)\ }\textcolor{comment}{/*\ Mouse\ data\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ INH\ \ \ \ \ \ \ \ \ BIT(4)\ }\textcolor{comment}{/*\ Inhibit\ flag:\ 0\ if\ keyboard\ is\ inhibited\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ A2\ \ \ \ \ \ \ \ \ \ BIT(3)\ }\textcolor{comment}{/*\ A2\ input\ line:\ irrelevant\ for\ LCOM\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ SYS\ \ \ \ \ \ \ \ \ BIT(2)\ }\textcolor{comment}{/*\ System\ flag:\ irrelevant\ for\ LCOM\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ IBF\ \ \ \ \ \ \ \ \ BIT(1)\ }\textcolor{comment}{/*\ Input\ buffer\ full\ -\/\ don’t\ write\ commands\ or\ arguments\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ OBF\ \ \ \ \ \ \ \ \ BIT(0)\ }\textcolor{comment}{/*\ Output\ buffer\ full\ -\/\ data\ available\ for\ reading\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ IS\_BREAKCODE\ BIT(7)\ }\textcolor{comment}{/*\ bit\ mask\ to\ check\ if\ a\ scancode\ is\ a\ breakcode\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ KBC\ Errors*/}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ PARITY\_ERR\ \ 1}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ TIMEOUT\_ERR\ 2}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ IBF\_ERR\ 3}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ AUX\_ERR\ 4}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{/*\ Keys\ for\ the\ Game\ */}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ W\_MAKE\ 0x11}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ A\_MAKE\ 0x1E}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ S\_MAKE\ 0x1F}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ D\_MAKE\ 0x20}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ ENTER\_MAKE\ 0x1C}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ F\_MAKE\ 0x21}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{/*\ Constants\ */}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ ESC\_MAKE\ \ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ ESC\_BREAK\ \ \ \ \ \ \ 0x81}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ TWO\_BYTE\_SCAN\ \ \ 0xE0}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ MAKE\_BREAK\_DIFF\ BIT(7)\ }\textcolor{comment}{//\ Bit\ that\ usually\ differs\ from\ the\ break\ code\ (key\ released)\ to\ the\ make\ code}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ KBC-\/related\ commands\ */}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ RCB\ \ \ \ \ \ \ \ \ \ 0x20\ }\textcolor{comment}{/*\ Read\ Command\ Back\ -\/\ reads\ command\ byte\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ WCB\ \ \ \ \ \ \ \ \ \ 0x60\ }\textcolor{comment}{/*\ Write\ Command\ Back\ -\/\ writes\ command\ byte\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ CHECK\_KBC\ \ \ \ 0xAA\ }\textcolor{comment}{/*\ Check\ KBC\ (Self-\/Test)\ -\/\ returns\ 0x55\ if\ OK,\ returns\ 0xFC\ if\ error\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ CHECK\_KBI\ \ \ \ 0xAB\ }\textcolor{comment}{/*\ Check\ KBD\ Interface\ -\/\ returns\ 0\ if\ OK\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ DIS\_KBD\_INTF\ 0xAD\ }\textcolor{comment}{/*\ Disable\ KBD\ Interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ ENA\_KBD\_INTF\ 0xAE\ }\textcolor{comment}{/*\ Enable\ KBD\ Interface\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ DIS2\ BIT(5)\ }\textcolor{comment}{//\ disable\ mouse\ interface}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ DIS\ \ BIT(4)\ }\textcolor{comment}{//\ disable\ keyboard\ interface}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ INT2\ BIT(1)\ }\textcolor{comment}{//\ enable\ interrupt\ on\ OBF,\ from\ mouse}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ INT\ \ BIT(0)\ }\textcolor{comment}{//\ enable\ interrupt\ on\ OBF,\ from\ keyboard}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_LCOM\_I8042\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

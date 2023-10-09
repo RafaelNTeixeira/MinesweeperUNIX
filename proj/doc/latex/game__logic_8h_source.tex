@@ -1,0 +1,53 @@
+\hypertarget{game__logic_8h_source}{}\doxysection{game\+\_\+logic.\+h}
+\label{game__logic_8h_source}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/game\_logic.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/game\_logic.h}}
+\mbox{\hyperlink{game__logic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game__state_8h}{game/game\_state.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8h_acfce30c20d501c583e678a8bbe6329bf}{getMatrixIndexX}}(\textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8h_a607fbfedd398a7bbd0db46efa2519c3b}{getMatrixIndexY}}(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8h_a03ae3db03a5ebc283f2b5c2d3af10608}{getXCoordenatesPressedCell\_16x16}}(\textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8h_aa4cf280ade908873f3e56afa9da536cc}{getYCoordenatesPressedCell\_16x16}}(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_a5a896153d6c6b46f0181aac94fb949b3}{placeMines\_16x16}}(\textcolor{keywordtype}{char}\ board[16][16],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8c_a786a393e41ef89576d517261c3a37956}{mines}});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_a469350b8ffa0e62ba116f9077c76a775}{initializeBoard\_16x16}}(\textcolor{keywordtype}{char}\ board[16][16]);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{game__logic_8h_ab434e1aba7e5c2486a52999f7fb089e4}{countAdjacentMines\_16x16}}(\textcolor{keywordtype}{char}\ board[16][16],\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8h_a9f18c1e252eb822a1636562a750e59db}{winGame\_16x16}}(\textcolor{keywordtype}{char}\ board[16][16]);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_adb2ef2da3d123ce62419c96e83d269bd}{checkEmptyPlates\_16x16}}(\textcolor{keywordtype}{char}\ board[16][16],\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_ac2a098b1319223d9dc736e9541c695d7}{placeMines\_20x16}}(\textcolor{keywordtype}{char}\ board[20][16],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8c_a786a393e41ef89576d517261c3a37956}{mines}});}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_a1b0a7dc7cfadcae1385dc4c53f25905b}{initializeBoard\_20x16}}(\textcolor{keywordtype}{char}\ board[20][16]);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{game__logic_8h_acc65ea0b1c8c65f4f30c36b167eab146}{countAdjacentMines\_20x16}}(\textcolor{keywordtype}{char}\ board[20][16],\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8h_a4daf7418e066896dfc691e86f26646b5}{winGame\_20x16}}(\textcolor{keywordtype}{char}\ board[20][16]);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_aaf55cbfd7dd6353666af81f2f18ccbd3}{checkEmptyPlates\_20x16}}(\textcolor{keywordtype}{char}\ board[20][16],\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_a5d77b119d87e66500c61468af241d05b}{placeMines\_28x20}}(\textcolor{keywordtype}{char}\ board[28][20],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8c_a786a393e41ef89576d517261c3a37956}{mines}});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_a9e96bb16a39e10214c39486f87f2f6e2}{initializeBoard\_28x20}}(\textcolor{keywordtype}{char}\ board[28][20]);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00132\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{game__logic_8h_aaa419d968e188e7b88db408728c014ff}{countAdjacentMines\_28x20}}(\textcolor{keywordtype}{char}\ board[28][20],\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{game__logic_8h_ad3a889eced6c58e8332f919cee097936}{winGame\_28x20}}(\textcolor{keywordtype}{char}\ board[28][20]);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game__logic_8h_a542667870ea04719268ceda86136be1f}{checkEmptyPlates\_28x20}}(\textcolor{keywordtype}{char}\ board[28][20],\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00148\ }
+
+\end{DoxyCode}

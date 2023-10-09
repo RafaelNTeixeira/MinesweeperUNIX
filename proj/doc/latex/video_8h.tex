@@ -1,0 +1,340 @@
+\hypertarget{video_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/devices/graphic/video.h File Reference}
+\label{video_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/graphic/video.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/graphic/video.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lab5.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphics\+\_\+card\+\_\+macros.\+h\char`\"{}}\newline
+Include dependency graph for video.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$() \mbox{\hyperlink{video_8h_afa0e432c3ebeefc29a59abc4d22918df}{vg\+\_\+init}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em This funtion initiates graphics mode (GUI instead of CLI) \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a8ee27bbdd4250f2a8fa20c0e4dd6f637}{change\+\_\+mode}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em This funtion changes graphics mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a5039f31e1c6f4e58d9c42fff7c1f7e84}{map\+\_\+virtual\+\_\+machine}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em This function allocates memomry necessary for the graphics and maps it in an array. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{video_8h_a59d8c6a919eef84d238f6c8d5bd66ff8}{draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em This function prints a pixels to the display. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_a3604104f4f56b2f458337fdaf1730f36}{vg\+\_\+draw\+\_\+matrix}} (uint16\+\_\+t mode, uint8\+\_\+t no\+\_\+rectangles, uint32\+\_\+t first, uint8\+\_\+t step)
+\begin{DoxyCompactList}\small\item\em This function is responsible for drawing the matrix that represents the board of the game. \end{DoxyCompactList}\item 
+uint8\+\_\+t() \mbox{\hyperlink{video_8h_aa01f9bbad6332518ec591451ecff15d2}{R}} (uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em This function returns the red component of a color in RGB. \end{DoxyCompactList}\item 
+uint8\+\_\+t() \mbox{\hyperlink{video_8h_a951a38a1459357ffe379b5dea65522b2}{G}} (uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em This function returns the green component of a color in RGB. \end{DoxyCompactList}\item 
+uint8\+\_\+t() \mbox{\hyperlink{video_8h_a24e0201c0056d4d68aa7a34ae360ed87}{B}} (uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em This function returns the blue component of a color in RGB. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{video_8h_a0d38ddec52d5b89b35a21bd3bc0ca247}{build\+\_\+\+RGB}} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em This function returns the color formed by the red, green and blue componets. \end{DoxyCompactList}\item 
+uint8\+\_\+t() \mbox{\hyperlink{video_8h_ae31554359e7f1cd21fb3a9d42daddf53}{get\+\_\+indexed\+\_\+color}} (uint row, uint col, uint32\+\_\+t first, uint8\+\_\+t no\+\_\+rectangles, uint8\+\_\+t step)
+\begin{DoxyCompactList}\small\item\em This function returns the index of the color mapped in a Minix color palette. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \mbox{\hyperlink{video_8h_ab87c9ed01dbb967ee33eca94c8a088e8}{get\+\_\+direct\+\_\+color}} (uint row, uint col, uint32\+\_\+t first, uint8\+\_\+t no\+\_\+rectangles, uint8\+\_\+t step)
+\begin{DoxyCompactList}\small\item\em This functions return a color formed by a set of bytes that represent each of the RGB components. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8h_a923b943e5b1b4762cd38427bdba6f3b1}{draw\+\_\+xpm}} (xpm\+\_\+image\+\_\+t img, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em This function prints a xmp image to the display. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{video_8h_a2ad93530cfcf385e64721278a0c2211e}{controller\+\_\+info}} (vg\+\_\+vbe\+\_\+contr\+\_\+info\+\_\+t $\ast$info)
+\begin{DoxyCompactList}\small\item\em This functions reads and stores all the necessary information in the struct vg\+\_\+vbe\+\_\+contr\+\_\+info\+\_\+t. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{video_8h_a8f71a08c1257e1a10e831be12b216053}{vg\+\_\+draw\+\_\+board}} (xpm\+\_\+image\+\_\+t board)
+\begin{DoxyCompactList}\small\item\em This function draws the game board on the screen using the provided XPM image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{video_8h_a7fb16bf2f02996a1a195a16c9c7bdd8a}{draw\+\_\+board\+\_\+cell}} (xpm\+\_\+image\+\_\+t img, uint8\+\_\+t x, uint8\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em This function draws an individual cell of the game board on the screen using the provided XPM image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{video_8h_a24e0201c0056d4d68aa7a34ae360ed87}\label{video_8h_a24e0201c0056d4d68aa7a34ae360ed87}} 
+\index{video.h@{video.h}!B@{B}}
+\index{B@{B}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{B()}{B()}}
+{\footnotesize\ttfamily uint8\+\_\+t() B (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+This function returns the blue component of a color in RGB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The original color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The blue component of the original color 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{video_8h_a0d38ddec52d5b89b35a21bd3bc0ca247}\label{video_8h_a0d38ddec52d5b89b35a21bd3bc0ca247}} 
+\index{video.h@{video.h}!build\_RGB@{build\_RGB}}
+\index{build\_RGB@{build\_RGB}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{build\_RGB()}{build\_RGB()}}
+{\footnotesize\ttfamily uint32\+\_\+t() build\+\_\+\+RGB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+This function returns the color formed by the red, green and blue componets. 
+
+\begin{DoxyReturn}{Returns}
+The final color 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{video_8h_a8ee27bbdd4250f2a8fa20c0e4dd6f637}\label{video_8h_a8ee27bbdd4250f2a8fa20c0e4dd6f637}} 
+\index{video.h@{video.h}!change\_mode@{change\_mode}}
+\index{change\_mode@{change\_mode}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{change\_mode()}{change\_mode()}}
+{\footnotesize\ttfamily int() change\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+This funtion changes graphics mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The VBE mode in which the graphics will be changed \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{video_8h_a2ad93530cfcf385e64721278a0c2211e}\label{video_8h_a2ad93530cfcf385e64721278a0c2211e}} 
+\index{video.h@{video.h}!controller\_info@{controller\_info}}
+\index{controller\_info@{controller\_info}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{controller\_info()}{controller\_info()}}
+{\footnotesize\ttfamily int() controller\+\_\+info (\begin{DoxyParamCaption}\item[{vg\+\_\+vbe\+\_\+contr\+\_\+info\+\_\+t $\ast$}]{info }\end{DoxyParamCaption})}
+
+
+
+This functions reads and stores all the necessary information in the struct vg\+\_\+vbe\+\_\+contr\+\_\+info\+\_\+t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & Object of type vg\+\_\+vbe\+\_\+contr\+\_\+info\+\_\+t struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 in case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{video_8h_a7fb16bf2f02996a1a195a16c9c7bdd8a}\label{video_8h_a7fb16bf2f02996a1a195a16c9c7bdd8a}} 
+\index{video.h@{video.h}!draw\_board\_cell@{draw\_board\_cell}}
+\index{draw\_board\_cell@{draw\_board\_cell}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{draw\_board\_cell()}{draw\_board\_cell()}}
+{\footnotesize\ttfamily void draw\+\_\+board\+\_\+cell (\begin{DoxyParamCaption}\item[{xpm\+\_\+image\+\_\+t}]{img,  }\item[{uint8\+\_\+t}]{x,  }\item[{uint8\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+This function draws an individual cell of the game board on the screen using the provided XPM image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The XPM image representing the cell to be drawn. \\
+\hline
+{\em x} & The x-\/coordinate of the cell. \\
+\hline
+{\em y} & The y-\/coordinate of the cell. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{video_8h_a59d8c6a919eef84d238f6c8d5bd66ff8}\label{video_8h_a59d8c6a919eef84d238f6c8d5bd66ff8}} 
+\index{video.h@{video.h}!draw\_pixel@{draw\_pixel}}
+\index{draw\_pixel@{draw\_pixel}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel()}{draw\_pixel()}}
+{\footnotesize\ttfamily void() draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+This function prints a pixels to the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the x-\/axis position of the pixel\textquotesingle{}s position \\
+\hline
+{\em y} & the y-\/axis position of the pixel\textquotesingle{}s position \\
+\hline
+{\em color} & the color the pixel to be displayed will be \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{video_8h_a923b943e5b1b4762cd38427bdba6f3b1}\label{video_8h_a923b943e5b1b4762cd38427bdba6f3b1}} 
+\index{video.h@{video.h}!draw\_xpm@{draw\_xpm}}
+\index{draw\_xpm@{draw\_xpm}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{draw\_xpm()}{draw\_xpm()}}
+{\footnotesize\ttfamily void draw\+\_\+xpm (\begin{DoxyParamCaption}\item[{xpm\+\_\+image\+\_\+t}]{img,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+This function prints a xmp image to the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & The xpm image to be loaded to the display \\
+\hline
+{\em x} & the x-\/axis position of the top left pixel\textquotesingle{}s position of the xpm \\
+\hline
+{\em y} & the y-\/axis position of the top left pixel\textquotesingle{}s position of the xpm \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{video_8h_a951a38a1459357ffe379b5dea65522b2}\label{video_8h_a951a38a1459357ffe379b5dea65522b2}} 
+\index{video.h@{video.h}!G@{G}}
+\index{G@{G}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{G()}{G()}}
+{\footnotesize\ttfamily uint8\+\_\+t() G (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+This function returns the green component of a color in RGB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The original color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The green component of the original color 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{video_8h_ab87c9ed01dbb967ee33eca94c8a088e8}\label{video_8h_ab87c9ed01dbb967ee33eca94c8a088e8}} 
+\index{video.h@{video.h}!get\_direct\_color@{get\_direct\_color}}
+\index{get\_direct\_color@{get\_direct\_color}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{get\_direct\_color()}{get\_direct\_color()}}
+{\footnotesize\ttfamily uint32\+\_\+t() get\+\_\+direct\+\_\+color (\begin{DoxyParamCaption}\item[{uint}]{row,  }\item[{uint}]{col,  }\item[{uint32\+\_\+t}]{first,  }\item[{uint8\+\_\+t}]{no\+\_\+rectangles,  }\item[{uint8\+\_\+t}]{step }\end{DoxyParamCaption})}
+
+
+
+This functions return a color formed by a set of bytes that represent each of the RGB components. 
+
+\begin{DoxyReturn}{Returns}
+The final color 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{video_8h_ae31554359e7f1cd21fb3a9d42daddf53}\label{video_8h_ae31554359e7f1cd21fb3a9d42daddf53}} 
+\index{video.h@{video.h}!get\_indexed\_color@{get\_indexed\_color}}
+\index{get\_indexed\_color@{get\_indexed\_color}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{get\_indexed\_color()}{get\_indexed\_color()}}
+{\footnotesize\ttfamily uint8\+\_\+t() get\+\_\+indexed\+\_\+color (\begin{DoxyParamCaption}\item[{uint}]{row,  }\item[{uint}]{col,  }\item[{uint32\+\_\+t}]{first,  }\item[{uint8\+\_\+t}]{no\+\_\+rectangles,  }\item[{uint8\+\_\+t}]{step }\end{DoxyParamCaption})}
+
+
+
+This function returns the index of the color mapped in a Minix color palette. 
+
+\begin{DoxyReturn}{Returns}
+The index of the color 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{video_8h_a5039f31e1c6f4e58d9c42fff7c1f7e84}\label{video_8h_a5039f31e1c6f4e58d9c42fff7c1f7e84}} 
+\index{video.h@{video.h}!map\_virtual\_machine@{map\_virtual\_machine}}
+\index{map\_virtual\_machine@{map\_virtual\_machine}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{map\_virtual\_machine()}{map\_virtual\_machine()}}
+{\footnotesize\ttfamily int() map\+\_\+virtual\+\_\+machine (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+This function allocates memomry necessary for the graphics and maps it in an array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The VBE mode in which the graphics will be configured \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 in case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{video_8h_aa01f9bbad6332518ec591451ecff15d2}\label{video_8h_aa01f9bbad6332518ec591451ecff15d2}} 
+\index{video.h@{video.h}!R@{R}}
+\index{R@{R}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{R()}{R()}}
+{\footnotesize\ttfamily uint8\+\_\+t() R (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+This function returns the red component of a color in RGB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The original color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The red component of the original color 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{video_8h_a8f71a08c1257e1a10e831be12b216053}\label{video_8h_a8f71a08c1257e1a10e831be12b216053}} 
+\index{video.h@{video.h}!vg\_draw\_board@{vg\_draw\_board}}
+\index{vg\_draw\_board@{vg\_draw\_board}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_board()}{vg\_draw\_board()}}
+{\footnotesize\ttfamily int vg\+\_\+draw\+\_\+board (\begin{DoxyParamCaption}\item[{xpm\+\_\+image\+\_\+t}]{board }\end{DoxyParamCaption})}
+
+
+
+This function draws the game board on the screen using the provided XPM image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The XPM image of the game board to be drawn. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+EXIT\+\_\+\+SUCCESS upon successful execution. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{video_8h_a3604104f4f56b2f458337fdaf1730f36}\label{video_8h_a3604104f4f56b2f458337fdaf1730f36}} 
+\index{video.h@{video.h}!vg\_draw\_matrix@{vg\_draw\_matrix}}
+\index{vg\_draw\_matrix@{vg\_draw\_matrix}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_draw\_matrix()}{vg\_draw\_matrix()}}
+{\footnotesize\ttfamily int vg\+\_\+draw\+\_\+matrix (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{uint8\+\_\+t}]{no\+\_\+rectangles,  }\item[{uint32\+\_\+t}]{first,  }\item[{uint8\+\_\+t}]{step }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for drawing the matrix that represents the board of the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The VBE mode that determines the color format (direct or indexed) \\
+\hline
+{\em no\+\_\+rectangles} & The number of rectangles in each row \\
+\hline
+{\em first} & Used to map the color \\
+\hline
+{\em step} & Used to map the color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 in case of success, 1 if otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{video_8h_afa0e432c3ebeefc29a59abc4d22918df}\label{video_8h_afa0e432c3ebeefc29a59abc4d22918df}} 
+\index{video.h@{video.h}!vg\_init@{vg\_init}}
+\index{vg\_init@{vg\_init}!video.h@{video.h}}
+\doxysubsubsection{\texorpdfstring{vg\_init()}{vg\_init()}}
+{\footnotesize\ttfamily void $\ast$() vg\+\_\+init (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+This funtion initiates graphics mode (GUI instead of CLI) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The VBE mode in which the graphics will be configured \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 17
+Here is the caller graph for this function\+:
+% FIG 18

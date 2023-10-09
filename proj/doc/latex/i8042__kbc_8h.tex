@@ -1,0 +1,333 @@
+\hypertarget{i8042__kbc_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/devices/keyboard/i8042\+\_\+kbc.h File Reference}
+\label{i8042__kbc_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/keyboard/i8042\_kbc.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/keyboard/i8042\_kbc.h}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for i8042\+\_\+kbc.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a1a522aa19bcb695a9df30032a893bee3}{DELAY\+\_\+\+US}}~20000
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a0e9cc5b3aff1352d3f400aa4d7254f44}{KBD\+\_\+\+IRQ1}}~1    /$\ast$ keyboard interrupt line $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a1ccde68b2b6d4e45b50eef1403e10bb7}{KBC\+\_\+\+OUT\+\_\+\+BUF}}~0x60
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a125df17b9fc5defdc6dae4925ad55ac9}{KBC\+\_\+\+ARGS}}~0x60
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a6f977b36b770dca3092d0bdf8c949cfe}{KBC\+\_\+\+ST\+\_\+\+REG}}~0x64
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a6d57c7927a10f638c83046b52c8caac9}{KBC\+\_\+\+CMD\+\_\+\+REG}}~0x64
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_af6996d12e71a534569c41a25de7d6d52}{PARITY}}~BIT(7) /$\ast$ Parity error -\/ invalid data $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a45ba202b05caf39795aeca91b0ae547e}{TIMEOUT}}~BIT(6) /$\ast$ Timeout error -\/ invalid data $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a4bb881a86464a16b02b50b244618b718}{KBC\+\_\+\+ERR\+\_\+\+SIG}}~BIT(6) $\vert$ BIT(7)
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a1b41fd2be63532d4ab910f8b256c3811}{AUX}}~BIT(5) /$\ast$ Mouse data $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a03f542f1e0e2ba512c4ed189decfee3d}{INH}}~BIT(4) /$\ast$ Inhibit flag\+: 0 if keyboard is inhibited $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a2946bc30423c2a996eeafa49e995c30e}{A2}}~BIT(3) /$\ast$ A2 input line\+: irrelevant for LCOM $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_ae3d9f52a1a315303ad04f0576bd42a25}{SYS}}~BIT(2) /$\ast$ System flag\+: irrelevant for LCOM $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a3c48b10907056351582baf9f6478598e}{IBF}}~BIT(1) /$\ast$ Input buffer full -\/ don’t write commands or arguments $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a45967c9e25447ba853cf6fb4ac545fe6}{OBF}}~BIT(0) /$\ast$ Output buffer full -\/ data available for reading $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a050e9755348d070dcb08d3f920911caa}{IS\+\_\+\+BREAKCODE}}~BIT(7) /$\ast$ bit mask to check if a \mbox{\hyperlink{int__manager_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}} is a breakcode $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_ac8a34f3fae782b1f62195c0d8f1d5d38}{PARITY\+\_\+\+ERR}}~1
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a9433449a20ede66ed57354ca3332a019}{TIMEOUT\+\_\+\+ERR}}~2
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a8d17f620ecba242efc6cfd0349e9c050}{IBF\+\_\+\+ERR}}~3
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a39fd1baa2c6401d481aaba3b97014176}{AUX\+\_\+\+ERR}}~4
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_ac822a3953d90207e64b58f480454a8d8}{W\+\_\+\+MAKE}}~0x11
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a0f76fe84c649e8cf3a4114d0d9bf085a}{A\+\_\+\+MAKE}}~0x1E
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_ac2c2b345d42f2a5b5a028028eb8c5680}{S\+\_\+\+MAKE}}~0x1F
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a629b0c93e278a4bf1e1678af58fbea95}{D\+\_\+\+MAKE}}~0x20
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a39dc690d592fb207f7ffdd79a212b59b}{ENTER\+\_\+\+MAKE}}~0x1C
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a565d225eee3f10e5a73aa81dc6caa469}{F\+\_\+\+MAKE}}~0x21
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a168fd0a54619731c76c386a7f1bde2b1}{ESC\+\_\+\+MAKE}}~0x01
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a343f44cb034d2d2ff3438b3d45dcde1f}{ESC\+\_\+\+BREAK}}~0x81
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_aeaace70a848986aba05d3e74cdc9c19a}{TWO\+\_\+\+BYTE\+\_\+\+SCAN}}~0x\+E0
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_aa47d3ad41b123a9eb60100f61026a2bf}{MAKE\+\_\+\+BREAK\+\_\+\+DIFF}}~BIT(7)
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_aa11034847efd6b91fe86390cc53f68ec}{RCB}}~0x20 /$\ast$ Read Command Back -\/ reads command byte $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_ae65b658c0eff67e188a2150bb9d51b7b}{WCB}}~0x60 /$\ast$ Write Command Back -\/ writes command byte $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a55fefff08c94153a53592686472a6c80}{CHECK\+\_\+\+KBC}}~0x\+AA /$\ast$ Check KBC (Self-\/Test) -\/ returns 0x55 if OK, returns 0x\+FC if error $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a2420806aa8d5f0c8914d7abe9153548a}{CHECK\+\_\+\+KBI}}~0x\+AB /$\ast$ Check KBD Interface -\/ returns 0 if OK $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a00e5eff6b024bf06eaa87679ad032e68}{DIS\+\_\+\+KBD\+\_\+\+INTF}}~0x\+AD /$\ast$ Disable KBD Interface $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_acddffe5e78c1eaafba6d8c67673af251}{ENA\+\_\+\+KBD\+\_\+\+INTF}}~0x\+AE /$\ast$ Enable KBD Interface $\ast$/
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_ae06932f67e4c43252a517ba344489854}{DIS2}}~BIT(5)
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_a6e5c46282d69d86c09a6e3669ed16ff5}{DIS}}~BIT(4)
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_ab254a5a335276357f63779cda0b8e44f}{INT2}}~BIT(1)
+\item 
+\#define \mbox{\hyperlink{i8042__kbc_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{INT}}~BIT(0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{i8042__kbc_8h_a2946bc30423c2a996eeafa49e995c30e}\label{i8042__kbc_8h_a2946bc30423c2a996eeafa49e995c30e}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!A2@{A2}}
+\index{A2@{A2}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{A2}{A2}}
+{\footnotesize\ttfamily \#define A2~BIT(3) /$\ast$ A2 input line\+: irrelevant for LCOM $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a0f76fe84c649e8cf3a4114d0d9bf085a}\label{i8042__kbc_8h_a0f76fe84c649e8cf3a4114d0d9bf085a}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!A\_MAKE@{A\_MAKE}}
+\index{A\_MAKE@{A\_MAKE}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{A\_MAKE}{A\_MAKE}}
+{\footnotesize\ttfamily \#define A\+\_\+\+MAKE~0x1E}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a1b41fd2be63532d4ab910f8b256c3811}\label{i8042__kbc_8h_a1b41fd2be63532d4ab910f8b256c3811}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!AUX@{AUX}}
+\index{AUX@{AUX}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{AUX}{AUX}}
+{\footnotesize\ttfamily \#define AUX~BIT(5) /$\ast$ Mouse data $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a39fd1baa2c6401d481aaba3b97014176}\label{i8042__kbc_8h_a39fd1baa2c6401d481aaba3b97014176}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!AUX\_ERR@{AUX\_ERR}}
+\index{AUX\_ERR@{AUX\_ERR}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{AUX\_ERR}{AUX\_ERR}}
+{\footnotesize\ttfamily \#define AUX\+\_\+\+ERR~4}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a55fefff08c94153a53592686472a6c80}\label{i8042__kbc_8h_a55fefff08c94153a53592686472a6c80}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!CHECK\_KBC@{CHECK\_KBC}}
+\index{CHECK\_KBC@{CHECK\_KBC}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_KBC}{CHECK\_KBC}}
+{\footnotesize\ttfamily \#define CHECK\+\_\+\+KBC~0x\+AA /$\ast$ Check KBC (Self-\/Test) -\/ returns 0x55 if OK, returns 0x\+FC if error $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a2420806aa8d5f0c8914d7abe9153548a}\label{i8042__kbc_8h_a2420806aa8d5f0c8914d7abe9153548a}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!CHECK\_KBI@{CHECK\_KBI}}
+\index{CHECK\_KBI@{CHECK\_KBI}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{CHECK\_KBI}{CHECK\_KBI}}
+{\footnotesize\ttfamily \#define CHECK\+\_\+\+KBI~0x\+AB /$\ast$ Check KBD Interface -\/ returns 0 if OK $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a629b0c93e278a4bf1e1678af58fbea95}\label{i8042__kbc_8h_a629b0c93e278a4bf1e1678af58fbea95}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!D\_MAKE@{D\_MAKE}}
+\index{D\_MAKE@{D\_MAKE}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{D\_MAKE}{D\_MAKE}}
+{\footnotesize\ttfamily \#define D\+\_\+\+MAKE~0x20}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a1a522aa19bcb695a9df30032a893bee3}\label{i8042__kbc_8h_a1a522aa19bcb695a9df30032a893bee3}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!DELAY\_US@{DELAY\_US}}
+\index{DELAY\_US@{DELAY\_US}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{DELAY\_US}{DELAY\_US}}
+{\footnotesize\ttfamily \#define DELAY\+\_\+\+US~20000}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a6e5c46282d69d86c09a6e3669ed16ff5}\label{i8042__kbc_8h_a6e5c46282d69d86c09a6e3669ed16ff5}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!DIS@{DIS}}
+\index{DIS@{DIS}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{DIS}{DIS}}
+{\footnotesize\ttfamily \#define DIS~BIT(4)}
+
+\mbox{\Hypertarget{i8042__kbc_8h_ae06932f67e4c43252a517ba344489854}\label{i8042__kbc_8h_ae06932f67e4c43252a517ba344489854}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!DIS2@{DIS2}}
+\index{DIS2@{DIS2}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{DIS2}{DIS2}}
+{\footnotesize\ttfamily \#define DIS2~BIT(5)}
+
+KBC Command Byte \mbox{\Hypertarget{i8042__kbc_8h_a00e5eff6b024bf06eaa87679ad032e68}\label{i8042__kbc_8h_a00e5eff6b024bf06eaa87679ad032e68}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!DIS\_KBD\_INTF@{DIS\_KBD\_INTF}}
+\index{DIS\_KBD\_INTF@{DIS\_KBD\_INTF}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{DIS\_KBD\_INTF}{DIS\_KBD\_INTF}}
+{\footnotesize\ttfamily \#define DIS\+\_\+\+KBD\+\_\+\+INTF~0x\+AD /$\ast$ Disable KBD Interface $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_acddffe5e78c1eaafba6d8c67673af251}\label{i8042__kbc_8h_acddffe5e78c1eaafba6d8c67673af251}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!ENA\_KBD\_INTF@{ENA\_KBD\_INTF}}
+\index{ENA\_KBD\_INTF@{ENA\_KBD\_INTF}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{ENA\_KBD\_INTF}{ENA\_KBD\_INTF}}
+{\footnotesize\ttfamily \#define ENA\+\_\+\+KBD\+\_\+\+INTF~0x\+AE /$\ast$ Enable KBD Interface $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a39dc690d592fb207f7ffdd79a212b59b}\label{i8042__kbc_8h_a39dc690d592fb207f7ffdd79a212b59b}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!ENTER\_MAKE@{ENTER\_MAKE}}
+\index{ENTER\_MAKE@{ENTER\_MAKE}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{ENTER\_MAKE}{ENTER\_MAKE}}
+{\footnotesize\ttfamily \#define ENTER\+\_\+\+MAKE~0x1C}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a343f44cb034d2d2ff3438b3d45dcde1f}\label{i8042__kbc_8h_a343f44cb034d2d2ff3438b3d45dcde1f}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!ESC\_BREAK@{ESC\_BREAK}}
+\index{ESC\_BREAK@{ESC\_BREAK}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_BREAK}{ESC\_BREAK}}
+{\footnotesize\ttfamily \#define ESC\+\_\+\+BREAK~0x81}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a168fd0a54619731c76c386a7f1bde2b1}\label{i8042__kbc_8h_a168fd0a54619731c76c386a7f1bde2b1}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!ESC\_MAKE@{ESC\_MAKE}}
+\index{ESC\_MAKE@{ESC\_MAKE}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{ESC\_MAKE}{ESC\_MAKE}}
+{\footnotesize\ttfamily \#define ESC\+\_\+\+MAKE~0x01}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a565d225eee3f10e5a73aa81dc6caa469}\label{i8042__kbc_8h_a565d225eee3f10e5a73aa81dc6caa469}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!F\_MAKE@{F\_MAKE}}
+\index{F\_MAKE@{F\_MAKE}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{F\_MAKE}{F\_MAKE}}
+{\footnotesize\ttfamily \#define F\+\_\+\+MAKE~0x21}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a3c48b10907056351582baf9f6478598e}\label{i8042__kbc_8h_a3c48b10907056351582baf9f6478598e}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!IBF@{IBF}}
+\index{IBF@{IBF}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{IBF}{IBF}}
+{\footnotesize\ttfamily \#define IBF~BIT(1) /$\ast$ Input buffer full -\/ don’t write commands or arguments $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a8d17f620ecba242efc6cfd0349e9c050}\label{i8042__kbc_8h_a8d17f620ecba242efc6cfd0349e9c050}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!IBF\_ERR@{IBF\_ERR}}
+\index{IBF\_ERR@{IBF\_ERR}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{IBF\_ERR}{IBF\_ERR}}
+{\footnotesize\ttfamily \#define IBF\+\_\+\+ERR~3}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a03f542f1e0e2ba512c4ed189decfee3d}\label{i8042__kbc_8h_a03f542f1e0e2ba512c4ed189decfee3d}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!INH@{INH}}
+\index{INH@{INH}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{INH}{INH}}
+{\footnotesize\ttfamily \#define INH~BIT(4) /$\ast$ Inhibit flag\+: 0 if keyboard is inhibited $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_afeeffe52c8fd59db7c61cf8b02042dbf}\label{i8042__kbc_8h_afeeffe52c8fd59db7c61cf8b02042dbf}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!INT@{INT}}
+\index{INT@{INT}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{INT}{INT}}
+{\footnotesize\ttfamily \#define INT~BIT(0)}
+
+\mbox{\Hypertarget{i8042__kbc_8h_ab254a5a335276357f63779cda0b8e44f}\label{i8042__kbc_8h_ab254a5a335276357f63779cda0b8e44f}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!INT2@{INT2}}
+\index{INT2@{INT2}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{INT2}{INT2}}
+{\footnotesize\ttfamily \#define INT2~BIT(1)}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a050e9755348d070dcb08d3f920911caa}\label{i8042__kbc_8h_a050e9755348d070dcb08d3f920911caa}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!IS\_BREAKCODE@{IS\_BREAKCODE}}
+\index{IS\_BREAKCODE@{IS\_BREAKCODE}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{IS\_BREAKCODE}{IS\_BREAKCODE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+BREAKCODE~BIT(7) /$\ast$ bit mask to check if a \mbox{\hyperlink{int__manager_8c_aa1de7a5557e9d96b83cf03f73c92163f}{scancode}} is a breakcode $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a125df17b9fc5defdc6dae4925ad55ac9}\label{i8042__kbc_8h_a125df17b9fc5defdc6dae4925ad55ac9}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!KBC\_ARGS@{KBC\_ARGS}}
+\index{KBC\_ARGS@{KBC\_ARGS}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_ARGS}{KBC\_ARGS}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+ARGS~0x60}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a6d57c7927a10f638c83046b52c8caac9}\label{i8042__kbc_8h_a6d57c7927a10f638c83046b52c8caac9}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!KBC\_CMD\_REG@{KBC\_CMD\_REG}}
+\index{KBC\_CMD\_REG@{KBC\_CMD\_REG}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_CMD\_REG}{KBC\_CMD\_REG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+CMD\+\_\+\+REG~0x64}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a4bb881a86464a16b02b50b244618b718}\label{i8042__kbc_8h_a4bb881a86464a16b02b50b244618b718}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!KBC\_ERR\_SIG@{KBC\_ERR\_SIG}}
+\index{KBC\_ERR\_SIG@{KBC\_ERR\_SIG}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_ERR\_SIG}{KBC\_ERR\_SIG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+ERR\+\_\+\+SIG~BIT(6) $\vert$ BIT(7)}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a1ccde68b2b6d4e45b50eef1403e10bb7}\label{i8042__kbc_8h_a1ccde68b2b6d4e45b50eef1403e10bb7}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!KBC\_OUT\_BUF@{KBC\_OUT\_BUF}}
+\index{KBC\_OUT\_BUF@{KBC\_OUT\_BUF}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_OUT\_BUF}{KBC\_OUT\_BUF}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+OUT\+\_\+\+BUF~0x60}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a6f977b36b770dca3092d0bdf8c949cfe}\label{i8042__kbc_8h_a6f977b36b770dca3092d0bdf8c949cfe}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!KBC\_ST\_REG@{KBC\_ST\_REG}}
+\index{KBC\_ST\_REG@{KBC\_ST\_REG}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBC\_ST\_REG}{KBC\_ST\_REG}}
+{\footnotesize\ttfamily \#define KBC\+\_\+\+ST\+\_\+\+REG~0x64}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a0e9cc5b3aff1352d3f400aa4d7254f44}\label{i8042__kbc_8h_a0e9cc5b3aff1352d3f400aa4d7254f44}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!KBD\_IRQ1@{KBD\_IRQ1}}
+\index{KBD\_IRQ1@{KBD\_IRQ1}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{KBD\_IRQ1}{KBD\_IRQ1}}
+{\footnotesize\ttfamily \#define KBD\+\_\+\+IRQ1~1    /$\ast$ keyboard interrupt line $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_aa47d3ad41b123a9eb60100f61026a2bf}\label{i8042__kbc_8h_aa47d3ad41b123a9eb60100f61026a2bf}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!MAKE\_BREAK\_DIFF@{MAKE\_BREAK\_DIFF}}
+\index{MAKE\_BREAK\_DIFF@{MAKE\_BREAK\_DIFF}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{MAKE\_BREAK\_DIFF}{MAKE\_BREAK\_DIFF}}
+{\footnotesize\ttfamily \#define MAKE\+\_\+\+BREAK\+\_\+\+DIFF~BIT(7)}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a45967c9e25447ba853cf6fb4ac545fe6}\label{i8042__kbc_8h_a45967c9e25447ba853cf6fb4ac545fe6}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!OBF@{OBF}}
+\index{OBF@{OBF}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{OBF}{OBF}}
+{\footnotesize\ttfamily \#define OBF~BIT(0) /$\ast$ Output buffer full -\/ data available for reading $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_af6996d12e71a534569c41a25de7d6d52}\label{i8042__kbc_8h_af6996d12e71a534569c41a25de7d6d52}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!PARITY@{PARITY}}
+\index{PARITY@{PARITY}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{PARITY}{PARITY}}
+{\footnotesize\ttfamily \#define PARITY~BIT(7) /$\ast$ Parity error -\/ invalid data $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_ac8a34f3fae782b1f62195c0d8f1d5d38}\label{i8042__kbc_8h_ac8a34f3fae782b1f62195c0d8f1d5d38}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!PARITY\_ERR@{PARITY\_ERR}}
+\index{PARITY\_ERR@{PARITY\_ERR}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{PARITY\_ERR}{PARITY\_ERR}}
+{\footnotesize\ttfamily \#define PARITY\+\_\+\+ERR~1}
+
+\mbox{\Hypertarget{i8042__kbc_8h_aa11034847efd6b91fe86390cc53f68ec}\label{i8042__kbc_8h_aa11034847efd6b91fe86390cc53f68ec}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!RCB@{RCB}}
+\index{RCB@{RCB}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{RCB}{RCB}}
+{\footnotesize\ttfamily \#define RCB~0x20 /$\ast$ Read Command Back -\/ reads command byte $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_ac2c2b345d42f2a5b5a028028eb8c5680}\label{i8042__kbc_8h_ac2c2b345d42f2a5b5a028028eb8c5680}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!S\_MAKE@{S\_MAKE}}
+\index{S\_MAKE@{S\_MAKE}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{S\_MAKE}{S\_MAKE}}
+{\footnotesize\ttfamily \#define S\+\_\+\+MAKE~0x1F}
+
+\mbox{\Hypertarget{i8042__kbc_8h_ae3d9f52a1a315303ad04f0576bd42a25}\label{i8042__kbc_8h_ae3d9f52a1a315303ad04f0576bd42a25}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!SYS@{SYS}}
+\index{SYS@{SYS}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{SYS}{SYS}}
+{\footnotesize\ttfamily \#define SYS~BIT(2) /$\ast$ System flag\+: irrelevant for LCOM $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a45ba202b05caf39795aeca91b0ae547e}\label{i8042__kbc_8h_a45ba202b05caf39795aeca91b0ae547e}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!TIMEOUT@{TIMEOUT}}
+\index{TIMEOUT@{TIMEOUT}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT}{TIMEOUT}}
+{\footnotesize\ttfamily \#define TIMEOUT~BIT(6) /$\ast$ Timeout error -\/ invalid data $\ast$/}
+
+\mbox{\Hypertarget{i8042__kbc_8h_a9433449a20ede66ed57354ca3332a019}\label{i8042__kbc_8h_a9433449a20ede66ed57354ca3332a019}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!TIMEOUT\_ERR@{TIMEOUT\_ERR}}
+\index{TIMEOUT\_ERR@{TIMEOUT\_ERR}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_ERR}{TIMEOUT\_ERR}}
+{\footnotesize\ttfamily \#define TIMEOUT\+\_\+\+ERR~2}
+
+\mbox{\Hypertarget{i8042__kbc_8h_aeaace70a848986aba05d3e74cdc9c19a}\label{i8042__kbc_8h_aeaace70a848986aba05d3e74cdc9c19a}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!TWO\_BYTE\_SCAN@{TWO\_BYTE\_SCAN}}
+\index{TWO\_BYTE\_SCAN@{TWO\_BYTE\_SCAN}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{TWO\_BYTE\_SCAN}{TWO\_BYTE\_SCAN}}
+{\footnotesize\ttfamily \#define TWO\+\_\+\+BYTE\+\_\+\+SCAN~0x\+E0}
+
+\mbox{\Hypertarget{i8042__kbc_8h_ac822a3953d90207e64b58f480454a8d8}\label{i8042__kbc_8h_ac822a3953d90207e64b58f480454a8d8}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!W\_MAKE@{W\_MAKE}}
+\index{W\_MAKE@{W\_MAKE}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{W\_MAKE}{W\_MAKE}}
+{\footnotesize\ttfamily \#define W\+\_\+\+MAKE~0x11}
+
+\mbox{\Hypertarget{i8042__kbc_8h_ae65b658c0eff67e188a2150bb9d51b7b}\label{i8042__kbc_8h_ae65b658c0eff67e188a2150bb9d51b7b}} 
+\index{i8042\_kbc.h@{i8042\_kbc.h}!WCB@{WCB}}
+\index{WCB@{WCB}!i8042\_kbc.h@{i8042\_kbc.h}}
+\doxysubsubsection{\texorpdfstring{WCB}{WCB}}
+{\footnotesize\ttfamily \#define WCB~0x60 /$\ast$ Write Command Back -\/ writes command byte $\ast$/}
+

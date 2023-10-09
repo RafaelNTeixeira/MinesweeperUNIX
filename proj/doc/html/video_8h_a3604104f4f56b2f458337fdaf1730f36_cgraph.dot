@@ -1,0 +1,29 @@
+digraph "vg_draw_matrix"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="vg_draw_matrix",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function is responsible for drawing the matrix that represents the board of the game."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="get_direct_color",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#ab87c9ed01dbb967ee33eca94c8a088e8",tooltip="This functions return a color formed by a set of bytes that represent each of the RGB components."];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="B",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a24e0201c0056d4d68aa7a34ae360ed87",tooltip="This function returns the blue component of a color in RGB."];
+  Node2 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="build_RGB",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a0d38ddec52d5b89b35a21bd3bc0ca247",tooltip="This function returns the color formed by the red, green and blue componets."];
+  Node2 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="G",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a951a38a1459357ffe379b5dea65522b2",tooltip="This function returns the green component of a color in RGB."];
+  Node2 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="R",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#aa01f9bbad6332518ec591451ecff15d2",tooltip="This function returns the red component of a color in RGB."];
+  Node1 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="get_indexed_color",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#ae31554359e7f1cd21fb3a9d42daddf53",tooltip="This function returns the index of the color mapped in a Minix color palette."];
+  Node1 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="vg_clear",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#ae73efbc5eb5fa85cab0358d0e4de8809",tooltip=" "];
+  Node1 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="vg_draw_rectangle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a99d2da2559e11200c6b40c469e9977ec",tooltip=" "];
+  Node9 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="vg_draw_hline",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a1677f4b59f9e0584d82e0b655e4b7fc9",tooltip=" "];
+  Node10 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="draw_pixel",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a59d8c6a919eef84d238f6c8d5bd66ff8",tooltip="This function prints a pixels to the display."];
+}

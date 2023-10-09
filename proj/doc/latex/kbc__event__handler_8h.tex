@@ -1,0 +1,177 @@
+\hypertarget{kbc__event__handler_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/event\+\_\+handler/kbc\+\_\+event\+\_\+handler.h File Reference}
+\label{kbc__event__handler_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/event\_handler/kbc\_event\_handler.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/event\_handler/kbc\_event\_handler.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}devices/keyboard/kbc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/game\+\_\+state.\+h\char`\"{}}\newline
+Include dependency graph for kbc\+\_\+event\+\_\+handler.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{kbc__event__handler_8h_a8f953f3d6c73d1b602907e7e4a2426e8}{handle\+\_\+kbd\+\_\+event}} (uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function handles keyboard events by dispatching them to the appropriate event handler based on the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{kbc__event__handler_8h_a5f0d2b60b707a74cc3db0fe3a7441fb8}{handle\+\_\+kbd\+\_\+mainmenu\+\_\+event}} (uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function handles keyboard events specific to the main menu state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{kbc__event__handler_8h_a7b16a1fb4b10b626ebb39a9cddf2c4de}{handle\+\_\+kbd\+\_\+beginner\+\_\+event}} (uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function handles keyboard events specific to the beginner state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{kbc__event__handler_8h_a6251bb316a8a74095d477b95b3381923}{handle\+\_\+kbd\+\_\+medium\+\_\+event}} (uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function handles keyboard events specific to the medium state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{kbc__event__handler_8h_a4023b521e078754c8859578d55e62254}{handle\+\_\+kbd\+\_\+hard\+\_\+event}} (uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function handles keyboard events specific to the hard state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{kbc__event__handler_8h_accf1db69517e762b64b7af27b8b06628}{handle\+\_\+kbd\+\_\+instructions\+\_\+event}} (uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function handles keyboard events specific to the instructions state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{kbc__event__handler_8h_a446479ec1377e99387108b1b6e1d6c5a}{handle\+\_\+kbd\+\_\+gamewin\+\_\+event}} (uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function handles the keyboard event when the game is won. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{kbc__event__handler_8h_a74dfb5b1d76c1b327d4c55426d005a86}{handle\+\_\+kbd\+\_\+gameover\+\_\+event}} (uint8\+\_\+t scan\+\_\+code\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function handles the keyboard event when the game is over. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kbc__event__handler_8h_a7b16a1fb4b10b626ebb39a9cddf2c4de}\label{kbc__event__handler_8h_a7b16a1fb4b10b626ebb39a9cddf2c4de}} 
+\index{kbc\_event\_handler.h@{kbc\_event\_handler.h}!handle\_kbd\_beginner\_event@{handle\_kbd\_beginner\_event}}
+\index{handle\_kbd\_beginner\_event@{handle\_kbd\_beginner\_event}!kbc\_event\_handler.h@{kbc\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_kbd\_beginner\_event()}{handle\_kbd\_beginner\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+kbd\+\_\+beginner\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function handles keyboard events specific to the beginner state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of two bytes representing the scan code of the key pressed on the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{kbc__event__handler_8h_a8f953f3d6c73d1b602907e7e4a2426e8}\label{kbc__event__handler_8h_a8f953f3d6c73d1b602907e7e4a2426e8}} 
+\index{kbc\_event\_handler.h@{kbc\_event\_handler.h}!handle\_kbd\_event@{handle\_kbd\_event}}
+\index{handle\_kbd\_event@{handle\_kbd\_event}!kbc\_event\_handler.h@{kbc\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_kbd\_event()}{handle\_kbd\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+kbd\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function handles keyboard events by dispatching them to the appropriate event handler based on the current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of two bytes representing the scan code of the key pressed on the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{kbc__event__handler_8h_a74dfb5b1d76c1b327d4c55426d005a86}\label{kbc__event__handler_8h_a74dfb5b1d76c1b327d4c55426d005a86}} 
+\index{kbc\_event\_handler.h@{kbc\_event\_handler.h}!handle\_kbd\_gameover\_event@{handle\_kbd\_gameover\_event}}
+\index{handle\_kbd\_gameover\_event@{handle\_kbd\_gameover\_event}!kbc\_event\_handler.h@{kbc\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_kbd\_gameover\_event()}{handle\_kbd\_gameover\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+kbd\+\_\+gameover\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function handles the keyboard event when the game is over. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of two bytes representing the scan code of the key pressed on the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{kbc__event__handler_8h_a446479ec1377e99387108b1b6e1d6c5a}\label{kbc__event__handler_8h_a446479ec1377e99387108b1b6e1d6c5a}} 
+\index{kbc\_event\_handler.h@{kbc\_event\_handler.h}!handle\_kbd\_gamewin\_event@{handle\_kbd\_gamewin\_event}}
+\index{handle\_kbd\_gamewin\_event@{handle\_kbd\_gamewin\_event}!kbc\_event\_handler.h@{kbc\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_kbd\_gamewin\_event()}{handle\_kbd\_gamewin\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+kbd\+\_\+gamewin\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function handles the keyboard event when the game is won. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of two bytes representing the scan code of the key pressed on the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{kbc__event__handler_8h_a4023b521e078754c8859578d55e62254}\label{kbc__event__handler_8h_a4023b521e078754c8859578d55e62254}} 
+\index{kbc\_event\_handler.h@{kbc\_event\_handler.h}!handle\_kbd\_hard\_event@{handle\_kbd\_hard\_event}}
+\index{handle\_kbd\_hard\_event@{handle\_kbd\_hard\_event}!kbc\_event\_handler.h@{kbc\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_kbd\_hard\_event()}{handle\_kbd\_hard\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+kbd\+\_\+hard\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function handles keyboard events specific to the hard state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of two bytes representing the scan code of the key pressed on the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{kbc__event__handler_8h_accf1db69517e762b64b7af27b8b06628}\label{kbc__event__handler_8h_accf1db69517e762b64b7af27b8b06628}} 
+\index{kbc\_event\_handler.h@{kbc\_event\_handler.h}!handle\_kbd\_instructions\_event@{handle\_kbd\_instructions\_event}}
+\index{handle\_kbd\_instructions\_event@{handle\_kbd\_instructions\_event}!kbc\_event\_handler.h@{kbc\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_kbd\_instructions\_event()}{handle\_kbd\_instructions\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+kbd\+\_\+instructions\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function handles keyboard events specific to the instructions state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of two bytes representing the scan code of the key pressed on the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{kbc__event__handler_8h_a5f0d2b60b707a74cc3db0fe3a7441fb8}\label{kbc__event__handler_8h_a5f0d2b60b707a74cc3db0fe3a7441fb8}} 
+\index{kbc\_event\_handler.h@{kbc\_event\_handler.h}!handle\_kbd\_mainmenu\_event@{handle\_kbd\_mainmenu\_event}}
+\index{handle\_kbd\_mainmenu\_event@{handle\_kbd\_mainmenu\_event}!kbc\_event\_handler.h@{kbc\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_kbd\_mainmenu\_event()}{handle\_kbd\_mainmenu\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+kbd\+\_\+mainmenu\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function handles keyboard events specific to the main menu state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of two bytes representing the scan code of the key pressed on the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{kbc__event__handler_8h_a6251bb316a8a74095d477b95b3381923}\label{kbc__event__handler_8h_a6251bb316a8a74095d477b95b3381923}} 
+\index{kbc\_event\_handler.h@{kbc\_event\_handler.h}!handle\_kbd\_medium\_event@{handle\_kbd\_medium\_event}}
+\index{handle\_kbd\_medium\_event@{handle\_kbd\_medium\_event}!kbc\_event\_handler.h@{kbc\_event\_handler.h}}
+\doxysubsubsection{\texorpdfstring{handle\_kbd\_medium\_event()}{handle\_kbd\_medium\_event()}}
+{\footnotesize\ttfamily void handle\+\_\+kbd\+\_\+medium\+\_\+event (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{scan\+\_\+code\mbox{[}2\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function handles keyboard events specific to the medium state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scan\+\_\+code} & An array of two bytes representing the scan code of the key pressed on the keyboard. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14

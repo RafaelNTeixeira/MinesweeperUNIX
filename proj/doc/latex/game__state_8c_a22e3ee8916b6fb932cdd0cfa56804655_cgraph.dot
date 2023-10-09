@@ -1,0 +1,37 @@
+digraph "check_mouse_clicks_menu"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="check_mouse_clicks_menu",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function checks the mouse clicks within the menu screen and updates the game state accordingly."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="start_game_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a814afd9aa373a35da8e7498906b94d62",tooltip="This function starts a game with a 16x16 grid. Initializes the game timer, sets the number of tiles i..."];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="getCurrentTime",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$rtc_8c.html#ae8aba83225f6193ec169c4fc41f3f3cb",tooltip="Get the current time and date."];
+  Node3 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="bcdToDec",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$rtc_8c.html#abc57bf2c447b1860df7493b3222c3a43",tooltip="Converts values from bcd to decimal."];
+  Node2 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="initializeBoard_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a469350b8ffa0e62ba116f9077c76a775",tooltip="This function is used to initialize a 16x16 board with default values."];
+  Node2 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="initTime",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$rtc_8c.html#a146e69d1601c86471739a6d5a0ad14c9",tooltip="Initializes the Time struct."];
+  Node2 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="placeMines_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a5a896153d6c6b46f0181aac94fb949b3",tooltip="This function is used to randomly place mines on a 16x16 board."];
+  Node1 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="start_game_20x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#ade11f77cf98a5c65c075cec3349926c9",tooltip="This function starts a game on a 20x16 board."];
+  Node8 -> Node3 [color="steelblue1",style="solid"];
+  Node8 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="initializeBoard_20x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a1b0a7dc7cfadcae1385dc4c53f25905b",tooltip="This function is used to initialize a 20x16 board with default values."];
+  Node8 -> Node6 [color="steelblue1",style="solid"];
+  Node8 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="placeMines_20x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#ac2a098b1319223d9dc736e9541c695d7",tooltip="This function is used to randomly place mines on a 20x16 board."];
+  Node1 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="start_game_28x20",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a72d3dc2882239cc9fc80e728abd24f3b",tooltip="This function starts a game on a 28x20 board."];
+  Node11 -> Node3 [color="steelblue1",style="solid"];
+  Node11 -> Node12 [color="steelblue1",style="solid"];
+  Node12 [label="initializeBoard_28x20",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a9e96bb16a39e10214c39486f87f2f6e2",tooltip="This function is used to initialize a 28x20 board with default values."];
+  Node11 -> Node6 [color="steelblue1",style="solid"];
+  Node11 -> Node13 [color="steelblue1",style="solid"];
+  Node13 [label="placeMines_28x20",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a5d77b119d87e66500c61468af241d05b",tooltip="This function is used to randomly place mines on a 28x20 board."];
+}

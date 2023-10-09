@@ -1,0 +1,15 @@
+digraph "check_keyboard_enter_20x16"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="check_keyboard_enter\l_20x16",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function checks for the 'Enter' key press on the keyboard in a 20x16 grid."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="checkEmptyPlates_20x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#aaf55cbfd7dd6353666af81f2f18ccbd3",tooltip="This function is responsible for checking and revealing empty plates in a 20x16 board."];
+  Node2 -> Node2 [color="steelblue1",style="solid"];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="countAdjacentMines\l_20x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#acc65ea0b1c8c65f4f30c36b167eab146",tooltip="This function calculates and returns the count of adjacent mines around a specified cell in a 20x16 b..."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+}

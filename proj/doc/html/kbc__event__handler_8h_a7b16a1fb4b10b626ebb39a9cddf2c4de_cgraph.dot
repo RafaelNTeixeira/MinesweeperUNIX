@@ -1,0 +1,27 @@
+digraph "handle_kbd_beginner_event"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="handle_kbd_beginner\l_event",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function handles keyboard events specific to the beginner state."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="check_keyboard_a",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a62dbdccc2e359d731f68de9d221b77a2",tooltip="This function detects the 'A' key press on the keyboard and performs specific actions based on the cu..."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="check_keyboard_d_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a6cc5b485d0598ac614752be45c4b869f",tooltip="This function checks for the 'D' key press on the keyboard in a 16x16 grid."];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="check_keyboard_enter\l_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#afe4ecd7d5ea67158fd397018661105ae",tooltip="This function checks for the 'Enter' key press on the keyboard in a 16x16 grid."];
+  Node4 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="checkEmptyPlates_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#adb2ef2da3d123ce62419c96e83d269bd",tooltip="This function is responsible for checking and revealing empty plates in a 16x16 board."];
+  Node5 -> Node5 [color="steelblue1",style="solid"];
+  Node5 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="countAdjacentMines\l_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#ab434e1aba7e5c2486a52999f7fb089e4",tooltip="This function calculates and returns the count of adjacent mines around a specified cell in a 16x16 b..."];
+  Node4 -> Node6 [color="steelblue1",style="solid"];
+  Node1 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="check_keyboard_f_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a69279d35a57aee05d4bbbc59b562eac2",tooltip=" "];
+  Node1 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="check_keyboard_s_16x16",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#ae6957c159ff7c2ebe3d588078da99979",tooltip="This function checks for the 'S' key press on the keyboard in a 16x16 grid."];
+  Node1 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="check_keyboard_w",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#ad70f7e6bd2036071b4aae2dd5b39b650",tooltip="This function is responsible for detecting the 'W' key press on the keyboard and performing the corre..."];
+}

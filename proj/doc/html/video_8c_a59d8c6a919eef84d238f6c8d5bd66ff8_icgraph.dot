@@ -1,0 +1,15 @@
+digraph "draw_pixel"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="draw_pixel",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function prints a pixels to the display."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="vg_draw_hline",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a1677f4b59f9e0584d82e0b655e4b7fc9",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="vg_draw_rectangle",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a99d2da2559e11200c6b40c469e9977ec",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="vg_draw_matrix",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#a3604104f4f56b2f458337fdaf1730f36",tooltip="This function is responsible for drawing the matrix that represents the board of the game."];
+}

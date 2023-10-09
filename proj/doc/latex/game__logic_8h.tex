@@ -1,0 +1,437 @@
+\hypertarget{game__logic_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/game/game\+\_\+logic.h File Reference}
+\label{game__logic_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/game\_logic.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/game/game\_logic.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game/game\+\_\+state.\+h\char`\"{}}\newline
+Include dependency graph for game\+\_\+logic.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{game__logic_8h_acfce30c20d501c583e678a8bbe6329bf}{get\+Matrix\+IndexX}} (int x)
+\begin{DoxyCompactList}\small\item\em This function is used to calculate the matrix index based on a given x-\/coordinate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__logic_8h_a607fbfedd398a7bbd0db46efa2519c3b}{get\+Matrix\+IndexY}} (int y)
+\begin{DoxyCompactList}\small\item\em This function is used to calculate the matrix index based on a given y-\/coordinate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__logic_8h_a03ae3db03a5ebc283f2b5c2d3af10608}{get\+XCoordenates\+Pressed\+Cell\+\_\+16x16}} (int x)
+\begin{DoxyCompactList}\small\item\em This function calculates the x-\/coordinate of a pressed cell in a 16x16 grid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__logic_8h_aa4cf280ade908873f3e56afa9da536cc}{get\+YCoordenates\+Pressed\+Cell\+\_\+16x16}} (int y)
+\begin{DoxyCompactList}\small\item\em This function calculates the y-\/coordinate of a pressed cell in a 16x16 grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_a5a896153d6c6b46f0181aac94fb949b3}{place\+Mines\+\_\+16x16}} (char board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]}, int \mbox{\hyperlink{game__logic_8c_a786a393e41ef89576d517261c3a37956}{mines}})
+\begin{DoxyCompactList}\small\item\em This function is used to randomly place mines on a 16x16 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_a469350b8ffa0e62ba116f9077c76a775}{initialize\+Board\+\_\+16x16}} (char board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to initialize a 16x16 board with default values. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{game__logic_8h_ab434e1aba7e5c2486a52999f7fb089e4}{count\+Adjacent\+Mines\+\_\+16x16}} (char board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]}, int row, int col)
+\begin{DoxyCompactList}\small\item\em This function calculates and returns the count of adjacent mines around a specified cell in a 16x16 board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__logic_8h_a9f18c1e252eb822a1636562a750e59db}{win\+Game\+\_\+16x16}} (char board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function checks if the game is won in a 16x16 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_adb2ef2da3d123ce62419c96e83d269bd}{check\+Empty\+Plates\+\_\+16x16}} (char board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]}, int x, int y)
+\begin{DoxyCompactList}\small\item\em This function is responsible for checking and revealing empty plates in a 16x16 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_ac2a098b1319223d9dc736e9541c695d7}{place\+Mines\+\_\+20x16}} (char board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]}, int \mbox{\hyperlink{game__logic_8c_a786a393e41ef89576d517261c3a37956}{mines}})
+\begin{DoxyCompactList}\small\item\em This function is used to randomly place mines on a 20x16 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_a1b0a7dc7cfadcae1385dc4c53f25905b}{initialize\+Board\+\_\+20x16}} (char board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to initialize a 20x16 board with default values. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{game__logic_8h_acc65ea0b1c8c65f4f30c36b167eab146}{count\+Adjacent\+Mines\+\_\+20x16}} (char board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]}, int row, int col)
+\begin{DoxyCompactList}\small\item\em This function calculates and returns the count of adjacent mines around a specified cell in a 20x16 board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__logic_8h_a4daf7418e066896dfc691e86f26646b5}{win\+Game\+\_\+20x16}} (char board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function checks if the game is won in a 20x16 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_aaf55cbfd7dd6353666af81f2f18ccbd3}{check\+Empty\+Plates\+\_\+20x16}} (char board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]}, int x, int y)
+\begin{DoxyCompactList}\small\item\em This function is responsible for checking and revealing empty plates in a 20x16 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_a5d77b119d87e66500c61468af241d05b}{place\+Mines\+\_\+28x20}} (char board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]}, int \mbox{\hyperlink{game__logic_8c_a786a393e41ef89576d517261c3a37956}{mines}})
+\begin{DoxyCompactList}\small\item\em This function is used to randomly place mines on a 28x20 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_a9e96bb16a39e10214c39486f87f2f6e2}{initialize\+Board\+\_\+28x20}} (char board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to initialize a 28x20 board with default values. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{game__logic_8h_aaa419d968e188e7b88db408728c014ff}{count\+Adjacent\+Mines\+\_\+28x20}} (char board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]}, int row, int col)
+\begin{DoxyCompactList}\small\item\em This function calculates and returns the count of adjacent mines around a specified cell in a 28x20 board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__logic_8h_ad3a889eced6c58e8332f919cee097936}{win\+Game\+\_\+28x20}} (char board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function checks if the game is won in a 28x20 board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__logic_8h_a542667870ea04719268ceda86136be1f}{check\+Empty\+Plates\+\_\+28x20}} (char board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]}, int x, int y)
+\begin{DoxyCompactList}\small\item\em This function is responsible for checking and revealing empty plates in a 28x20 board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__logic_8h_adb2ef2da3d123ce62419c96e83d269bd}\label{game__logic_8h_adb2ef2da3d123ce62419c96e83d269bd}} 
+\index{game\_logic.h@{game\_logic.h}!checkEmptyPlates\_16x16@{checkEmptyPlates\_16x16}}
+\index{checkEmptyPlates\_16x16@{checkEmptyPlates\_16x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{checkEmptyPlates\_16x16()}{checkEmptyPlates\_16x16()}}
+{\footnotesize\ttfamily void check\+Empty\+Plates\+\_\+16x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]},  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for checking and revealing empty plates in a 16x16 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 16x16 board represented by a 2D character array. \\
+\hline
+{\em x} & The row index of the current cell. \\
+\hline
+{\em y} & The column index of the current cell. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{game__logic_8h_aaf55cbfd7dd6353666af81f2f18ccbd3}\label{game__logic_8h_aaf55cbfd7dd6353666af81f2f18ccbd3}} 
+\index{game\_logic.h@{game\_logic.h}!checkEmptyPlates\_20x16@{checkEmptyPlates\_20x16}}
+\index{checkEmptyPlates\_20x16@{checkEmptyPlates\_20x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{checkEmptyPlates\_20x16()}{checkEmptyPlates\_20x16()}}
+{\footnotesize\ttfamily void check\+Empty\+Plates\+\_\+20x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]},  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for checking and revealing empty plates in a 20x16 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 20x16 board represented by a 2D character array. \\
+\hline
+{\em x} & The row index of the current cell. \\
+\hline
+{\em y} & The column index of the current cell. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{game__logic_8h_a542667870ea04719268ceda86136be1f}\label{game__logic_8h_a542667870ea04719268ceda86136be1f}} 
+\index{game\_logic.h@{game\_logic.h}!checkEmptyPlates\_28x20@{checkEmptyPlates\_28x20}}
+\index{checkEmptyPlates\_28x20@{checkEmptyPlates\_28x20}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{checkEmptyPlates\_28x20()}{checkEmptyPlates\_28x20()}}
+{\footnotesize\ttfamily void check\+Empty\+Plates\+\_\+28x20 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]},  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is responsible for checking and revealing empty plates in a 28x20 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 28x20 board represented by a 2D character array. \\
+\hline
+{\em x} & The row index of the current cell. \\
+\hline
+{\em y} & The column index of the current cell. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{game__logic_8h_ab434e1aba7e5c2486a52999f7fb089e4}\label{game__logic_8h_ab434e1aba7e5c2486a52999f7fb089e4}} 
+\index{game\_logic.h@{game\_logic.h}!countAdjacentMines\_16x16@{countAdjacentMines\_16x16}}
+\index{countAdjacentMines\_16x16@{countAdjacentMines\_16x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{countAdjacentMines\_16x16()}{countAdjacentMines\_16x16()}}
+{\footnotesize\ttfamily char count\+Adjacent\+Mines\+\_\+16x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+This function calculates and returns the count of adjacent mines around a specified cell in a 16x16 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 16x16 board represented by a 2D character array. \\
+\hline
+{\em row} & The row index of the cell. \\
+\hline
+{\em col} & The column index of the cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+character representing the count of adjacent mines as a digit character (0 to 8). 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{game__logic_8h_acc65ea0b1c8c65f4f30c36b167eab146}\label{game__logic_8h_acc65ea0b1c8c65f4f30c36b167eab146}} 
+\index{game\_logic.h@{game\_logic.h}!countAdjacentMines\_20x16@{countAdjacentMines\_20x16}}
+\index{countAdjacentMines\_20x16@{countAdjacentMines\_20x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{countAdjacentMines\_20x16()}{countAdjacentMines\_20x16()}}
+{\footnotesize\ttfamily char count\+Adjacent\+Mines\+\_\+20x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+This function calculates and returns the count of adjacent mines around a specified cell in a 20x16 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 20x16 board represented by a 2D character array. \\
+\hline
+{\em row} & The row index of the cell. \\
+\hline
+{\em col} & The column index of the cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+character representing the count of adjacent mines as a digit character (0 to 8). 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{game__logic_8h_aaa419d968e188e7b88db408728c014ff}\label{game__logic_8h_aaa419d968e188e7b88db408728c014ff}} 
+\index{game\_logic.h@{game\_logic.h}!countAdjacentMines\_28x20@{countAdjacentMines\_28x20}}
+\index{countAdjacentMines\_28x20@{countAdjacentMines\_28x20}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{countAdjacentMines\_28x20()}{countAdjacentMines\_28x20()}}
+{\footnotesize\ttfamily char count\+Adjacent\+Mines\+\_\+28x20 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+This function calculates and returns the count of adjacent mines around a specified cell in a 28x20 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 28x20 board represented by a 2D character array. \\
+\hline
+{\em row} & The row index of the cell. \\
+\hline
+{\em col} & The column index of the cell. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+character representing the count of adjacent mines as a digit character (0 to 8). 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{game__logic_8h_acfce30c20d501c583e678a8bbe6329bf}\label{game__logic_8h_acfce30c20d501c583e678a8bbe6329bf}} 
+\index{game\_logic.h@{game\_logic.h}!getMatrixIndexX@{getMatrixIndexX}}
+\index{getMatrixIndexX@{getMatrixIndexX}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{getMatrixIndexX()}{getMatrixIndexX()}}
+{\footnotesize\ttfamily int get\+Matrix\+IndexX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+This function is used to calculate the matrix index based on a given x-\/coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate for which to calculate the matrix index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The matrix index corresponding to the given x-\/coordinate. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{game__logic_8h_a607fbfedd398a7bbd0db46efa2519c3b}\label{game__logic_8h_a607fbfedd398a7bbd0db46efa2519c3b}} 
+\index{game\_logic.h@{game\_logic.h}!getMatrixIndexY@{getMatrixIndexY}}
+\index{getMatrixIndexY@{getMatrixIndexY}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{getMatrixIndexY()}{getMatrixIndexY()}}
+{\footnotesize\ttfamily int get\+Matrix\+IndexY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function is used to calculate the matrix index based on a given y-\/coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The y-\/coordinate for which to calculate the matrix index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The matrix index corresponding to the given y-\/coordinate. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{game__logic_8h_a03ae3db03a5ebc283f2b5c2d3af10608}\label{game__logic_8h_a03ae3db03a5ebc283f2b5c2d3af10608}} 
+\index{game\_logic.h@{game\_logic.h}!getXCoordenatesPressedCell\_16x16@{getXCoordenatesPressedCell\_16x16}}
+\index{getXCoordenatesPressedCell\_16x16@{getXCoordenatesPressedCell\_16x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{getXCoordenatesPressedCell\_16x16()}{getXCoordenatesPressedCell\_16x16()}}
+{\footnotesize\ttfamily int get\+XCoordenates\+Pressed\+Cell\+\_\+16x16 (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+This function calculates the x-\/coordinate of a pressed cell in a 16x16 grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The starting x-\/coordinate of the grid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The x-\/coordinate of the pressed cell in the 16x16 grid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__logic_8h_aa4cf280ade908873f3e56afa9da536cc}\label{game__logic_8h_aa4cf280ade908873f3e56afa9da536cc}} 
+\index{game\_logic.h@{game\_logic.h}!getYCoordenatesPressedCell\_16x16@{getYCoordenatesPressedCell\_16x16}}
+\index{getYCoordenatesPressedCell\_16x16@{getYCoordenatesPressedCell\_16x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{getYCoordenatesPressedCell\_16x16()}{getYCoordenatesPressedCell\_16x16()}}
+{\footnotesize\ttfamily int get\+YCoordenates\+Pressed\+Cell\+\_\+16x16 (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function calculates the y-\/coordinate of a pressed cell in a 16x16 grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & The starting x-\/coordinate of the grid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The y-\/coordinate of the pressed cell in the 16x16 grid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__logic_8h_a469350b8ffa0e62ba116f9077c76a775}\label{game__logic_8h_a469350b8ffa0e62ba116f9077c76a775}} 
+\index{game\_logic.h@{game\_logic.h}!initializeBoard\_16x16@{initializeBoard\_16x16}}
+\index{initializeBoard\_16x16@{initializeBoard\_16x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{initializeBoard\_16x16()}{initializeBoard\_16x16()}}
+{\footnotesize\ttfamily void initialize\+Board\+\_\+16x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to initialize a 16x16 board with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 16x16 board represented by a 2D character array. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{game__logic_8h_a1b0a7dc7cfadcae1385dc4c53f25905b}\label{game__logic_8h_a1b0a7dc7cfadcae1385dc4c53f25905b}} 
+\index{game\_logic.h@{game\_logic.h}!initializeBoard\_20x16@{initializeBoard\_20x16}}
+\index{initializeBoard\_20x16@{initializeBoard\_20x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{initializeBoard\_20x16()}{initializeBoard\_20x16()}}
+{\footnotesize\ttfamily void initialize\+Board\+\_\+20x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to initialize a 20x16 board with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 20x16 board represented by a 2D character array. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{game__logic_8h_a9e96bb16a39e10214c39486f87f2f6e2}\label{game__logic_8h_a9e96bb16a39e10214c39486f87f2f6e2}} 
+\index{game\_logic.h@{game\_logic.h}!initializeBoard\_28x20@{initializeBoard\_28x20}}
+\index{initializeBoard\_28x20@{initializeBoard\_28x20}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{initializeBoard\_28x20()}{initializeBoard\_28x20()}}
+{\footnotesize\ttfamily void initialize\+Board\+\_\+28x20 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to initialize a 28x20 board with default values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 28x20 board represented by a 2D character array. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{game__logic_8h_a5a896153d6c6b46f0181aac94fb949b3}\label{game__logic_8h_a5a896153d6c6b46f0181aac94fb949b3}} 
+\index{game\_logic.h@{game\_logic.h}!placeMines\_16x16@{placeMines\_16x16}}
+\index{placeMines\_16x16@{placeMines\_16x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{placeMines\_16x16()}{placeMines\_16x16()}}
+{\footnotesize\ttfamily void place\+Mines\+\_\+16x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]},  }\item[{int}]{mines }\end{DoxyParamCaption})}
+
+
+
+This function is used to randomly place mines on a 16x16 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 16x16 board represented by a 2D character array. \\
+\hline
+{\em mines} & The number of mines to be placed on the board. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{game__logic_8h_ac2a098b1319223d9dc736e9541c695d7}\label{game__logic_8h_ac2a098b1319223d9dc736e9541c695d7}} 
+\index{game\_logic.h@{game\_logic.h}!placeMines\_20x16@{placeMines\_20x16}}
+\index{placeMines\_20x16@{placeMines\_20x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{placeMines\_20x16()}{placeMines\_20x16()}}
+{\footnotesize\ttfamily void place\+Mines\+\_\+20x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]},  }\item[{int}]{mines }\end{DoxyParamCaption})}
+
+
+
+This function is used to randomly place mines on a 20x16 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 20x16 board represented by a 2D character array. \\
+\hline
+{\em mines} & The number of mines to be placed on the board. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{game__logic_8h_a5d77b119d87e66500c61468af241d05b}\label{game__logic_8h_a5d77b119d87e66500c61468af241d05b}} 
+\index{game\_logic.h@{game\_logic.h}!placeMines\_28x20@{placeMines\_28x20}}
+\index{placeMines\_28x20@{placeMines\_28x20}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{placeMines\_28x20()}{placeMines\_28x20()}}
+{\footnotesize\ttfamily void place\+Mines\+\_\+28x20 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]},  }\item[{int}]{mines }\end{DoxyParamCaption})}
+
+
+
+This function is used to randomly place mines on a 28x20 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 28x20 board represented by a 2D character array. \\
+\hline
+{\em mines} & The number of mines to be placed on the board. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{game__logic_8h_a9f18c1e252eb822a1636562a750e59db}\label{game__logic_8h_a9f18c1e252eb822a1636562a750e59db}} 
+\index{game\_logic.h@{game\_logic.h}!winGame\_16x16@{winGame\_16x16}}
+\index{winGame\_16x16@{winGame\_16x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{winGame\_16x16()}{winGame\_16x16()}}
+{\footnotesize\ttfamily int win\+Game\+\_\+16x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}16\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function checks if the game is won in a 16x16 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 16x16 board represented by a 2D character array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the game is won, and 0 otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{game__logic_8h_a4daf7418e066896dfc691e86f26646b5}\label{game__logic_8h_a4daf7418e066896dfc691e86f26646b5}} 
+\index{game\_logic.h@{game\_logic.h}!winGame\_20x16@{winGame\_20x16}}
+\index{winGame\_20x16@{winGame\_20x16}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{winGame\_20x16()}{winGame\_20x16()}}
+{\footnotesize\ttfamily int win\+Game\+\_\+20x16 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}20\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function checks if the game is won in a 20x16 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 20x16 board represented by a 2D character array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the game is won, and 0 otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{game__logic_8h_ad3a889eced6c58e8332f919cee097936}\label{game__logic_8h_ad3a889eced6c58e8332f919cee097936}} 
+\index{game\_logic.h@{game\_logic.h}!winGame\_28x20@{winGame\_28x20}}
+\index{winGame\_28x20@{winGame\_28x20}!game\_logic.h@{game\_logic.h}}
+\doxysubsubsection{\texorpdfstring{winGame\_28x20()}{winGame\_28x20()}}
+{\footnotesize\ttfamily int win\+Game\+\_\+28x20 (\begin{DoxyParamCaption}\item[{char}]{board\mbox{[}28\mbox{]}\mbox{[}20\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function checks if the game is won in a 28x20 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The 28x20 board represented by a 2D character array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the game is won, and 0 otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 21

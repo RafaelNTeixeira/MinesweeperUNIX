@@ -1,0 +1,25 @@
+digraph "handle_timer_instructions_event"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="handle_timer_instructions\l_event",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function handles timer events in the \"INSTRUCTIONS\" state."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="_instructions_menu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a6196304024954107645a1db9755caa0e",tooltip="This function calls the specific draw function to draw the instruction menu."];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="draw_instructions_menu",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$display_8c.html#ad591a81c7dd7fe49e0732eee1c55c725",tooltip="This function displays the \"instructions menu\" image on the screen."];
+  Node3 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="draw_xpm",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$video_8c.html#af110146e2c41a581c0d543ed7eb61f37",tooltip="This function prints a xmp image to the display."];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="cursor_draw",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a36951ff3bd81205b3d399c2735d38b59",tooltip="This function takes the current position of the cursor and draws it on the screen."];
+  Node5 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="draw_cursor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$display_8c.html#a58b56a9af02d37c0b66d88674e579da3",tooltip="This function is responsible for drawing the cursor on the screen at the specified coordinates (x,..."];
+  Node6 -> Node4 [color="steelblue1",style="solid"];
+  Node1 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="cursor_erase",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a3b714459f8030f49c71cfe0bab357a4e",tooltip="This function calls the specific erase function to remove the cursor."];
+  Node7 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="erase_cursor",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$display_8c.html#aa1156b1e9f5177ad9f3215f1f7a19280",tooltip="This function is responsible for erasing the cursor from the screen at the specified coordinates (x,..."];
+  Node8 -> Node4 [color="steelblue1",style="solid"];
+}

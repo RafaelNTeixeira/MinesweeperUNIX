@@ -1,0 +1,31 @@
+digraph "check_mouse_click_left_hard"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="check_mouse_click_left_hard",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function checks for a left mouse click in the hard mode."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="checkEmptyPlates_28x20",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a542667870ea04719268ceda86136be1f",tooltip="This function is responsible for checking and revealing empty plates in a 28x20 board."];
+  Node2 -> Node2 [color="steelblue1",style="solid"];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="countAdjacentMines\l_28x20",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#aaa419d968e188e7b88db408728c014ff",tooltip="This function calculates and returns the count of adjacent mines around a specified cell in a 28x20 b..."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="getMatrixIndexX",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#acfce30c20d501c583e678a8bbe6329bf",tooltip="This function is used to calculate the matrix index based on a given x-coordinate."];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="getMatrixIndexY",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a607fbfedd398a7bbd0db46efa2519c3b",tooltip="This function is used to calculate the matrix index based on a given y-coordinate."];
+  Node1 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="start_game_28x20",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__state_8c.html#a72d3dc2882239cc9fc80e728abd24f3b",tooltip="This function starts a game on a 28x20 board."];
+  Node6 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="getCurrentTime",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$rtc_8c.html#ae8aba83225f6193ec169c4fc41f3f3cb",tooltip="Get the current time and date."];
+  Node7 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="bcdToDec",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$rtc_8c.html#abc57bf2c447b1860df7493b3222c3a43",tooltip="Converts values from bcd to decimal."];
+  Node6 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="initializeBoard_28x20",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a9e96bb16a39e10214c39486f87f2f6e2",tooltip="This function is used to initialize a 28x20 board with default values."];
+  Node6 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="initTime",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$rtc_8c.html#a146e69d1601c86471739a6d5a0ad14c9",tooltip="Initializes the Time struct."];
+  Node6 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="placeMines_28x20",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a5d77b119d87e66500c61468af241d05b",tooltip="This function is used to randomly place mines on a 28x20 board."];
+}

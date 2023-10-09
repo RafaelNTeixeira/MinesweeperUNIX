@@ -1,0 +1,13 @@
+digraph "check_mouse_click_right_beginner"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="check_mouse_click_right\l_beginner",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function checks for a right mouse click in the beginner mode."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="getMatrixIndexX",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#acfce30c20d501c583e678a8bbe6329bf",tooltip="This function is used to calculate the matrix index based on a given x-coordinate."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="getMatrixIndexY",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$game__logic_8c.html#a607fbfedd398a7bbd0db46efa2519c3b",tooltip="This function is used to calculate the matrix index based on a given y-coordinate."];
+}

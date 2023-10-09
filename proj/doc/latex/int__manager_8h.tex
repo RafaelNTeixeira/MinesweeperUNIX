@@ -1,0 +1,79 @@
+\hypertarget{int__manager_8h}{}\doxysection{C\+:/\+Users/\+João Costa/\+Desktop/\+FEUP/\+MINIX-\/\+LCOM/shared/g1/proj/src/devices/int\+\_\+manager.h File Reference}
+\label{int__manager_8h}\index{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/int\_manager.h@{C:/Users/João Costa/Desktop/FEUP/MINIX-\/LCOM/shared/g1/proj/src/devices/int\_manager.h}}
+{\ttfamily \#include $<$lcom/timer.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}timer/timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}keyboard/kbc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mouse/mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphic/video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../game/display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}event\+\_\+handler/timer\+\_\+event\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}event\+\_\+handler/mouse\+\_\+event\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}event\+\_\+handler/kbc\+\_\+event\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game/game\+\_\+state.\+h\char`\"{}}\newline
+Include dependency graph for int\+\_\+manager.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{int__manager_8h_ac4ae186b48f33686d93c72b9160a2afb}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the system and sets up the necessary interrupts and devices. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{int__manager_8h_a24285aea4a27f96c321b2628788e9a57}{main\+\_\+loop}} ()
+\begin{DoxyCompactList}\small\item\em Main loop of the system. This function enters the main loop of the system and continuously waits for messages from device interrupts. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{int__manager_8h_afaf9296ec5f119629e57f458f207ae0c}{finalize}} ()
+\begin{DoxyCompactList}\small\item\em Finalizes the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{int__manager_8h_afaf9296ec5f119629e57f458f207ae0c}\label{int__manager_8h_afaf9296ec5f119629e57f458f207ae0c}} 
+\index{int\_manager.h@{int\_manager.h}!finalize@{finalize}}
+\index{finalize@{finalize}!int\_manager.h@{int\_manager.h}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily int() finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finalizes the system. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{int__manager_8h_ac4ae186b48f33686d93c72b9160a2afb}\label{int__manager_8h_ac4ae186b48f33686d93c72b9160a2afb}} 
+\index{int\_manager.h@{int\_manager.h}!initialize@{initialize}}
+\index{initialize@{initialize}!int\_manager.h@{int\_manager.h}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily int() initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the system and sets up the necessary interrupts and devices. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{int__manager_8h_a24285aea4a27f96c321b2628788e9a57}\label{int__manager_8h_a24285aea4a27f96c321b2628788e9a57}} 
+\index{int\_manager.h@{int\_manager.h}!main\_loop@{main\_loop}}
+\index{main\_loop@{main\_loop}!int\_manager.h@{int\_manager.h}}
+\doxysubsubsection{\texorpdfstring{main\_loop()}{main\_loop()}}
+{\footnotesize\ttfamily int() main\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main loop of the system. This function enters the main loop of the system and continuously waits for messages from device interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7

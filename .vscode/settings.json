@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "timer.h": "c",
+        "i8254.h": "c",
+        "i8042.h": "c",
+        "lcf.h": "c",
+        "mouse.h": "c",
+        "stdio.h": "c",
+        "kbc.h": "c",
+        "statemachine.h": "c",
+        "define.h": "c",
+        "system_error": "c",
+        "*.xpm": "c",
+        "video.h": "c",
+<<<<<<< HEAD
+        "game_state.h": "c"
+=======
+        "display.h": "c",
+        "game_state.h": "c",
+        "timer_event_handler.h": "c"
+>>>>>>> 363c37d02d82b27facb657ff79e0ad4aaa66c137
+    }
+}
